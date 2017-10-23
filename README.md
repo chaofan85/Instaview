@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Instaview
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* [MVP list](https://github.com/chaofan85/-Instaview/wiki/mvp-list)
+* [Wireframes](https://github.com/chaofan85/-Instaview/wiki/wireframes)
+* [Component Hierarchy](https://github.com/chaofan85/-Instaview/wiki/component-hierarchy)
+* [Sample State](https://github.com/chaofan85/-Instaview/wiki/sample-state)
+* [Routes](https://github.com/chaofan85/-Instaview/wiki/routes)
+* [Schema](https://github.com/chaofan85/-Instaview/wiki/schema)
