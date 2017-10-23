@@ -66,7 +66,7 @@
 
 ## Comment
 * `CommentContainer` + `CommentItem`
-  * State: `photos[:photoId].commentIds` 
+  * State: `photos[:photoId].commentIds`, `comments[:id]`
 
 ## Like
 * LikeIndexContainer + LikeIndex
