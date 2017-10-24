@@ -6,11 +6,11 @@ const SessionReducer = (state = initialState, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
-      let newState = merge({}, state, { current_user: action.user });
+      let newState = merge({}, state, { currentUser: action.user });
       return newState;
     default:
       return state;
   }
-}
+};
 
 export default SessionReducer;
