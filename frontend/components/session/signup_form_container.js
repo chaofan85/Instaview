@@ -3,6 +3,7 @@ import SignupForm from './signup_form';
 import { signup } from '../../actions/session_actions.js';
 
 const mapStateToProps = (state, ownProps) => {
+
   const userInfo = {
     email: "",
     fullname: "",
