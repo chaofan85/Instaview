@@ -1,4 +1,4 @@
-import SessionIndex from './session_index';
+import Index from './index';
 import { connect } from 'react-redux';
 import { logout } from '../actions/session_actions.js';
 
@@ -19,4 +19,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SessionIndex);
+)(Index);
