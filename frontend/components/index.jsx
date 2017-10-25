@@ -10,17 +10,13 @@ class Index extends React.Component {
   }
 
   handleChange() {
-    console.log(this.state);
     this.setState({ renderLogin: !this.state.renderLogin });
   }
 
   render() {
-    console.log(this.props);
     if (this.props.currentUser) {
       return (
-        <div>
-          Greeting, {this.props.currentUser.username}
-        </div>
+        <div>Greeting, {this.props.currentUser.username}</div>
       );
     } else {
       if (this.state.renderLogin) {
