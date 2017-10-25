@@ -1,5 +1,7 @@
 import React from 'react';
 import SessionForm from './session/session_form';
+import PhotoIndexContainer from './photo/photo_index_container';
+import Header from './header';
 
 class Index extends React.Component {
 
@@ -7,8 +9,9 @@ class Index extends React.Component {
     if (this.props.currentUser) {
       return (
         <div>
-          <p>Greeting, {this.props.currentUser.username}</p>
-          <button onClick={this.props.logout}>Logout</button>
+          {/* <button onClick={this.props.logout}>Logout</button> */}
+          {/*<PhotoIndexContainer />*/}
+          <Header />
         </div>
       );
     } else {

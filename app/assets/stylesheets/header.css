@@ -1,0 +1,19 @@
+header {
+  width: 100%;
+  height: 77px;
+  background-color: #fff;
+  /*background-image: url("icons.png");
+  background-repeat: no-repeat;
+  background-position-x: -176px;
+  background-position-y: 0px;
+  background-size: 395px 371px;*/
+}
+
+.herder-bg-top {
+  height: 35px;
+  width: 40px;
+  background-image: url("icons.png");
+  background-repeat: no-repeat;
+  background-position: -176px 0;
+  background-size: 395px 371px;
+}
