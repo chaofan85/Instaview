@@ -46,10 +46,6 @@ class SignupForm extends React.Component {
           <button>Sign Up</button>
         </form>
         <div>
-          <p>
-            Have an account?
-            <a>Log In</a>
-          </p>
 
         </div>
       </div>

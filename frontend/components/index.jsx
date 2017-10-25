@@ -3,14 +3,16 @@ import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
 
 class Index extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //
-  //   this.state = props.renderLogin
-  // }
+  constructor(props) {
+    super(props);
+    this.state = { renderLogin: props.renderLogin };
+    this.handleChange = this.handleChange.bind(this);
+  }
 
-
-
+  handleChange() {
+    console.log(this.state);
+    this.setState({ renderLogin: !this.state.renderLogin });
+  }
 
   render() {
     console.log(this.props);
@@ -21,18 +23,18 @@ class Index extends React.Component {
         </div>
       );
     } else {
-      if (this.props.something) {
+      if (this.state.renderLogin) {
         return (
           <div>
-            <SignupFormContainer />
-            <a onClick={this.props.renderLoginForm(this.props.renderLogin)}>clickme</a>
+            <LoginFormContainer />
+            <a onClick={this.handleChange}>clickme</a>
           </div>
         );
       } else {
         return (
           <div>
-            <LoginFormContainer />
-            <button onClick={this.props.renderLoginForm(this.props.renderLogin)}>clickme</button>
+            <SignupFormContainer />
+            <a onClick={this.handleChange}>clickme</a>
           </div>
         );
       }
