@@ -10,9 +10,8 @@ const App = () => (
       <h1>Instaview</h1>
       <IndexContainer />
     </header>
-    <Route path="/login" component={ LoginFormContainer} />
-    <Route path="/signup" component={ SignupFormContainer } />
 
+    
   </div>
 );
 

@@ -16,7 +16,10 @@ class Index extends React.Component {
   render() {
     if (this.props.currentUser) {
       return (
-        <div>Greeting, {this.props.currentUser.username}</div>
+        <div>
+          <p>Greeting, {this.props.currentUser.username}</p>
+          <button onClick={this.props.logout}>Logout</button>
+        </div>
       );
     } else {
       if (this.state.renderLogin) {
