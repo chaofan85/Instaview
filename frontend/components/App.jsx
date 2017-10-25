@@ -6,7 +6,7 @@ import LoginFormContainer from './session/login_form_container';
 
 const App = () => (
   <div className="app">
-    <IndexContainer />
+    <Route exact path='/' component={ IndexContainer } />
   </div>
 );
 

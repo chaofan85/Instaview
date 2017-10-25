@@ -1,5 +1,5 @@
 import React from 'react';
-import SessionFormContainer from './session/session_form_container';
+import SessionForm from './session/session_form';
 
 class Index extends React.Component {
 
@@ -15,7 +15,7 @@ class Index extends React.Component {
       return (
         <div className="index-main">
           <div className='index-background'></div>
-          <SessionFormContainer />
+          <SessionForm />
         </div>
       );
     }

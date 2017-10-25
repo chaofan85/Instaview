@@ -1,4 +1,5 @@
-import  { RECEIVE_CURRENT_USER, login, signup, logout } from '../actions/session_actions.js';
+import  { RECEIVE_CURRENT_USER,
+          login, signup, logout } from '../actions/session_actions.js';
 import merge from 'lodash/merge';
 
 const initialState = {};

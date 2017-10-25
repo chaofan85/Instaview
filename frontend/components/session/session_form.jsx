@@ -2,10 +2,10 @@ import React from 'react';
 import SignupFormContainer from './signup_form_container';
 import LoginFormContainer from './login_form_container';
 
-class Index extends React.Component {
+class SessionForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { renderLogin: props.renderLogin };
+    this.state = { renderLogin: false };
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -52,4 +52,4 @@ class Index extends React.Component {
   }
 }
 
-export default Index;
+export default SessionForm;
