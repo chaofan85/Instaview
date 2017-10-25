@@ -1,24 +1,13 @@
-export const RENDER_SIGN_UP_FORM = 'RENDER_SIGN_UP_FORM';
-export const RENDER_LOGIN_FORM = 'RENDER_LOGIN_FORM';
+export const SWITCH_FORM = 'SWITCH_FORM';
 
-const renderSignUpForm = (form) => {
+
+const switchForm = (shouldRender) => {
   return {
-    type: RENDER_SIGN_UP_FORM,
-    form
+    type: SWITCH_FORM,
+    shouldRender
   };
 };
 
-const renderLoginForm = (form) => {
-  return {
-    type: RENDER_LOGIN_FORM,
-    form
-  };
-};
-
-export const getSignUpForm = (form) => dispatch => {
-  return dispatch(renderSignUpForm(form));
-};
-
-export const getLoginForm = (form) => dispatch => {
-  return dispatch(renderLoginForm(form));
+export const renderLogin = (shouldRender) => dispatch => {
+  return dispatch(switchForm(shouldRender));
 };

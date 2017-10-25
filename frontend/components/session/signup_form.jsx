@@ -48,7 +48,7 @@ class SignupForm extends React.Component {
         <div>
           <p>
             Have an account?
-            <Link to="javascript:;" onClick={console.log('hi')}>Log In</Link>
+            <a>Log In</a>
           </p>
 
         </div>

@@ -33,7 +33,7 @@ class LoginForm extends React.Component {
             value={this.state.password}
             placeholder='Password'
             onChange={this.handleChange('password')}></input>
-          <button>Sign Up</button>
+          <button>Log In</button>
         </form>
 
         <div></div>
