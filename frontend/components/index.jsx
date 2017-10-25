@@ -1,6 +1,6 @@
 import React from 'react';
 import SessionForm from './session/session_form';
-import PhotoIndexContainer from './photo/photo_index_container';
+import PhotoIndex from './photo/photo_index';
 import Header from './header';
 
 class Index extends React.Component {
@@ -8,10 +8,10 @@ class Index extends React.Component {
   render() {
     if (this.props.currentUser) {
       return (
-        <div>
+        <div className='main'>
           {/* <button onClick={this.props.logout}>Logout</button> */}
-          {/*<PhotoIndexContainer />*/}
           <Header />
+          <PhotoIndex />
         </div>
       );
     } else {
