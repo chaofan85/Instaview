@@ -14,11 +14,19 @@
 }
 
 .login-form input, .signup-form input {
-  width: 250px;
-  height: 18px;
+  width: 262px;
+  height: 34px;
+  text-align: left;
+  font-family: sans-serif;
   padding: 9px 0 7px 8px;
   font-size: 14px;
   margin-bottom: 5px;
+  background-color: #fafafa;
+  line-height: 18px;
+  font-weight: 300;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  border-radius: 3px;
 }
 
 .signup-button, .login-button {
@@ -29,8 +37,10 @@
   color: white;
   font-family: sans-serif;
   font-size: 14px;
+  font-weight: 600;
   margin-top: 10px;
   padding: 0 8px;
+  box-sizing: border-box;
 }
 
 .slogan {
