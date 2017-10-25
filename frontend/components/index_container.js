@@ -5,7 +5,6 @@ import { logout } from '../actions/session_actions.js';
 const mapStateToProps = state => {
   return {
     currentUser: state.session.currentUser,
-    renderLogin: false
   };
 };
 
