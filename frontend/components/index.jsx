@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import SignupFormContainer from './session/signup_form_container';
 
 const Index = (props) => {
   return props.currentUser ?
@@ -9,9 +9,7 @@ const Index = (props) => {
       </div>
     ) : (
       <div>
-        <Link to='/signup' name='lololo'>Sign Up</Link>
-        <br />
-        <Link to='/login' name='lalala'>Login</Link>
+        <SignupFormContainer />
       </div>
     );
 };
