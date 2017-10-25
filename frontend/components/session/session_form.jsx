@@ -16,16 +16,27 @@ class Index extends React.Component {
   render() {
     if (this.state.renderLogin) {
       return (
-        <div>
+        <div className='login-container'>
+          <h2>Instaview</h2>
           <LoginFormContainer />
-          <a onClick={this.handleChange}>clickme</a>
+          <p>
+            Dont't have an account?
+            <a onClick={this.handleChange}>Sign up</a>
+          </p>
         </div>
       );
     } else {
       return (
-        <div>
+        <div className='signup-container'>
+          <h2>Instaview</h2>
+          <p className='slogan'>
+            Sign up to see photos and videos from your friends.
+          </p>
           <SignupFormContainer />
-          <a onClick={this.handleChange}>clickme</a>
+          <p>
+            Have an account?
+            <a onClick={this.handleChange}>Log in</a>
+          </p>
         </div>
       );
     }

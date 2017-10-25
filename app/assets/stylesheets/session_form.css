@@ -1,0 +1,50 @@
+.login-form {
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.signup-form {
+  width: 300px;
+  height: 330px;
+  border: 1px solid black;
+  margin: auto;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.login-form input, .signup-form input {
+  width: 250px;
+  height: 18px;
+  padding: 9px 0 7px 8px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.signup-button, .login-button {
+  width: 250px;
+  height: 26px;
+  background: #3897f0;
+  border-radius: 3px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 0 8px;
+}
+
+.slogan {
+  font-size: 17px;
+  font-weight: 600;
+  width: 268px;
+  margin: auto;
+}
+
+.polocy {
+  width: 228px;
+  margin: auto;
+  margin-top: 15px;
+  font-size: 14px;
+}

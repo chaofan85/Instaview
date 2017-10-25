@@ -13,8 +13,8 @@ class Index extends React.Component {
       );
     } else {
       return (
-        <div>
-          <div className='background'></div>
+        <div className="index-main">
+          <div className='index-background'></div>
           <SessionFormContainer />
         </div>
       );

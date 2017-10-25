@@ -1,0 +1,47 @@
+.index-main {
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding-top: 50px;
+}
+
+.index-background {
+  width: 380px;
+  height: 650px;
+  border: 1px solid black;
+  position: absolute;
+  left: 200px;
+}
+
+.login-container {
+  width: 350px;
+  height: 300px;
+  border: 1px solid black;
+  position: absolute;
+  right: 250px;
+  text-align: center;
+  padding-top: 30px;
+
+}
+
+.signup-container {
+  width: 350px;
+  height: 528px;
+  border: 1px solid black;
+  position: absolute;
+  right: 250px;
+  padding: 10px;
+  padding-top: 30px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.login-container h2, .signup-container h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.login-container p, .signup-container p {
+  font-family: sans-serif;
+  color: grey;
+}

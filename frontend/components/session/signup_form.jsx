@@ -24,25 +24,32 @@ class SignupForm extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className='signup-form'>
         <form onSubmit={this.handleSubmit}>
           <input type='text'
             value={this.state.email}
             placeholder='Email'
             onChange={this.handleChange('email')}></input>
+          <br />
           <input type='text'
             value={this.state.fullname}
             placeholder='Full Name(Optional)'
             onChange={this.handleChange('fullname')}></input>
+          <br />
           <input type='text'
             value={this.state.username}
             placeholder='Username'
             onChange={this.handleChange('username')}></input>
+          <br />
           <input type='password'
             value={this.state.password}
             placeholder='Password'
             onChange={this.handleChange('password')}></input>
-          <button>Sign Up</button>
+          <br />
+          <button className='signup-button'>Sign Up</button>
+          <p className='polocy'>
+            By signing up, you agree to our Terms & Privacy Policy.
+          </p>
         </form>
         <div>
 
