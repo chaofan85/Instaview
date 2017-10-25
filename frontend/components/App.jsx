@@ -6,12 +6,8 @@ import LoginFormContainer from './session/login_form_container';
 
 const App = () => (
   <div>
-    <header>
-      <h1>Instaview</h1>
-      <IndexContainer />
-    </header>
-
-    
+    <h1>Instaview</h1>
+    <IndexContainer />
   </div>
 );
 
