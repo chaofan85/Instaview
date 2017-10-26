@@ -14,13 +14,13 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    console.log(this.props, 'lalala');
     if (this.state.renderLogin) {
       return (
         <div className='index-form'>
           <div className='login-container'>
             <h2>Instaview</h2>
             <LoginFormContainer />
-            <p className='forgot'>Forgot password?</p>
           </div>
           <div className='signup-link'>
             <p>

@@ -1,6 +1,6 @@
 .login-form {
   width: 300px;
-  height: 150px;
+  /*height: 150px;*/
   margin: auto;
 }
 
@@ -59,6 +59,7 @@
 .forgot {
   font-size: 12px;
   color: #003569 !important;
+  margin: 20px 0 0 0;
 }
 
 .session-errors {

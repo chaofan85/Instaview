@@ -1,4 +1,5 @@
 import React from 'react';
+import ErrorItem from '../other/error_item.jsx';
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -21,9 +22,20 @@ class LoginForm extends React.Component {
   }
 
   render() {
+    let errors;
+    if (this.props.errors.length) {
+      errors = this.props.errors[0].responseJSON.map((error, idx) => {
+        return (
+          <ErrorItem error={error} key={idx} />
+        );
+      });
+    }
 
     return (
       <div className='login-form'>
+        <div className='session-errors'>
+          { errors }
+        </div>
         <form onSubmit={this.handleSubmit}>
           <input type='text'
             value={this.state.username}
@@ -36,6 +48,7 @@ class LoginForm extends React.Component {
             onChange={this.handleChange('password')}></input>
           <br />
           <button className='login-button'>Log In</button>
+          <p className='forgot'>Forgot password?</p>
         </form>
 
         <div></div>
