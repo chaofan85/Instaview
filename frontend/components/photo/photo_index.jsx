@@ -5,21 +5,19 @@ class PhotoIndex extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { renderUpload: false };
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(e) {
-    e.preventDefault();
-    this.setState({ renderUpload: !this.state.renderUpload });
+    // this.state = { renderUpload: false };
+    // this.handleClick = this.handleClick.bind(this);
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className='photo-index'>
-        <button onClick={this.handleClick}>+ New Photo</button>
-        {this.state.renderUpload ? <PhotoUpload /> : <div></div>}
-        {/*<PhotoFeed />*/}
+        <div className='photo-upload'>
+          <PhotoUpload />
+        </div>
+        <div className='feed-index'>
+        </div>
       </div>
     );
   }
