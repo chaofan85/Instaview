@@ -39,7 +39,7 @@
 
 .signup-container {
   width: 350px;
-  height: 450px;
+  /*height: 450px;*/
   /*position: absolute;*/
   right: 250px;
   padding: 10px;
@@ -49,6 +49,8 @@
   background-color: #fff;
   border: 1px solid #e6e6e6;
   margin: auto;
+  font-family: sans-serif;
+  line-height: 1.2
 }
 
 .login-container h2, .signup-container h2 {

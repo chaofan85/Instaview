@@ -1,5 +1,6 @@
 import React from 'react';
 import LoginFormContainer from './login_form_container';
+import ErrorItem from '../other/error_item.jsx';
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -21,10 +22,25 @@ class SignupForm extends React.Component {
     };
   }
 
+  componentWillUnount() {
+
+  }
+
   render() {
+    let errors;
+    if (this.props.errors.length) {
+      errors = this.props.errors[0].responseJSON.map((error, idx) => {
+        return (
+          <ErrorItem error={error} key={idx} />
+        );
+      });
+    }
 
     return (
       <div className='signup-form'>
+        <div className='session-errors'>
+          { errors }
+        </div>
         <form onSubmit={this.handleSubmit}>
           <input type='text'
             value={this.state.email}
@@ -33,7 +49,7 @@ class SignupForm extends React.Component {
           <br />
           <input type='text'
             value={this.state.fullname}
-            placeholder='Full Name(Optional)'
+            placeholder='Full Name&nbsp;(Optional)'
             onChange={this.handleChange('fullname')}></input>
           <br />
           <input type='text'

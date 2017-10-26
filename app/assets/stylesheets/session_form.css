@@ -2,14 +2,12 @@
   width: 300px;
   height: 150px;
   margin: auto;
-  padding-top: 20px;
 }
 
 .signup-form {
   width: 300px;
   height: 330px;
   margin: auto;
-  padding-top: 20px;
   margin-top: 20px;
 }
 
@@ -55,9 +53,19 @@
   margin: auto;
   margin-top: 15px;
   font-size: 14px;
+  line-height: 1.4;
 }
 
 .forgot {
   font-size: 12px;
   color: #003569 !important;
+}
+
+.session-errors {
+  width: 262px;
+  margin: auto;
+  margin-bottom: 5px;
+  text-align: left;
+  font-size: 14px;
+  color: red;
 }
