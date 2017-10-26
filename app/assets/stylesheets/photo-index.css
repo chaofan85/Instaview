@@ -66,9 +66,9 @@
 }
 
 .photo-ul {
-  width: 500px;
+  width: 520px;
   height: 350px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -77,7 +77,7 @@
 .choose-photo {
   width: 250px;
   height: 50px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 .photo-ul img {
@@ -85,30 +85,45 @@
   height: 200px;
 }
 
-.upload-button {
-  width: 200px;
-  height: 60px;
-  border: 1px solid black;
-}
 
 .photo-info {
-  width: 350px;
-  height: 350px;
-  border: 1px solid black;
+  width: 300px;
+  height: 330px;
+  /*border: 1px solid black;*/
+  padding-top: 20px;
+  text-align: left;
+}
+
+.photo-ul input {
+  width: 250px;
+  box-sizing: border-box;
+  padding-left: 5px;
+  text-align: left;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
 }
 
 .location {
-  width: 200px;
   height: 30px;
   border: 1px solid black;
 }
 
 .caption {
-  width: 200px;
-  height: 70px;
+  height: 150px;
   border: 1px solid black;
 }
 
-.photo-preview {
+.upload-button {
+  width: 200px;
+  height: 40px;
+  border: 1px solid black;
+  margin: auto;
+  display: block;
+  text-align: center;
+}
 
+.photo-preview {
+  margin-top: 60px;
+  margin-right: 5px;
 }

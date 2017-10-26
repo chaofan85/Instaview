@@ -57,7 +57,8 @@ class PhotoUploadPanel extends React.Component {
           <input type="text"
             className="location"
             value={this.state.location}
-            onChange={this.handleChange('location')} />
+            onChange={this.handleChange('location')}
+            placeholder="Add Location (optional)" />
 
           <input type="text"
             className="caption"
