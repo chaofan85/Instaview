@@ -34,7 +34,7 @@ nav {
 .header-logo {
   font-family: cursive;
   font-size: 28px;
-  line-height: 1.2;
+  line-height: 1.1;
   font-weight: 600;
   margin-left: 5px;
   box-sizing: border-box;
@@ -46,7 +46,7 @@ nav {
 }
 
 .search-bar {
-  width: 200px;
+  width: 210px;
   height: 25px;
   background-color: #fafafa;
   border: solid 1px #dbdbdb;
@@ -62,12 +62,13 @@ nav {
   color: #999;
   font-weight: 300;
   font-family: sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .search-area div {
   position: absolute;
   top: 5px;
-  right: 70px;
+  right: 75px;
 }
 
 .search-icon {
