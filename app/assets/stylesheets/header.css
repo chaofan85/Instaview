@@ -9,7 +9,7 @@ header {
 .herder-bg-top {
   height: 35px;
   width: 40px;
-  background-image: url("icons.png");
+  background-image: image-url("icons.png");
   background-repeat: no-repeat;
   background-position: -176px 0;
   background-size: 395px 371px;
