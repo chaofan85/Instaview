@@ -1,16 +1,128 @@
 header {
   width: 100%;
-  height: 77px;
+  height: 76px;
   background-color: #fff;
   position: fixed;
   top: 0;
+  border-bottom: 1px solid rgba(0,0,0,.0975);
 }
 
-.herder-bg-top {
+nav {
+  width: 930px;
+  height: 27px;
+  margin: auto;
+  display: flex;
+  padding: 23px 40px;
+  justify-content: center;
+}
+
+.logo {
+  min-width: 350px;
+  height: 100%;
+  display: flex;
+}
+
+.header-bg-logo {
   height: 35px;
-  width: 40px;
-  background-image: image-url("icons.png");
+  width: 60px;
+  background-image: url("icons.png");
   background-repeat: no-repeat;
   background-position: -176px 0;
   background-size: 395px 371px;
+}
+
+.header-logo {
+  font-family: cursive;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-left: 5px;
+  box-sizing: border-box;
+}
+
+.search-area {
+  position: relative;
+  margin-top: 3px;
+}
+
+.search-bar {
+  width: 200px;
+  height: 25px;
+  background-color: #fafafa;
+  border: solid 1px #dbdbdb;
+  -webkit-box-pack: center;
+  justify-content: center;
+  border-radius: 3px;
+  cursor: text;
+  text-align: center;
+}
+
+.search-text {
+  font-size: 14px;
+  color: #999;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+.search-area div {
+  position: absolute;
+  top: 5px;
+  right: 70px;
+}
+
+.search-icon {
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  background-image: url("icons.png");
+  background-repeat: no-repeat;
+  background-position: -379px -161px;
+  background-size: 395px 371px;
+  margin-right: 6px;
+}
+
+.header-icons {
+  width: 350px;
+  height: 30px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3px;
+}
+
+.header-icons span {
+  margin-right: 30px;
+}
+
+
+.explore-icon {
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  background-image: url("icons.png");
+  background-repeat: no-repeat;
+  background-position: -25px -347px;
+  background-size: 395px 371px;
+  margin-right: 6px;
+}
+
+.notification-icon {
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  background-image: url("icons.png");
+  background-repeat: no-repeat;
+  background-position: -353px -151px;
+  background-size: 395px 371px;
+  margin-right: 6px;
+}
+
+.profile-icon {
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  background-image: url("icons.png");
+  background-repeat: no-repeat;
+  background-position: -353px -226px;
+  background-size: 395px 371px;
+  margin-right: 6px;
 }
