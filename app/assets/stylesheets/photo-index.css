@@ -70,12 +70,14 @@
   height: 350px;
   border: 1px solid black;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .choose-photo {
   width: 250px;
   height: 50px;
-  /*border: 1px solid black;*/
+  border: 1px solid black;
 }
 
 .photo-ul img {
@@ -84,7 +86,29 @@
 }
 
 .upload-button {
-  width: 100px;
+  width: 200px;
   height: 60px;
   border: 1px solid black;
+}
+
+.photo-info {
+  width: 350px;
+  height: 350px;
+  border: 1px solid black;
+}
+
+.location {
+  width: 200px;
+  height: 30px;
+  border: 1px solid black;
+}
+
+.caption {
+  width: 200px;
+  height: 70px;
+  border: 1px solid black;
+}
+
+.photo-preview {
+
 }

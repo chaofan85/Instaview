@@ -1,5 +1,4 @@
 export const createPhoto = (formData) => {
-  debugger
   return $.ajax({
     url: '/api/photos',
     type: 'POST',

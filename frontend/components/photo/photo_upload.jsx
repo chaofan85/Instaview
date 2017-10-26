@@ -26,7 +26,7 @@ class PhotoUpload extends React.Component {
         { this.state.renderUpload ? (
           <div className='upload-panel'>
             <div className='modal-form'>
-              <PhotoUploadPanelContainer />
+              <PhotoUploadPanelContainer closeModal={this.closeModal} />
               <span className="modal-close"
                 onClick={this.closeModal}>&times;</span>
             </div>

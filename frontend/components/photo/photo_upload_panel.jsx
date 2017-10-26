@@ -3,17 +3,26 @@ import React from 'react';
 class PhotoUploadPanel extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { imageFile: null, imageUrl: null };
+    this.state = {
+      imageFile: null,
+      imageUrl: null,
+      location: "",
+      caption: "",
+     };
     this.uploadPhoto = this.uploadPhoto.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(field) {
+    return e => {
+      this.setState({ [field]: e.target.value });
+    };
   }
 
   uploadPhoto(e) {
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
-    debugger
     fileReader.onloadend = () => {
-      debugger
       this.setState({ imageFile: file, imageUrl: fileReader.result });
     };
 
@@ -22,11 +31,11 @@ class PhotoUploadPanel extends React.Component {
     }
   }
 
-  handleSubmit() {
+  handleSubmit(e) {
+    e.preventDefault();
     const file = this.state.imageFile;
 
     const formData = new FormData();
-    debugger
     if (file) {
       formData.append("photo[image]", file);
     }
@@ -36,15 +45,28 @@ class PhotoUploadPanel extends React.Component {
 
   render() {
     return (
-      <div className="photo-ul">
-        <input type="file"
-          className="choose-photo"
-          onChange={ this.uploadPhoto }/>
+      <div className="photo-ul" onClick={this.handleSubmit}>
+        <form className='photo-info'>
+          <input type="file"
+            className="choose-photo"
+            onChange={ this.uploadPhoto } />
 
-        <img src={ this.state.imageUrl }/>
-        <button className="upload-button" onClick={this.handleSubmit}>
-          Submit
-        </button>
+          <input type="text"
+            className="location"
+            value={this.state.location}
+            onChange={this.handleChange('location')} />
+
+          <input type="text"
+            className="caption"
+            value={this.state.caption}
+            onChange={this.handleChange('caption')}
+            placeholder="Write a caption..." />
+
+          <button className="upload-button">Submit</button>
+        </form>
+
+        <img className="photo-preview" src={ this.state.imageUrl }/>
+
       </div>
     );
   }
