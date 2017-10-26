@@ -64,3 +64,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.photo-ul {
+  width: 500px;
+  height: 350px;
+  border: 1px solid black;
+  margin: auto;
+
+}

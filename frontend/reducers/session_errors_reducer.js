@@ -10,11 +10,9 @@ const  SessionErrorsReducer = (state = initialState, action) => {
     case RECEIVE_CURRENT_USER:
       return [];
     case RECEIVE_ERRORS:
-      newState = state.concat(action.errors);
-      return newState;
+      return action.errors;
     case REMOVE_ERRORS:
-      newState = merge({}, state, { errors: [] });
-      return newState;
+      return [];
     default:
       return state;
   }

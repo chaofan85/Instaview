@@ -21,15 +21,16 @@ class LoginForm extends React.Component {
     };
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   render() {
-    let errors;
-    if (this.props.errors.length) {
-      errors = this.props.errors[0].responseJSON.map((error, idx) => {
+    const errors = this.props.errors.map((error, idx) => {
         return (
           <ErrorItem error={error} key={idx} />
         );
       });
-    }
 
     return (
       <div className='login-form'>
