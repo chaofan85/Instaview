@@ -11,7 +11,9 @@ class PhotoUploadPanel extends React.Component {
   uploadPhoto(e) {
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
+    debugger
     fileReader.onloadend = () => {
+      debugger
       this.setState({ imageFile: file, imageUrl: fileReader.result });
     };
 
@@ -21,8 +23,15 @@ class PhotoUploadPanel extends React.Component {
   }
 
   handleSubmit() {
+    const file = this.state.imageFile;
+
     const formData = new FormData();
-    // formData.append()
+    debugger
+    if (file) {
+      formData.append("photo[image]", file);
+    }
+
+    this.props.uploadPhoto(formData);
   }
 
   render() {
@@ -30,7 +39,7 @@ class PhotoUploadPanel extends React.Component {
       <div className="photo-ul">
         <input type="file"
           className="choose-photo"
-          onClick={ this.uploadPhoto }/>
+          onChange={ this.uploadPhoto }/>
 
         <img src={ this.state.imageUrl }/>
         <button className="upload-button" onClick={this.handleSubmit}>

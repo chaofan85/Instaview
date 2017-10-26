@@ -1,5 +1,5 @@
 import React from 'react';
-import PhotoUploadPanel from './photo_upload_panel';
+import PhotoUploadPanelContainer from './photo_upload_panel_container';
 
 class PhotoUpload extends React.Component {
   constructor(props) {
@@ -26,7 +26,7 @@ class PhotoUpload extends React.Component {
         { this.state.renderUpload ? (
           <div className='upload-panel'>
             <div className='modal-form'>
-              <PhotoUploadPanel />
+              <PhotoUploadPanelContainer />
               <span className="modal-close"
                 onClick={this.closeModal}>&times;</span>
             </div>

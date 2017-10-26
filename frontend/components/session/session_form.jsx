@@ -14,7 +14,6 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    console.log(this.props, 'lalala');
     if (this.state.renderLogin) {
       return (
         <div className='index-form'>

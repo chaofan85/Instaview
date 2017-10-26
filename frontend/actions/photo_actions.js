@@ -8,7 +8,7 @@ const receivePhoto = (photo) => {
   };
 };
 
-export const getPhoto = (formData) => (dispatch) => {
+export const uploadPhoto = (formData) => (dispatch) => {
   return createPhoto(formData).then(
   (photo) => dispatch(receivePhoto(photo)));
 };
