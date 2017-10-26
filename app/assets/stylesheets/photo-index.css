@@ -1,0 +1,52 @@
+.photo-index {
+  width: 600px;
+  height: 700px;
+  margin: auto;
+  margin-top: 77px;
+  border: 1px solid black;
+}
+
+.add {
+  width: 200px;
+  height: 70px;
+  border: 1px solid black;
+  margin-left: 200px;
+  text-align: center;
+}
+
+.add:hover {
+  cursor: pointer;
+}
+
+.modal-bg {
+   position: fixed;
+   top: 0px;
+   bottom: 0px;
+   right: 0px;
+   left: 0px;
+   z-index: 10;
+   background: rgba(0,0,0,0.7);
+}
+
+.modal-form {
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  z-index: 11;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+}
