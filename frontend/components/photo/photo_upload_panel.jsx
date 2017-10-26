@@ -43,7 +43,7 @@ class PhotoUploadPanel extends React.Component {
       formData.append("photo[caption]", this.state.caption);
     }
 
-    this.props.uploadPhoto(formData);
+    this.props.uploadPhoto(formData).then(this.props.closeModal);
   }
 
   render() {
