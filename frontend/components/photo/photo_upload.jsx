@@ -1,5 +1,5 @@
 import React from 'react';
-import PhotoUploadPanel from './photo_upload_panel';
+// import PhotoUploadPanel from './photo_upload_panel';
 
 class PhotoUpload extends React.Component {
   constructor(props) {
@@ -26,7 +26,7 @@ class PhotoUpload extends React.Component {
             <div className='modal-form'>
               <span className="modal-close"
                 onClick={this.closeModal}>&times;</span>
-              <PhotoUploadPanel />
+              
             </div>
             <div className="modal-bg"></div>
           </div>) : null }

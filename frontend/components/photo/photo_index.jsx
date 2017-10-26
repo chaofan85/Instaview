@@ -10,7 +10,6 @@ class PhotoIndex extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className='photo-index'>
         <div className='photo-upload'>
