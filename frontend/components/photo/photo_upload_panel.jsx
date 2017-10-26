@@ -11,6 +11,7 @@ class PhotoUploadPanel extends React.Component {
      };
     this.uploadPhoto = this.uploadPhoto.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(field) {
@@ -38,6 +39,8 @@ class PhotoUploadPanel extends React.Component {
     const formData = new FormData();
     if (file) {
       formData.append("photo[image]", file);
+      formData.append("photo[location]", this.state.location);
+      formData.append("photo[caption]", this.state.caption);
     }
 
     this.props.uploadPhoto(formData);
@@ -45,8 +48,8 @@ class PhotoUploadPanel extends React.Component {
 
   render() {
     return (
-      <div className="photo-ul" onClick={this.handleSubmit}>
-        <form className='photo-info'>
+      <div className="photo-ul">
+        <form className='photo-info' onSubmit={this.handleSubmit}>
           <input type="file"
             className="choose-photo"
             onChange={ this.uploadPhoto } />
