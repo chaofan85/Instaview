@@ -70,5 +70,21 @@
   height: 350px;
   border: 1px solid black;
   margin: auto;
+}
 
+.choose-photo {
+  width: 250px;
+  height: 50px;
+  /*border: 1px solid black;*/
+}
+
+.photo-ul img {
+  width: 200px;
+  height: 200px;
+}
+
+.upload-button {
+  width: 100px;
+  height: 60px;
+  border: 1px solid black;
 }
