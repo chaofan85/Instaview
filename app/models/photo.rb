@@ -8,7 +8,6 @@ class Photo < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   def likes_number
-    p self.likes
     self.likes.count
   end
 end

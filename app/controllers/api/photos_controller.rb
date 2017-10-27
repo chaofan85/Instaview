@@ -9,6 +9,22 @@ class Api::PhotosController < ApplicationController
     end
   end
 
+  def like
+    @photo = Photo.find(params[:id])
+    like = @photo.likes.new(liker_id: current_user.id)
+    if like.save
+      render :show
+    else
+    end
+  end
+
+  def unlike
+    @photo = Photo.find(params[:id])
+    like = Like.find_by(photo_id: @photo.id, liker_id: current_user.id)
+    like.destroy
+    render :show
+  end
+
   private
 
   def photo_params

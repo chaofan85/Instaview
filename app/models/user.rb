@@ -4,6 +4,8 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 8, allow_nil: true }
 
   has_many :photos, class_name: 'Photo', foreign_key: :user_id, primary_key: :id
+  has_many :likes, class_name: 'Like', foreign_key: :liker_id, primary_key: :id
+  has_many :liked_photos, through: :likes, source: :photo
 
   after_initialize :ensure_session_token
 
