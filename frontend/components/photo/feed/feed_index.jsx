@@ -9,6 +9,7 @@ class FeedIndex extends React.Component {
 
 
   render() {
+    console.log(this.props);
     const feeds = this.props.photos.map(photo => {
       return (
         <FeedIndexItem photo={photo}
