@@ -4,7 +4,7 @@ import React from 'react';
 // import FeedFooter from './feed_footer';
 
 const FeedIndexItem = ({ photo, username }) => {
-  console.log(photo.image_url);
+  
   return (
     <article className="feed">
       {/*<FeedHeader location={photo.location} />*/}

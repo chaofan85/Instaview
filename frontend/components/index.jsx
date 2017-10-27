@@ -9,7 +9,10 @@ class Index extends React.Component {
     if (this.props.currentUser) {
       return (
         <div className='main'>
-          {/* <button onClick={this.props.logout}>Logout</button> */}
+          <button className="logout" onClick={this.props.logout}>
+            Logout
+          </button>
+          
           <Header logout={this.props.logout}/>
           <PhotoIndex />
         </div>
