@@ -1,8 +1,10 @@
 import React from 'react';
 
-const FeedBody = (imageUrl) => {
+const FeedBody = ({ imageUrl }) => {
   return (
-    <div></div>
+    <div className='feed-body'>
+      <img src={`${imageUrl}`} />
+    </div>
   );
 };
 

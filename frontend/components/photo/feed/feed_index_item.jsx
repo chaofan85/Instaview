@@ -1,30 +1,19 @@
 import React from 'react';
-// import FeedHeader from './feed_header';
-// import FeedBody from './feed_body';
-// import FeedFooter from './feed_footer';
+import FeedHeader from './feed_header';
+import FeedBody from './feed_body';
+import FeedFooter from './feed_footer';
 
 const FeedIndexItem = ({ photo, username }) => {
-  
+
   return (
     <article className="feed">
-      {/*<FeedHeader location={photo.location} />*/}
-      {/*<FeedBody imageUrl={photo.image_url} />*/}
-      {/*<FeedFooter caption={photo.caption} />*/}
+      <FeedHeader location={ photo.location }
+        username={ username }
+        key={photo.id} />
 
-      <div className='feed-header'>
-        <div className='feed-user-avatar'></div>
-        <div className="feed-user-info">
-          <div className='feed-username'>{ username }</div>
-          { photo.location ?
-            <div className="feed-location">{photo.location}</div>
-              :
-            null }
-        </div>
-      </div>
-
-      <div className='feed-body'>
-        <img src={`${photo.image_url}`} />
-      </div>
+      <FeedBody imageUrl={photo.image_url} key={photo.id} />
+      
+      <FeedFooter caption={photo.caption} key={photo.id} />
     </article>
   );
 };

@@ -2,20 +2,18 @@ import React from 'react';
 import FeedIndexItem from './feed_index_item';
 
 class FeedIndex extends React.Component {
+
   constructor(props) {
     super(props);
   }
 
-  componentDidMount() {
-    // this.props.getPhotoFeeds(this.props.userId);
-  }
 
   render() {
     const feeds = this.props.photos.map(photo => {
       return (
         <FeedIndexItem photo={photo}
           username={this.props.username}
-          key={photo.id}/>
+          key={photo.photoId} />
       );
     });
     return (

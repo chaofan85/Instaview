@@ -7,7 +7,13 @@ import Root from './components/root';
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
-    const preloadedState = { session: { currentUser: window.currentUser } };
+
+    const photos = window.currentUser.photos;
+    delete window.currentUser["photos"];
+    const preloadedState = {
+      session: { currentUser: window.currentUser },
+      entities: { photos: photos }
+     };
     store = configureStore(preloadedState);
     delete window.currentUser;
   } else {

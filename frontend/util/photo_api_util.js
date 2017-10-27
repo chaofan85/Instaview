@@ -1,9 +1,3 @@
-// export const fetchPhotos = (userId) => {
-//   return $.ajax({
-//     method: 'GET',
-//     url: `/api/users/${userId}`,
-//   });
-// };
 
 export const createPhoto = (formData) => {
   return $.ajax({

@@ -1,26 +1,21 @@
 import { connect } from 'react-redux';
 import FeedIndex from './feed_index';
-// import { getPhotoFeeds } from '../../actions/photo_actions';
 
 const mapStateToProps = (state) => {
+  let newPhoto = {};
   if (state.session.currentUser) {
     return {
-      photos: state.session.currentUser.photos,
-      username: state.session.currentUser.username
+      photos: Object.values(state.entities.photos),
+      username: state.session.currentUser.username,
+      userId: state.session.currentUser.id,
     };
   } else {
     return {
       photos: [],
-      username: ""
+      username: "",
     };
   }
 };
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     getPhotoFeeds: (userId) => dispatch(getPhotoFeeds(userId))
-//   };
-// };
 
 export default connect(
   mapStateToProps,
