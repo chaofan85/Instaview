@@ -3,7 +3,7 @@
   height: 700px;
   margin: auto;
   margin-top: 77px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 .add {
@@ -131,5 +131,59 @@
 }
 
 .feed-index {
+  width: 100%;
+  height: 800px;
+  /*border: 1px solid black;*/
+}
+
+.feed {
+  margin-bottom: 60px;
+  border: 1px solid red;
+  border: 1px solid #e6e6e6;
+}
+
+.feed-header {
+  width: 100%;
+  height: 60px;
+  border-bottom-width: .5px;
+  border-bottom: 1px solid #efefef;
+  align-items: center;
+  padding: 16px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.feed-user-info {
+  width: 150px;
+  height: 35px;
+  /*border: 1px solid black;*/
+  font-family: sans-serif;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feed-username {
+  font-weight: 600;
+}
+
+.feed-location {
+  font-weight: 300;
+}
+
+.feed-user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.feed-body {
+  width: 100%;
+}
+
+.feed-body img {
   width: 100%;
 }

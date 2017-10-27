@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PhotoUploadPanel from './photo_upload_panel';
-import { uploadPhoto } from '../../actions/photo_actions';
+import { uploadPhoto } from '../../../actions/photo_actions';
 
 const mapDispatchToProps = (dispatch) => {
   return {

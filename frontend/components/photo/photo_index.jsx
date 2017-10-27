@@ -1,6 +1,6 @@
 import React from 'react';
-import PhotoUpload from './photo_upload';
-import FeedIndexContainer from './feed_index_container';
+import PhotoUpload from './upload/photo_upload';
+import FeedIndexContainer from './feed/feed_index_container';
 
 class PhotoIndex extends React.Component {
   constructor(props) {
