@@ -12,7 +12,7 @@ export const createPhoto = (formData) => {
 export const addLike = (photoId) => {
   return $.ajax({
     method: 'POST',
-    url: `api/photo/${photoId}/like`,
+    url: `api/photos/${photoId}/like`,
     data: { id: photoId }
   });
 };
@@ -20,7 +20,7 @@ export const addLike = (photoId) => {
 export const deleteLike = (photoId) => {
   return $.ajax({
     method: 'DELETE',
-    url: `api/photo/${photoId}/unlike`,
+    url: `api/photos/${photoId}/unlike`,
     data: { id: photoId }
   });
 };

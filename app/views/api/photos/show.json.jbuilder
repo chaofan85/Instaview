@@ -1,1 +1,1 @@
-json.partial! "photo", photo: @photo
+json.partial! "photo", photo: @photo, user: current_user
