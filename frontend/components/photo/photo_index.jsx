@@ -1,5 +1,6 @@
 import React from 'react';
 import PhotoUpload from './photo_upload';
+import FeedIndexContainer from './feed_index_container';
 
 class PhotoIndex extends React.Component {
   constructor(props) {
@@ -10,8 +11,7 @@ class PhotoIndex extends React.Component {
     return (
       <div className='photo-index'>
         <PhotoUpload />
-        <div className='feed-index'>
-        </div>
+        <FeedIndexContainer />
       </div>
     );
   }
