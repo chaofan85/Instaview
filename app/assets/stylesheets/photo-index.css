@@ -3,6 +3,7 @@
   height: 700px;
   margin: auto;
   margin-top: 77px;
+  border: 1px solid black;
 }
 
 .add {
@@ -127,4 +128,8 @@
 .photo-preview {
   margin-top: 60px;
   margin-right: 5px;
+}
+
+.feed-index {
+  width: 100%;
 }

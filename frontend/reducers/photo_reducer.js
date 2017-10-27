@@ -1,4 +1,4 @@
-import { RECEIVE_PHOTO } from '../actions/photo_actions';
+import { RECEIVE_PHOTOS, RECEIVE_PHOTO } from '../actions/photo_actions';
 
 const initialState = {};
 const PhotoReducer = (state = initialState, action) => {
