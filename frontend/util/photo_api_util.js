@@ -24,3 +24,11 @@ export const deleteLike = (photoId) => {
     data: { id: photoId }
   });
 };
+
+export const addComment = (comment) => {
+  return $.ajax({
+    method: 'POST',
+    url: 'api/comments',
+    data: comment
+  });
+};

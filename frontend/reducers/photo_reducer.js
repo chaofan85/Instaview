@@ -7,6 +7,8 @@ const PhotoReducer = (state = initialState, action) => {
   switch (action.type) {
     case RECEIVE_PHOTO:
       return merge({}, state, { [action.photo.id]: action.photo });
+    // case RECEIVE_COMMENT:
+    //   return merge({}, state, { })
     default:
       return state;
   }
