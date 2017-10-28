@@ -8,6 +8,6 @@ Rails.application.routes.draw do
       post :like, on: :member
       delete :unlike, on: :member
     end
-    # resources :likes, only: [:create, :destroy]
+    resources :comments, only: [:create, :destroy]
   end
 end

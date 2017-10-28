@@ -193,6 +193,8 @@
   /*border: 1px solid black;*/
   padding: 0 16px;
   box-sizing: border-box;
+  font-family: -apple-system, system-ui, "Segoe UI", 'Roboto', Helvetica, Arial, sans-serif;
+  font-size: 14px;
 }
 
 .feed-footer-icons {
@@ -248,16 +250,19 @@
   height: 18px;
   font-family: sans-serif;
   color: #262626;
-  font-family: -apple-system, system-ui, "Segoe UI", 'Roboto', Helvetica, Arial, sans-serif;
   font-weight: 600;
-  font-size: 14px;
 }
 
 .comment-area {
   width: 568px;
-  height: 145px;
-  border: 1px solid black;
-  padding-top: 5px;
   margin-top: 5px;
   margin-bottom: 4px;
+}
+
+.comment-area li {
+  padding: 5px 0;
+}
+
+.comments-text {
+  font-weight: 600;
 }
