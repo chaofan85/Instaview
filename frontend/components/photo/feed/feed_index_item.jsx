@@ -1,24 +1,34 @@
 import React from 'react';
 import FeedHeader from './feed_header';
 import FeedBody from './feed_body';
-import FeedFooterContainer from './feed_footer_container';
+import FeedFooter from './feed_footer';
 
-const FeedIndexItem = ({ photo, username }) => {
-  return (
-    <article className="feed">
+class FeedIndexItem extends React.Component  {
+  constructor(props) {
+    super(props);
 
-      <FeedHeader location={ photo.location }
-        username={ username } />
+  }
 
-      <FeedBody imageUrl={photo.image_url} />
 
-      <FeedFooterContainer caption={photo.caption}
-        photoId={photo.photoId}
-        likes={photo.likes}
-        likedByCurrentUser={photo.liked_by_current_user} />
+  render() {
+    return (
+      <article className="feed">
 
-    </article>
-  );
-};
+        <FeedHeader location={ this.props.photo.location }
+          username={ this.props.username } />
+
+        <FeedBody imageUrl={this.props.photo.image_url} />
+
+        <FeedFooter caption={this.props.photo.caption}
+          photoId={this.props.photo.photoId}
+          likes={this.props.photo.likes}
+          likedByCurrentUser={this.props.photo.liked_by_current_user}
+          addLike={this.props.addLike}
+          deleteLike={this.props.deleteLike} />
+
+      </article>
+    );
+  }
+}
 
 export default FeedIndexItem;
