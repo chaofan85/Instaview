@@ -32,3 +32,10 @@ export const addComment = (comment) => {
     data: { comment }
   });
 };
+
+export const deleteComment = (comment) => {
+  return $.ajax({
+    method: 'DELETE',
+    url: `api/comments/${comment.id}`
+  });
+};

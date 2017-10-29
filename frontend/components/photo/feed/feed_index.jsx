@@ -10,7 +10,6 @@ class FeedIndex extends React.Component {
 
   render() {
     const feeds = this.props.photos.map(photo => {
-      console.log(photo.photoId);
       return (
         <FeedIndexItemContainer photo={photo}
           username={this.props.username}

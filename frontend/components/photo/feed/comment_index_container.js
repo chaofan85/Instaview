@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import FeedFooter from './feed_footer';
+import CommentIndex from './comment_index';
 import { addComment, deleteComment } from '../../../actions/photo_actions';
 
 const mapStateToProps = (state) => {
@@ -19,4 +19,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(FeedFooter);
+)(CommentIndex);

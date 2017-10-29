@@ -1,15 +1,10 @@
 import React from 'react';
+import CommentIndexContainer from './comment_index_container';
 
 class FeedFooter extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      photo_id: props.photo.photoId,
-      body: ""
-    };
 
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
   }
 
   likePhoto(photoId){
@@ -20,26 +15,9 @@ class FeedFooter extends React.Component {
     this.props.deleteLike(photoId);
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    this.setState({ photoId: this.props.photo.photoId });
-    const comment = Object.assign({}, this.state);
-    this.props.addComment(comment);
-  }
-
-  handleChange() {
-    return e => {
-      this.setState({ body: e.target.value });
-    };
-  }
-
 
   render() {
-    const comments = this.props.photo.comments.map(comment => {
-      return (
-        <li key={comment.id}>{comment.username}: {comment.body}</li>
-      );
-    });
+
     return (
 
       <div className="feed-footer">
@@ -59,27 +37,8 @@ class FeedFooter extends React.Component {
 
         <div className="likes-number">{this.props.photo.likes} likes</div>
 
-        <section className="comment-area">
-          <ul className="comment-list">
-            {
-              this.props.photo.caption ?
-              <li className="photo-caption">
-                {this.props.username}: {this.props.photo.caption}
-              </li>
-              :
-              null
-            }
-            <li className="comments-text">Comments</li>
-            { comments }
-          </ul>
-          <div className="comment-adding">
-            <form onSubmit={this.handleSubmit}>
-              <input type="text"
-                placeholder="Add a comment..."
-                onChange={this.handleChange()}></input>
-            </form>
-          </div>
-        </section>
+        <CommentIndexContainer photo={this.props.photo}
+          username={ this.props.username }/>
 
       </div>
     );

@@ -1,0 +1,67 @@
+import React from 'react';
+
+class CommentIndex extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      photo_id: props.photo.photoId,
+      body: ""
+    };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.setState({ photoId: this.props.photo.photoId });
+    const comment = Object.assign({}, this.state);
+    this.props.addComment(comment);
+  }
+
+  handleChange() {
+    return e => {
+      this.setState({ body: e.target.value });
+    };
+  }
+
+  render() {
+    const comments = this.props.photo.comments.map(comment => {
+      return (
+        <li key={comment.id}>
+          <span className="author-name">
+            {comment.username}
+          </span> : {comment.body}
+        </li>
+      );
+    });
+
+    return (
+      <section className="comment-area">
+        <ul className="comment-list">
+          {
+            this.props.photo.caption ?
+            <li className="photo-caption">
+              <span className="author-name">
+                {this.props.username}
+              </span> : {this.props.photo.caption}
+            </li>
+            :
+            null
+          }
+          <li className="comments-text">Comments</li>
+          { comments }
+        </ul>
+        <div className="comment-adding">
+          <form onSubmit={this.handleSubmit}>
+            <input type="text"
+              placeholder="Add a comment..."
+              onChange={this.handleChange()}></input>
+          </form>
+        </div>
+      </section>
+    );
+  }
+}
+
+export default CommentIndex;
