@@ -3,7 +3,6 @@ import FeedFooter from './feed_footer';
 import { addComment } from '../../../actions/photo_actions';
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     photos: state.photos
   };

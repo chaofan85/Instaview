@@ -36,17 +36,17 @@ class FeedFooter extends React.Component {
 
   render() {
     const comments = this.props.photo.comments.map(comment => {
-      console.log(comment);
       return (
         <li key={comment.id}>{comment.username}: {comment.body}</li>
       );
     });
     return (
+
       <div className="feed-footer">
         <div className="feed-footer-icons">
 
           {
-            this.props.photo.likedByCurrentUser ?
+            this.props.photo.liked_by_current_user ?
             <span className="liked"
               onClick={() => this.cancleLike(this.props.photo.photoId)}></span>
             :

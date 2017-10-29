@@ -11,7 +11,6 @@ class FeedIndexItem extends React.Component  {
 
 
   render() {
-    // console.log(this.props);
     return (
       <article className="feed">
 
