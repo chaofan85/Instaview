@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
   constructor(props) {
@@ -6,6 +7,7 @@ class Header extends React.Component {
   }
 
   render() {
+    const username = this.props.currentUser.username;
     return (
       <header>
         <nav>
@@ -25,7 +27,9 @@ class Header extends React.Component {
           <div className='header-icons'>
              <span className='explore-icon'></span>
              <span className='notification-icon'></span>
-             <span className='profile-icon'></span>
+             <Link to={`/${username}`}>
+               <span className='profile-icon'></span>
+             </Link>
           </div>
 
           {/*<button onClick={this.props.logout}>logout</button>*/}

@@ -13,7 +13,8 @@ class Index extends React.Component {
             Logout
           </button>
 
-          <Header logout={this.props.logout}/>
+          <Header logout={this.props.logout}
+            currentUser={this.props.currentUser}/>
           <PhotoIndex />
         </div>
       );
