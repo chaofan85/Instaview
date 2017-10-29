@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import FeedIndex from './feed_index';
 
 const mapStateToProps = (state) => {
-  console.log(state);
+  // console.log(state);
   let newPhoto = {};
   if (state.session.currentUser) {
     return {

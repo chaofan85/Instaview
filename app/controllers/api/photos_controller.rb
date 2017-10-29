@@ -9,6 +9,10 @@ class Api::PhotosController < ApplicationController
     end
   end
 
+  def show
+    @photo = Photo.includes(:comments).find(params[:id])
+  end
+
   def like
     @photo = Photo.find(params[:id])
     like = @photo.likes.new(liker_id: current_user.id)

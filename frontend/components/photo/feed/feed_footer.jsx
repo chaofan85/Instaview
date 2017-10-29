@@ -3,7 +3,13 @@ import React from 'react';
 class FeedFooter extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      photo_id: props.photo.photoId,
+      body: ""
+    };
 
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   likePhoto(photoId){
@@ -14,8 +20,27 @@ class FeedFooter extends React.Component {
     this.props.deleteLike(photoId);
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    this.setState({ photoId: this.props.photo.photoId });
+    const comment = Object.assign({}, this.state);
+    this.props.addComment(comment);
+  }
+
+  handleChange() {
+    return e => {
+      this.setState({ body: e.target.value });
+    };
+  }
+
 
   render() {
+    const comments = this.props.photo.comments.map(comment => {
+      console.log(comment);
+      return (
+        <li key={comment.id}>{comment.username}: {comment.body}</li>
+      );
+    });
     return (
       <div className="feed-footer">
         <div className="feed-footer-icons">
@@ -45,7 +70,15 @@ class FeedFooter extends React.Component {
               null
             }
             <li className="comments-text">Comments</li>
+            { comments }
           </ul>
+          <div className="comment-adding">
+            <form onSubmit={this.handleSubmit}>
+              <input type="text"
+                placeholder="Add a comment..."
+                onChange={this.handleChange()}></input>
+            </form>
+          </div>
         </section>
 
       </div>

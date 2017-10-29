@@ -140,6 +140,7 @@
   margin-bottom: 60px;
   border: 1px solid red;
   border: 1px solid #e6e6e6;
+  background: #fff;
 }
 
 .feed-header {
@@ -265,4 +266,18 @@
 
 .comments-text {
   font-weight: 600;
+}
+
+.comment-adding {
+  width: 100%;
+  height: 56px;
+  padding: 16px 26px 16px 0;
+  margin-top: 10px;
+  border-top: 1px solid #efefef;
+}
+
+.comment-adding textarea {
+  width: 100%;
+  height: 18px;
+  resize: none;
 }
