@@ -7,6 +7,7 @@ class CommentIndexItem extends React.Component {
 
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
+    this.removeComment = this.removeComment.bind(this);
   }
 
   openModal() {
@@ -17,6 +18,12 @@ class CommentIndexItem extends React.Component {
   closeModal() {
     this.setState({ confirmDelete: false });
     document.body.style.overflow = 'visible';
+  }
+
+  removeComment() {
+    this.props.deleteComment(this.props.comment).then(
+      () => this.closeModal()
+    );
   }
 
   render() {
@@ -40,8 +47,13 @@ class CommentIndexItem extends React.Component {
           this.state.confirmDelete ?
           <div className='confirmation'>
             <div className='modal-form'>
-              <ul>
-                <li>lalala</li>
+              <ul className='delete-options'>
+                <li>
+                  <button onClick={this.removeComment}>Delete Comment</button>
+                </li>
+                <li>
+                  <button onClick={this.closeModal}>Cancel</button>
+                </li>
               </ul>
               <span className="modal-close"
                 onClick={this.closeModal}>&times;</span>
