@@ -11,10 +11,12 @@ class PhotoUpload extends React.Component {
 
   openModal() {
     this.setState({ renderUpload: true });
+    document.body.style.overflow = 'hidden';
   }
 
   closeModal() {
     this.setState({ renderUpload: false });
+    document.body.style.overflow = 'visible';
   }
 
   render() {

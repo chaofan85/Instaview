@@ -17,7 +17,11 @@ class CommentIndex extends React.Component {
     e.preventDefault();
     this.setState({ photoId: this.props.photo.photoId });
     const comment = Object.assign({}, this.state);
-    this.props.addComment(comment);
+    this.props.addComment(comment).then(
+      () => this.setState({
+        body: ""
+      })
+    );
   }
 
   handleChange() {
@@ -32,7 +36,6 @@ class CommentIndex extends React.Component {
         <CommentIndexItemContainer comment={comment} key={comment.id} />
       );
     });
-
     return (
       <section className="comment-area">
         <ul className="comment-list">
@@ -46,7 +49,10 @@ class CommentIndex extends React.Component {
             :
             null
           }
-          <li className="comments-text">Comments</li>
+          {
+            this.props.photo.comment_ids.length ?
+            <li className="comments-text">Comments</li> : null
+          }
           { comments }
         </ul>
         <div className="comment-adding">

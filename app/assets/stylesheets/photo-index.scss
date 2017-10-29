@@ -26,13 +26,15 @@
 }
 
 .modal-bg {
-   position: fixed;
-   top: 0px;
-   bottom: 0px;
-   right: 0px;
-   left: 0px;
-   z-index: 10;
-   background: rgba(0,0,0,0.7);
+  height: 700px;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 10;
+  background: rgba(0,0,0,0.7);
+  overflow: hidden;
 }
 
 .modal-form {
@@ -41,7 +43,7 @@
   border: 1px solid black;
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -260,12 +262,10 @@
   margin-bottom: 4px;
 }
 
-.comment-area li {
-  padding: 5px 0;
-}
-
 .comments-text {
   font-weight: 600;
+  margin-top: 7px;
+  margin-bottom: 4px;
 }
 
 .comment-adding {
@@ -284,4 +284,21 @@
 
 .author-name {
   font-weight: 600;
+}
+
+.comment-item {
+  height: 25px;
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+
+.delete-comment {
+  color: #c7c7c7;
+  cursor: pointer;
+  font-family: -apple-system, system-ui, "Segoe UI", 'Roboto', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  box-sizing: border-box;
 }

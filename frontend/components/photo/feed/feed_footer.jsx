@@ -35,7 +35,19 @@ class FeedFooter extends React.Component {
           <span className="comment-icon"></span>
         </div>
 
-        <div className="likes-number">{this.props.photo.likes} likes</div>
+        {
+          this.props.photo.likes ?
+          <div className="likes-number">
+            {this.props.photo.likes} &nbsp;
+            {
+              this.props.photo.likes > 1 ?
+              <span>likes</span> : <span>like</span>
+            }
+          </div>
+          :
+          null
+        }
+
 
         <CommentIndexContainer photo={this.props.photo}
           username={ this.props.username }/>
