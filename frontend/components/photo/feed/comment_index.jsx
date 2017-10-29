@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentIndexItemContainer from './comment_index_item_container';
 
 class CommentIndex extends React.Component {
   constructor(props) {
@@ -28,11 +29,7 @@ class CommentIndex extends React.Component {
   render() {
     const comments = this.props.photo.comments.map(comment => {
       return (
-        <li key={comment.id}>
-          <span className="author-name">
-            {comment.username}
-          </span> : {comment.body}
-        </li>
+        <CommentIndexItemContainer comment={comment} key={comment.id} />
       );
     });
 

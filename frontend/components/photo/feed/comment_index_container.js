@@ -2,13 +2,6 @@ import { connect } from 'react-redux';
 import CommentIndex from './comment_index';
 import { addComment, deleteComment } from '../../../actions/photo_actions';
 
-const mapStateToProps = (state) => {
-  // console.log(state);
-  return {
-    currentUserId: state.session.currentUser.id
-  };
-};
-
 const mapDispatchToProps = (dispatch) => {
   return {
     addComment: (comment) => dispatch(addComment(comment)),
@@ -17,6 +10,6 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(CommentIndex);

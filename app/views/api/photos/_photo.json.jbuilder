@@ -11,5 +11,6 @@ json.comments do
     json.body comment.body
     json.username comment.author.username
     json.id comment.id
+    json.author_id comment.author_id
   end
 end
