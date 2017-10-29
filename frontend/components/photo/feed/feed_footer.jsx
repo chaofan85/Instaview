@@ -46,7 +46,7 @@ class FeedFooter extends React.Component {
         <div className="feed-footer-icons">
 
           {
-            this.props.likedByCurrentUser ?
+            this.props.photo.likedByCurrentUser ?
             <span className="liked"
               onClick={() => this.cancleLike(this.props.photo.photoId)}></span>
             :
