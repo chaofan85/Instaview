@@ -9,9 +9,9 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  # def show
-  #   @user = User.includes()
-  # end
+  def show
+    @user = User.includes(:photos).find(params[:id])
+  end
 
   private
 

@@ -39,3 +39,10 @@ export const deleteComment = (commentId) => {
     url: `api/comments/${commentId}`
   });
 };
+
+export const fetchUserInfo = (id) => {
+  return $.ajax({
+    method: 'GET',
+    url: `api/users/${id}`,
+  });
+};

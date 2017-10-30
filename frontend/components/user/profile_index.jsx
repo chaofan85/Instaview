@@ -3,12 +3,20 @@ import Header from '../header';
 
 class ProfileIndex extends React.Component {
 
+
+
+  componentDidMount() {
+    this.props.fetchUserInfo(this.props.currentUser.id);
+  }
+
   render() {
+    console.log(this.props);
     return (
       <div className='profile-page'>
         <Header currentUser={this.props.currentUser}/>
 
         <article className="profile-main">
+
           <section className="profile-header">
             <div className="user-profile-avatar"></div>
             <div className="user-profile-info">
@@ -28,6 +36,10 @@ class ProfileIndex extends React.Component {
                 <span></span>
               </div>
             </div>
+          </section>
+
+          <section className="user-gallery">
+            
           </section>
         </article>
       </div>

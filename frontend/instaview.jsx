@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import { addComment } from './util/photo_api_util';
+// import { addComment, fetchUserInfo } from './util/photo_api_util';
+import {fetchUserInfo} from './actions/user_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,7 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const root = document.getElementById('root');
   window.store = store;
-  window.addComment = addComment;
+  window.dispatch = store.dispatch;
+  window.fetchUserInfo = fetchUserInfo;
 
   ReactDOM.render(<Root store={ store } />, root);
 });
