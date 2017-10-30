@@ -3,9 +3,15 @@ import CommentIndexItem from './comment_index_item';
 import { deleteComment } from '../../../actions/photo_actions';
 
 const mapStateToProps = (state) => {
-  return {
-    currentUserId: state.session.currentUser.id
-  };
+  if (state.session.currentUser) {
+    return {
+      currentUserId: state.session.currentUser.id
+    };
+  } else {
+    return {
+      currentUserId: null
+    };
+  }
 };
 
 

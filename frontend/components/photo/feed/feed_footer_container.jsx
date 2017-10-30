@@ -6,11 +6,16 @@ import { addComment,
          deleteLike} from '../../../actions/photo_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
-  return {
-    currentUserId: state.session.currentUser.id,
-    photo: ownProps.photo
-  };
+  if (state.session.currentUser) {
+    return {
+      currentUserId: state.session.currentUser.id,
+      photo: ownProps.photo
+    };
+  } else {
+    return {
+      currentUserId: null
+    };
+  }
 };
 
 const mapDispatchToProps = (dispatch) => {

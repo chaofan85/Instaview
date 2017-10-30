@@ -10,7 +10,6 @@ import merge from 'lodash/merge';
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
-
     const photos = window.currentUser.photos;
     console.log(photos);
     delete window.currentUser["photos"];

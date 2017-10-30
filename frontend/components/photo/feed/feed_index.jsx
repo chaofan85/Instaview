@@ -8,6 +8,7 @@ class FeedIndex extends React.Component {
   }
 
 
+
   render() {
     const feeds = this.props.photos.map(photo => {
       return (
