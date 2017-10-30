@@ -9,5 +9,6 @@ Rails.application.routes.draw do
       delete :unlike, on: :member
     end
     resources :comments, only: [:create, :destroy]
+    resources :follows, only: [:create, :destroy]
   end
 end

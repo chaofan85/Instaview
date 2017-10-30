@@ -23,6 +23,7 @@
   height: 100px;
   text-align: center;
   padding-top: 30px;
+
 }
 
 .modal-bg {
@@ -34,8 +35,8 @@
   left: 0px;
   z-index: 10;
   background: rgba(0,0,0,0.7);
-  overflow: hidden;
 }
+
 
 .modal-form {
   width: 600px;
@@ -49,7 +50,17 @@
   transform: translate(-50%, -50%);
   background: white;
   z-index: 11;
+  box-shadow: 5px 5px 3px #333;
+  filter: blur(0px);
+  // background-image: image-url("pen.png");
+  // background-repeat: no-repeat;
+  // overflow: visible;
+  // background-position: 200px, 100px;
 }
+
+// .photo-upload .modal-form {
+//   transform: rotate(-10deg);
+// }
 
 .modal-close {
   position: absolute;
@@ -234,7 +245,7 @@
   background-repeat: no-repeat;
   background-position: -256px -322px;
   background-size: 395px 371px;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .feed-footer-icons .comment-icon{
@@ -244,7 +255,7 @@
   background-repeat: no-repeat;
   background-position: -353px -176px;
   background-size: 395px 371px;
-  margin-top: 8px;
+  margin-top: 10px;
   margin-left: 16px;
 }
 

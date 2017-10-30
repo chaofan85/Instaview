@@ -43,7 +43,7 @@ const PhotoReducer = (state = initialState, action) => {
       } else {
         return {};
       }
-    
+
 
     default:
       return state;

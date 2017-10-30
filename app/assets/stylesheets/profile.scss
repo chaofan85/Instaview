@@ -56,9 +56,27 @@
   padding: 0 25px;
   border: 1px solid #dbdbdb;
   margin-left: 20px;
-  margin-top: 7px;
+  margin-top: 9px;
   padding-top: 3px;
   box-sizing: border-box;
+}
+
+.user-profile-info-1 a {
+  width: 24px;
+  height: 24px;
+}
+
+.setting-options {
+  height: 24px;
+  width: 24px;
+  background: image-url("icons.png");
+  background-repeat: no-repeat;
+  background-position: -100px -347px;
+  background-size: 395px 371px;
+  margin-left: 10px;
+  margin-top: 9px;
+  cursor: pointer;
+  box-sizing: content-box;
 }
 
 .user-profile-info-2 {

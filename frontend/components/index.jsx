@@ -9,9 +9,6 @@ class Index extends React.Component {
     if (this.props.currentUser) {
       return (
         <div className='main'>
-          <button className="logout" onClick={this.props.logout}>
-            Logout
-          </button>
 
           <Header logout={this.props.logout}
             currentUser={this.props.currentUser}/>

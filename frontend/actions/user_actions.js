@@ -9,7 +9,7 @@ const receiveUser = (user) => {
   };
 };
 
-export const fetchUserInfo = user => dispatch => {
-  return PhotoAPIUtil.fetchUserInfo(user).then(
-    returnedUser => dispatch(receiveUser(returnedUser)));
+export const fetchUserInfo = id => dispatch => {
+  return PhotoAPIUtil.fetchUserInfo(id).then(
+    user => dispatch(receiveUser(user)));
 };

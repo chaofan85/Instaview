@@ -7,7 +7,10 @@ class Header extends React.Component {
   }
 
   render() {
-    const username = this.props.currentUser.username;
+    let username;
+    if (this.props.currentUser) {
+      username = this.props.currentUser.username;
+    }
     return (
       <header>
         <nav>
