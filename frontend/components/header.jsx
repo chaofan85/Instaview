@@ -11,10 +11,12 @@ class Header extends React.Component {
     return (
       <header>
         <nav>
-          <div className="logo">
-            <div className='header-bg-logo'></div>
-            <div className='header-logo'>Instaview</div>
-          </div>
+          <Link to='/'>
+            <div className="logo">
+              <div className='header-bg-logo'></div>
+              <div className='header-logo'>Instaview</div>
+            </div>
+          </Link>
 
           <div className="search-area">
             <input className='search-bar' type='text'/>

@@ -8,6 +8,9 @@ class User < ApplicationRecord
   has_many :likes, class_name: 'Like', foreign_key: :liker_id, primary_key: :id
   has_many :liked_photos, through: :likes, source: :photo
 
+  has_attached_file :avatar, default_url: "avatar.png"
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
+
   after_initialize :ensure_session_token
 
   attr_reader :password
@@ -31,6 +34,10 @@ class User < ApplicationRecord
     self.session_token = SecureRandom.urlsafe_base64(16)
     self.save!
     self.session_token
+  end
+
+  def post_number
+    self.photos.count
   end
 
   private

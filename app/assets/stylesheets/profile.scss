@@ -25,6 +25,10 @@
   border: 1px solid black;
 }
 
+.user-profile-avatar:hover {
+  cursor: pointer;
+}
+
 .user-profile-info {
   width: 610px;
   height: 150px;
@@ -82,7 +86,6 @@
 .photo-item {
   width: 293px;
   height: 293px;
-  border: 1px solid black;
   margin-bottom: 28px;
 }
 
