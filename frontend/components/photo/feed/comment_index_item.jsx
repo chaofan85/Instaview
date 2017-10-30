@@ -47,7 +47,7 @@ class CommentIndexItem extends React.Component {
           this.state.confirmDelete ?
           <div className='confirmation'>
             <div className='modal-form'>
-              <ul className='delete-options'>
+              <ul className='modal-options'>
                 <li>
                   <button onClick={this.removeComment}>Delete Comment</button>
                 </li>

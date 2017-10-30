@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :comments, class_name: 'Comment', foreign_key: :author_id, primary_key: :id
   has_many :likes, class_name: 'Like', foreign_key: :liker_id, primary_key: :id
   has_many :liked_photos, through: :likes, source: :photo
+  has_many :followers, class_name: 'Follow', foreign_key: :follower_id, primary_key: :id
+  has_many :fo
 
   has_attached_file :avatar, default_url: "avatar.png"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
