@@ -2,6 +2,8 @@ import { RECEIVE_PHOTO,
          RECEIVE_COMMENT,
          REMOVE_COMMENT } from '../actions/photo_actions';
 
+import {RECEIVE_CURRENT_USER} from '../actions/session_actions';
+
 import merge from 'lodash/merge';
 
 const initialState = {};
@@ -34,8 +36,14 @@ const PhotoReducer = (state = initialState, action) => {
         state,
         { [action.comment.photo_id]: newPhoto }
       );
-    // case REMOVE_COMMENT:
 
+    case RECEIVE_CURRENT_USER:
+      if (action.user) {
+        return merge({}, state, action.user.photos);
+      } else {
+        return {};
+      }
+    
 
     default:
       return state;

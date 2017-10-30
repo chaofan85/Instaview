@@ -31,12 +31,12 @@ class UserAvatar extends React.Component {
             <div className='modal-form'>
               <ul className='modal-options'>
                 <li>
-                  <button onClick={this}>
+                  <button>
                     Remove Current Photo
                   </button>
                 </li>
                 <li>
-                  <input type='file' />Upload Photo
+                  <button>Upload Picture</button>
                 </li>
                 <li>
                   <button onClick={this.closeModal}>Cancel</button>

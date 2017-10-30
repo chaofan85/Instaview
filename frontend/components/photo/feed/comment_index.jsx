@@ -18,9 +18,10 @@ class CommentIndex extends React.Component {
     this.setState({ photoId: this.props.photo.photoId });
     const comment = Object.assign({}, this.state);
     this.props.addComment(comment).then(
-      this.setState({
+      () => {
+        this.setState({
         body: ""
-      })
+      });}
     );
   }
 
@@ -59,6 +60,7 @@ class CommentIndex extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <input type="text"
               placeholder="Add a comment..."
+              value={this.state.body}
               onChange={this.handleChange()}></input>
           </form>
         </div>
