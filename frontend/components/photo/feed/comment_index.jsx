@@ -18,7 +18,7 @@ class CommentIndex extends React.Component {
     this.setState({ photoId: this.props.photo.photoId });
     const comment = Object.assign({}, this.state);
     this.props.addComment(comment).then(
-      () => this.setState({
+      this.setState({
         body: ""
       })
     );

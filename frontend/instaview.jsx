@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
+  console.log(store);
+
   const root = document.getElementById('root');
   window.store = store;
   window.dispatch = store.dispatch;
