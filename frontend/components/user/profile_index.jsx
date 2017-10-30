@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../header';
+import UserPhotoIndex from './user_photo_index';
 
 class ProfileIndex extends React.Component {
 
@@ -10,7 +11,6 @@ class ProfileIndex extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className='profile-page'>
         <Header currentUser={this.props.currentUser}/>
@@ -38,9 +38,10 @@ class ProfileIndex extends React.Component {
             </div>
           </section>
 
-          <section className="user-gallery">
-            
-          </section>
+          {
+            this.props.user.photos ?
+            <UserPhotoIndex  user={this.props.user}/> : null
+          }
         </article>
       </div>
     );
