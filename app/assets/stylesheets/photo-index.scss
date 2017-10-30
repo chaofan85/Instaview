@@ -37,6 +37,10 @@
   background: rgba(0,0,0,0.7);
 }
 
+.upload-panel .modal-form {
+  box-shadow: 5px 5px 3px #333;
+}
+
 
 .modal-form {
   width: 600px;
@@ -50,12 +54,8 @@
   transform: translate(-50%, -50%);
   background: white;
   z-index: 11;
-  box-shadow: 5px 5px 3px #333;
-  filter: blur(0px);
-  // background-image: image-url("pen.png");
-  // background-repeat: no-repeat;
-  // overflow: visible;
-  // background-position: 200px, 100px;
+
+
 }
 
 // .photo-upload .modal-form {
