@@ -21,9 +21,8 @@ class CommentIndexItem extends React.Component {
   }
 
   removeComment() {
-    this.props.deleteComment(this.props.comment).then(
-      () => this.closeModal()
-    );
+    this.closeModal();
+    this.props.deleteComment(this.props.comment);
   }
 
   render() {

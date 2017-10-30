@@ -1,35 +1,16 @@
 import React from 'react';
 import Header from '../header';
 import UserPhotoIndex from './user_photo_index';
-// import UserAvatarContainer from './user_avatar_container';
+import UserAvatar from './user_avatar';
 
 
 class ProfileIndex extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { renderEdit: false };
-    this.closeModal = this.closeModal.bind(this);
-    this.openModal = this.openModal.bind(this);
-  }
-
-  openModal() {
-    this.setState({ renderEdit: true });
-    document.body.style.overflow = 'hidden';
-  }
-
-  closeModal() {
-    this.setState({ renderEdit: false });
-    document.body.style.overflow = 'visible';
-  }
-
 
   componentDidMount() {
     this.props.fetchUserInfo(this.props.currentUser.id);
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className='profile-page'>
         <Header currentUser={this.props.currentUser}/>
@@ -37,32 +18,8 @@ class ProfileIndex extends React.Component {
         <article className="profile-main">
 
           <section className="profile-header">
-          
-            <div className="user-profile-avatar" onClick={this.openModal}></div>
 
-            {
-              this.state.renderEdit ?
-              <div className='user-info-edit'>
-                <div className='modal-form'>
-                  <ul className='modal-options'>
-                    <li>
-                      <button onClick={this.removeComment}>Remove Current Photo</button>
-                    </li>
-                    <li>
-                      <button>Upload Photo</button>
-                    </li>
-                    <li>
-                      <button onClick={this.closeModal}>Cancel</button>
-                    </li>
-                  </ul>
-                  <span className="modal-close"
-                    onClick={this.closeModal}>&times;</span>
-                </div>
-                <div className="modal-bg"></div>
-              </div>
-              :
-              null
-            }
+            <UserAvatar />
 
             <div className="user-profile-info">
               <div className="user-profile-info-1">

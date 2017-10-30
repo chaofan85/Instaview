@@ -17,7 +17,6 @@ class FeedFooter extends React.Component {
 
 
   render() {
-
     return (
 
       <div className="feed-footer">

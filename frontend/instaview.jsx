@@ -4,6 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 // import { addComment, fetchUserInfo } from './util/photo_api_util';
 import {fetchUserInfo} from './actions/user_actions';
+import merge from 'lodash/merge';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,7 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.currentUser) {
 
     const photos = window.currentUser.photos;
+    console.log(photos);
     delete window.currentUser["photos"];
+
     const preloadedState = {
       session: { currentUser: window.currentUser },
       entities: { photos: photos }
@@ -26,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.store = store;
   window.dispatch = store.dispatch;
   window.fetchUserInfo = fetchUserInfo;
+  window.merge = merge;
 
   ReactDOM.render(<Root store={ store } />, root);
 });

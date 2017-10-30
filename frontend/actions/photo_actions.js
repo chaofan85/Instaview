@@ -48,5 +48,5 @@ export const addComment = (comment) => (dispatch) => {
 
 export const deleteComment = (comment) => (dispatch) => {
   return PhotoAPIUtil.deleteComment(comment.id).then(
-    (returnedComment) => dispatch(removeComment(receiveComment.id)));
+    (returnedPhoto) => dispatch(receivePhoto(returnedPhoto)));
 };

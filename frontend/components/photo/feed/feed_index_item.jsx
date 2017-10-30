@@ -20,9 +20,7 @@ class FeedIndexItem extends React.Component  {
         <FeedBody imageUrl={this.props.photo.image_url} />
 
         <FeedFooterContainer photo={this.props.photo}
-          username={ this.props.username }
-          addLike={this.props.addLike}
-          deleteLike={this.props.deleteLike} />
+          username={ this.props.username } />
 
       </article>
     );

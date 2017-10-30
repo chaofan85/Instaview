@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :likes, class_name: 'Like', foreign_key: :liker_id, primary_key: :id
   has_many :liked_photos, through: :likes, source: :photo
   has_many :followers, class_name: 'Follow', foreign_key: :follower_id, primary_key: :id
-  has_many :fo
+  # has_many :fo
 
   has_attached_file :avatar, default_url: "avatar.png"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
@@ -40,6 +40,10 @@ class User < ApplicationRecord
 
   def post_number
     self.photos.count
+  end
+
+  def liked_by_current_user(photo)
+    self.liked_photos.include?(photo)
   end
 
   private
