@@ -112,17 +112,17 @@
   -webkit-animation-name: imgFade;
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-duration: 24s;
+  -webkit-animation-duration: 28s;
 
   -moz-animation-name: imgFade;
   -moz-animation-timing-function: ease-in-out;
   -moz-animation-iteration-count: infinite;
-  -moz-animation-duration: 24s;
+  -moz-animation-duration: 28s;
 
   -o-animation-name: imgFade;
   -o-animation-timing-function: ease-in-out;
   -o-animation-iteration-count: infinite;
-  -o-animation-duration: 24s;
+  -o-animation-duration: 28s;
 
   animation-name: imgFade;
   animation-timing-function: ease-in-out;
@@ -169,7 +169,7 @@
   -webkit-animation-delay: 4s;
   -moz-animation-delay: 4s;
   -o-animation-delay: 4s;
-  animation-delay: 4s;
+  animation-delay: 0s;
 }
 
 
