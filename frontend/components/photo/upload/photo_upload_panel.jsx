@@ -50,9 +50,14 @@ class PhotoUploadPanel extends React.Component {
     return (
       <div className="photo-ul">
         <form className='photo-info' onSubmit={this.handleSubmit}>
-          <input type="file"
-            className="choose-photo"
-            onChange={ this.uploadPhoto } />
+          <label htmlFor="upload">
+            <div className='upload-symbol'>&#8682;</div>
+            <input type="file"
+              className="choose-photo"
+              onChange={ this.uploadPhoto }
+              id="upload" style={{display:"none"}}/>
+          </label>
+
 
           <input type="text"
             className="location"
