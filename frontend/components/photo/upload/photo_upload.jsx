@@ -23,7 +23,7 @@ class PhotoUpload extends React.Component {
     return (
       <div className="photo-upload">
         <button className='new-photo-button'
-          onClick={this.openModal}>+ New Photo</button>
+          onClick={this.openModal}>+</button>
 
         { this.state.renderUpload ? (
           <div className='upload-panel'>

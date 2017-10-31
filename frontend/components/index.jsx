@@ -18,7 +18,9 @@ class Index extends React.Component {
     } else {
       return (
         <div className="index-main">
-          <div className='index-background'></div>
+          <div className='index-background'>
+            <img src={"photo-189349.jpeg"} />
+          </div>
           <SessionForm />
         </div>
       );
