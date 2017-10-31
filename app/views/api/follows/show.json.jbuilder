@@ -1,1 +1,2 @@
-json.partial! 'api/users/user', user: @follow.follower
+json.partial! 'api/users/user', user: @follow.followed_user
+json.follow_id @follow.id

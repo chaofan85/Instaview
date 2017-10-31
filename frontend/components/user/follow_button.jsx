@@ -4,7 +4,6 @@ class FollowButton extends React.Component {
   constructor(props) {
     super(props);
     this.state= {
-      follower_id: this.props.currentUser.id,
       followee_id: this.props.user.id
     };
 
@@ -18,10 +17,12 @@ class FollowButton extends React.Component {
   }
 
   unfollow() {
-    // this.props.unFollowUser(this.state);
+    const followId = this.props.user.follow_id;
+    this.props.unFollowUser(followId);
   }
 
   render() {
+    console.log(this.props);
     if (this.props.user.followed_by_current_user) {
       return (
         <span className="unfollow-user"

@@ -1,15 +1,15 @@
 export const followUser = follow => {
   // debugger
-  return {
+  return $.ajax({
     method: 'POST',
     url: 'api/follows',
     data: { follow }
-  };
+  });
 };
 
 export const unFollowUser = (id) => {
-  return {
+  return $.ajax({
     method: 'DELETE',
     url: `api/follows/${id}`,
-  };
+  });
 };

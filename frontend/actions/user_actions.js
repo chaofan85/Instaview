@@ -1,6 +1,6 @@
 import * as PhotoAPIUtil from '../util/photo_api_util';
 import * as UserAPIUtil from '../util/user_api_util';
-import { receiveCurrentUser } from './session_actions';
+// import { receiveCurrentUser } from './session_actions';
 
 export const RECEIVE_USER = 'RECEIVE_USER';
 
@@ -18,10 +18,10 @@ export const fetchUserInfo = username => dispatch => {
 
 export const followUser = follow => dispatch => {
   return UserAPIUtil.followUser(follow).then(
-    user => dispatch(receiveCurrentUser(user)));
+    user => dispatch(receiveUser(user)));
 };
 
-export const unFollowUser = follow => dispatch => {
-  return UserAPIUtil.unFollowUser(follow.id).then(
-    user => dispatch(receiveCurrentUser(user)));
+export const unFollowUser = followId => dispatch => {
+  return UserAPIUtil.unFollowUser(followId).then(
+    user => dispatch(receiveUser(user)));
 };

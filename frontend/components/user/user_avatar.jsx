@@ -37,6 +37,7 @@ class UserAvatar extends React.Component {
   }
 
 
+
   render() {
     return (
       <section className="avatar-edit">
