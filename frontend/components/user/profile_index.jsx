@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../header';
 import UserPhotoIndex from './user_photo_index';
 import UserAvatar from './user_avatar';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 
 class ProfileIndex extends React.Component {
@@ -12,6 +12,7 @@ class ProfileIndex extends React.Component {
     this.state = { renderOptions: false };
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
+    this.userLogout = this.userLogout.bind(this);
   }
 
   openModal() {
@@ -22,6 +23,13 @@ class ProfileIndex extends React.Component {
   closeModal() {
     this.setState({ renderOptions: false });
     document.body.style.overflow = 'visible';
+  }
+
+  userLogout() {
+    this.closeModal();
+    this.props.logout();
+    this.props.history.push("/");
+
   }
 
   componentDidMount() {
@@ -60,7 +68,7 @@ class ProfileIndex extends React.Component {
                     <div className='modal-form'>
                       <ul className='modal-options'>
                         <li>
-                          <button onClick={this.props.logout}>Log Out</button>
+                          <button onClick={this.userLogout}>Log Out</button>
                         </li>
                         <li>
                           <Link to='/'>
@@ -98,4 +106,4 @@ class ProfileIndex extends React.Component {
   }
 }
 
-export default ProfileIndex;
+export default withRouter(ProfileIndex);

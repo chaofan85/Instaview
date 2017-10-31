@@ -50,6 +50,10 @@ class User < ApplicationRecord
     self.liked_photos.include?(photo)
   end
 
+  def get_user(username)
+    User.find_by(username: username)
+  end
+
   private
 
   def ensure_session_token

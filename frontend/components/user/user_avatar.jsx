@@ -4,9 +4,14 @@ class UserAvatar extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { renderEdit: false };
+    this.state = {
+      renderEdit: false,
+      imageFile: null,
+      imageUrl: null,
+     };
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
+    this.uploadAvatar = this.uploadAvatar.bind(this);
   }
 
   openModal() {
@@ -17,6 +22,18 @@ class UserAvatar extends React.Component {
   closeModal() {
     this.setState({ renderEdit: false });
     document.body.style.overflow = 'visible';
+  }
+
+  uploadAvatar(e) {
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = () => {
+      this.setState({ imageFile: file, imageUrl: fileReader.result });
+    };
+
+    if (file) {
+      fileReader.readAsDataURL(file);
+    }
   }
 
 
@@ -36,7 +53,13 @@ class UserAvatar extends React.Component {
                   </button>
                 </li>
                 <li>
-                  <button>Upload Picture</button>
+                  <label htmlFor="upload">
+                    <div>Upload Photo</div>
+                    <input type="file"
+                      className="choose-photo"
+                      onChange={ this.uploadAvatar }
+                      id="upload" style={{display:"none"}}/>
+                  </label>
                 </li>
                 <li>
                   <button onClick={this.closeModal}>Cancel</button>

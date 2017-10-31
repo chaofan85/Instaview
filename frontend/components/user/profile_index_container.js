@@ -3,7 +3,8 @@ import ProfileIndex from './profile_index';
 import { fetchUserInfo } from '../../actions/user_actions';
 import { logout } from '../../actions/session_actions';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
+  
   return {
     currentUser: state.session.currentUser,
     user: state.entities.user

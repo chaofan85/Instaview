@@ -19,7 +19,12 @@ class Index extends React.Component {
       return (
         <div className="index-main">
           <div className='index-background'>
-            <img src={"photo-189349.jpeg"} />
+            <img src={`${window.photo1}`} />
+            <img src={`${window.photo2}`} />
+            <img src={`${window.photo3}`} />
+            <img src={`${window.photo4}`} />
+            <img src={`${window.photo5}`} />
+            <img className="dog-pic" src={`${window.photo6}`} />
           </div>
           <SessionForm />
         </div>

@@ -77,14 +77,13 @@
   margin-left: auto;
   border-radius: 50%;
   box-shadow: 3px 3px 2px #2c2c2c;
-  transition: background .5s, color .5s;
+  transition: background .5s;
 
 }
 
 .new-photo-button:hover {
   background: #4286f4;
-  color: #dce85f;
-  transition: background .5s, color .5s;
+  transition: background .5s;
 }
 
 .new-photo-button:active{
@@ -215,7 +214,7 @@
 }
 
 .feed-user-info {
-  width: 150px;
+  width: 300px;
   height: 35px;
   /*border: 1px solid black;*/
   font-family: sans-serif;
@@ -388,6 +387,7 @@
   font-weight: 400;
   background: #fff;
   box-sizing: border-box;
+
 }
 
 .modal-options li:hover {
@@ -397,4 +397,8 @@
 .modal-options li button {
   width: 100%;
   height: 100%;
+}
+.modal-options li div {
+  padding-top: 15px;
+  cursor: pointer;
 }
