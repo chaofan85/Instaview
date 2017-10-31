@@ -1,15 +1,15 @@
 import { connect } from 'react-redux';
 import EditOrFollow from './edit_or_follow';
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-
+    currentUser: state.session.currentUser
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-
+    
   };
 };
 

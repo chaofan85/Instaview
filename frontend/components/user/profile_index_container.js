@@ -8,6 +8,7 @@ const mapStateToProps = (state, ownProps) => {
   const user = state.entities.user[username];
   return {
     currentUser: state.session.currentUser,
+    pageOwner: username,
     user: user
   };
 };

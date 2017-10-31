@@ -65,8 +65,8 @@ class ProfileIndex extends React.Component {
                       this.props.user.username : null
                     }
                   </span>
-                  <span className="edit-profile">Edit Profile</span>
-                  <EditOrFollowContainer />
+                  
+                  <EditOrFollowContainer pageOwner={this.props.pageOwner}/>
 
                   <span className="setting-options"
                     onClick={this.openModal}></span>

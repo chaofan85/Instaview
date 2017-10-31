@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 // import { addComment, fetchUserInfo } from './util/photo_api_util';
-import {fetchUserInfo} from './actions/user_actions';
+import {fetchUserInfo, followUser} from './actions/user_actions';
 import merge from 'lodash/merge';
 
 
@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.dispatch = store.dispatch;
   window.fetchUserInfo = fetchUserInfo;
   window.merge = merge;
+  window.followUser = followUser;
 
   ReactDOM.render(<Root store={ store } />, root);
 });

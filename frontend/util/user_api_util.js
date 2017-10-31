@@ -1,4 +1,5 @@
 export const followUser = follow => {
+  // debugger
   return {
     method: 'POST',
     url: 'api/follows',

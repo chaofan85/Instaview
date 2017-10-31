@@ -20,3 +20,8 @@ export const followUser = follow => dispatch => {
   return UserAPIUtil.followUser(follow).then(
     user => dispatch(receiveCurrentUser(user)));
 };
+
+export const unFollowUser = follow => dispatch => {
+  return UserAPIUtil.unFollowUser(follow.id).then(
+    user => dispatch(receiveCurrentUser(user)));
+};
