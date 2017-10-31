@@ -10,7 +10,8 @@ const UserReducer = (state = {}, action) => {
       if (!action.user) {
         return {};
       } else {
-        return merge({}, state, action.user);
+        // return merge({}, state, action.user);
+        return state;
       }
     default:
       return state;

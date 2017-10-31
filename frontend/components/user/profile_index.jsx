@@ -1,8 +1,9 @@
 import React from 'react';
-import Header from '../header';
+import HeaderContainer from '../header_container';
 import UserPhotoIndex from './user_photo_index';
 import UserAvatar from './user_avatar';
 import { Link, withRouter } from 'react-router-dom';
+import EditOrFollowContainer from './edit_or_follow_container';
 
 
 class ProfileIndex extends React.Component {
@@ -40,6 +41,7 @@ class ProfileIndex extends React.Component {
     if (nextProps.match.params.username !== this.props.match.params.username) {
       this.props.fetchUserInfo(nextProps.match.params.username);
     }
+
   }
 
   render() {
@@ -47,7 +49,7 @@ class ProfileIndex extends React.Component {
 
       return (
         <div className='profile-page'>
-          <Header currentUser={this.props.user}/>
+          <HeaderContainer />
 
           <article className="profile-main">
 
@@ -64,6 +66,7 @@ class ProfileIndex extends React.Component {
                     }
                   </span>
                   <span className="edit-profile">Edit Profile</span>
+                  <EditOrFollowContainer />
 
                   <span className="setting-options"
                     onClick={this.openModal}></span>

@@ -1,4 +1,7 @@
 json.extract! user, :id, :username, :post_number
+json.follower_ids user.follower_ids
+json.following_ids user.following_ids
+json.followed_by_current_user user.followed_by_current_user(current_user)
 # json.fetched_user_id user.get_user(username)
 json.photos do
   user.photos.each do |photo|

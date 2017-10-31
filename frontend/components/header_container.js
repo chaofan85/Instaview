@@ -1,14 +1,13 @@
-import Index from './index';
 import { connect } from 'react-redux';
-import { logout } from '../actions/session_actions.js';
+import Header from './header';
 
 const mapStateToProps = state => {
   return {
-    currentUser: state.session.currentUser,
+    currentUser: state.session.currentUser
   };
 };
 
 export default connect(
   mapStateToProps,
   null
-)(Index);
+)(Header);

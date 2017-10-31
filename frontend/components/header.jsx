@@ -36,8 +36,7 @@ class Header extends React.Component {
                <span className='profile-icon'></span>
              </Link>
           </div>
-
-          {/*<button onClick={this.props.logout}>logout</button>*/}
+          
         </nav>
       </header>
     );
