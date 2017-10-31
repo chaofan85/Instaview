@@ -4,16 +4,17 @@ import { fetchUserInfo } from '../../actions/user_actions';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  
+  const username = ownProps.match.params.username;
+  const user = state.entities.user[username];
   return {
     currentUser: state.session.currentUser,
-    user: state.entities.user
+    user: user
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchUserInfo: id => dispatch(fetchUserInfo(id)),
+    fetchUserInfo: username => dispatch(fetchUserInfo(username)),
     logout: () => dispatch(logout())
   };
 };

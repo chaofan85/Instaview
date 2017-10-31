@@ -5,7 +5,7 @@ import merge from 'lodash/merge';
 const UserReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_USER:
-      return merge({}, state, action.user);
+      return merge({}, state, {[action.user.username]: action.user});
     case RECEIVE_CURRENT_USER:
       if (!action.user) {
         return {};

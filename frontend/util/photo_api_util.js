@@ -40,9 +40,9 @@ export const deleteComment = (commentId) => {
   });
 };
 
-export const fetchUserInfo = (id) => {
+export const fetchUserInfo = (username) => {
   return $.ajax({
     method: 'GET',
-    url: `api/users/${id}`,
+    url: `api/users/${username}`,
   });
 };

@@ -33,76 +33,85 @@ class ProfileIndex extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.currentUser) {
-      this.props.fetchUserInfo(this.props.currentUser.id);
+    this.props.fetchUserInfo(this.props.match.params.username);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.match.params.username !== this.props.match.params.username) {
+      this.props.fetchUserInfo(nextProps.match.params.username);
     }
   }
 
   render() {
-    return (
-      <div className='profile-page'>
-        <Header currentUser={this.props.currentUser}/>
+    if (this.props.user) {
 
-        <article className="profile-main">
+      return (
+        <div className='profile-page'>
+          <Header currentUser={this.props.user}/>
 
-          <section className="profile-header">
+          <article className="profile-main">
 
-            <UserAvatar />
+            <section className="profile-header">
 
-            <div className="user-profile-info">
-              <div className="user-profile-info-1">
-                <span className="user-profile-username">
+              <UserAvatar />
+
+              <div className="user-profile-info">
+                <div className="user-profile-info-1">
+                  <span className="user-profile-username">
+                    {
+                      this.props.user ?
+                      this.props.user.username : null
+                    }
+                  </span>
+                  <span className="edit-profile">Edit Profile</span>
+
+                  <span className="setting-options"
+                    onClick={this.openModal}></span>
+
                   {
-                    this.props.currentUser ?
-                    this.props.currentUser.username : null
-                  }
-                </span>
-                <span className="edit-profile">Edit Profile</span>
-
-                <span className="setting-options"
-                  onClick={this.openModal}></span>
-
-                {
-                  this.state.renderOptions ?
-                  <div className='user-info-edit'>
-                    <div className='modal-form'>
-                      <ul className='modal-options'>
-                        <li>
-                          <button onClick={this.userLogout}>Log Out</button>
-                        </li>
-                        <li>
-                          <Link to='/'>
-                            <button onClick={this.closeModal}>Cancel</button>
-                          </Link>
-                        </li>
-                      </ul>
-                      <span className="modal-close"
-                        onClick={this.closeModal}>&times;</span>
+                    this.state.renderOptions ?
+                    <div className='user-info-edit'>
+                      <div className='modal-form'>
+                        <ul className='modal-options'>
+                          <li>
+                            <button onClick={this.userLogout}>Log Out</button>
+                          </li>
+                          <li>
+                            <Link to='/'>
+                              <button onClick={this.closeModal}>Cancel</button>
+                            </Link>
+                          </li>
+                        </ul>
+                        <span className="modal-close"
+                          onClick={this.closeModal}>&times;</span>
+                      </div>
+                      <div className="modal-bg"></div>
                     </div>
-                    <div className="modal-bg"></div>
-                  </div>
-                  :
-                  null
-                }
+                    :
+                    null
+                  }
+                </div>
+                <ul className="user-profile-info-2">
+                  <li>{this.props.user.post_number} posts</li>
+                  <li>xxx followers</li>
+                  <li>xxx following</li>
+                </ul>
+                <div className="user-profile-info-3">
+                  <span></span>
+                </div>
               </div>
-              <ul className="user-profile-info-2">
-                <li>{this.props.user.post_number} posts</li>
-                <li>xxx followers</li>
-                <li>xxx following</li>
-              </ul>
-              <div className="user-profile-info-3">
-                <span></span>
-              </div>
-            </div>
-          </section>
+            </section>
 
-          {
-            this.props.user.photos ?
-            <UserPhotoIndex  user={this.props.user}/> : null
-          }
-        </article>
-      </div>
-    );
+            {
+              this.props.user.photos ?
+              <UserPhotoIndex  user={this.props.user}/> : null
+              }
+            </article>
+          </div>
+        );
+    } else {
+      return null;
+    }
   }
 }
 

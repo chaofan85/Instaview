@@ -10,7 +10,7 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @user = User.includes(:photos).find(params[:id])
+    @user = User.includes(:photos).find_by(username: params[:username])
   end
 
   private
