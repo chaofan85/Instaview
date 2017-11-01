@@ -5,7 +5,7 @@ export const createPhoto = (id, formData) => {
     processData: false,
     contentType: false,
     dataType: 'json',
-    data: { avatar: data}
+    data: formData
   });
 };
 

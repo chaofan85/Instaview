@@ -131,7 +131,7 @@ class ProfileIndex extends React.Component {
               this.props.user.photos ?
               <UserPhotoIndex  user={this.props.user}/>
               :
-              <div>no post</div>
+              <div className="no-post">No posts yet</div>
             }
             </article>
           </div>

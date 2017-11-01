@@ -29,8 +29,7 @@ class UserAvatar extends React.Component {
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
     fileReader.onloadend = () => {
-      this.setState({ imageFile: file, imageUrl: fileReader.result });
-      this.handleSubmit(e);
+      this.handleSubmit(file);
     };
 
     if (file) {
@@ -38,17 +37,13 @@ class UserAvatar extends React.Component {
     }
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    const file = this.state.imageFile;
+  handleSubmit(file) {
+
     const id = this.props.currentUser.id;
     const formData = new FormData();
-    if (file) {
-      formData.append("user[avatar]", file);
-      // formData.append("user[]")
-    }
+    formData.append("user[avatar]", file);
 
-    this.props.uploadAvatar(id, formData).then(this.props.closeModal);
+    this.props.uploadAvatar(id, formData).then(this.closeModal);
   }
 
 

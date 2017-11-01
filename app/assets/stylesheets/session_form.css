@@ -2,6 +2,7 @@
   width: 300px;
   /*height: 150px;*/
   margin: auto;
+  font-family: -apple-system, system-ui, "Segoe UI", 'Roboto', Helvetica, Arial, sans-serif;
 }
 
 .signup-form {
@@ -9,6 +10,7 @@
   height: 330px;
   margin: auto;
   margin-top: 20px;
+  font-family: -apple-system, system-ui, "Segoe UI", 'Roboto', Helvetica, Arial, sans-serif;
 }
 
 .login-form input, .signup-form input {

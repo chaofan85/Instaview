@@ -6,7 +6,7 @@ import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
 import PhotoUpload from './photo/upload/photo_upload';
 import ProfileIndexContainer from './user/profile_index_container';
-// import PhotoShowContainer from './photo/PhotoShowContainer';
+import Footer from './footer';
 
 const App = () => (
   <div className="app">
@@ -15,6 +15,8 @@ const App = () => (
       {/*<Route path="/p/:photoId" component={ PhotoShowContainer } />*/}
       <ProtectedRoute path="/:username" component={ ProfileIndexContainer } />
     </Switch>
+
+    <Footer />
   </div>
 );
 

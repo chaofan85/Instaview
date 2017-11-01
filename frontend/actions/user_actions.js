@@ -26,7 +26,7 @@ export const unFollowUser = followeeId => dispatch => {
     user => dispatch(receiveUser(user)));
 };
 
-export const uploadAvatar = (formData) => (dispatch) => {
-  return UserAPIUtil.createPhoto(formData).then(
+export const uploadAvatar = (id, formData) => (dispatch) => {
+  return UserAPIUtil.createPhoto(id, formData).then(
   (user) => dispatch(receiveCurrentUser(user)));
 };
