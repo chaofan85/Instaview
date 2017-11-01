@@ -12,6 +12,7 @@ class UserAvatar extends React.Component {
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
     this.uploadAvatar = this.uploadAvatar.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   openModal() {
@@ -29,6 +30,7 @@ class UserAvatar extends React.Component {
     const fileReader = new FileReader();
     fileReader.onloadend = () => {
       this.setState({ imageFile: file, imageUrl: fileReader.result });
+      this.handleSubmit(e);
     };
 
     if (file) {
@@ -36,12 +38,27 @@ class UserAvatar extends React.Component {
     }
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    const file = this.state.imageFile;
+    const id = this.props.currentUser.id;
+    const formData = new FormData();
+    if (file) {
+      formData.append("user[avatar]", file);
+      // formData.append("user[]")
+    }
+
+    this.props.uploadAvatar(id, formData).then(this.props.closeModal);
+  }
+
 
 
   render() {
     return (
       <section className="avatar-edit">
-        <div className="user-profile-avatar" onClick={this.openModal}></div>
+        <div className="user-profile-avatar" onClick={this.openModal}>
+          <img src={`${this.props.user.avatar_url}`} />
+        </div>
 
         {
           this.state.renderEdit ?

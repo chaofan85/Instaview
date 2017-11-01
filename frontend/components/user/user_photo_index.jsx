@@ -7,7 +7,6 @@ const UserPhotoIndex = ({ user }) => {
     return (<UserPhotoIndexItem photo={photo} key={photo.photoId}/>);
   });
   return (
-
     <section className="user-gallery">
       <ul>
         { photos }

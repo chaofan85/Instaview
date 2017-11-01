@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import FollowButton from './follow_button';
-import { followUser, unFollowUser } from '../../actions/user_actions';
+import { followUser,
+         unFollowUser,
+         uploadAvatar } from '../../actions/user_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const username = ownProps.pageOwner;
@@ -14,7 +16,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
   return {
     followUser: followeeId => dispatch(followUser(followeeId)),
-    unFollowUser: followeeId => dispatch(unFollowUser(followeeId))
+    unFollowUser: followeeId => dispatch(unFollowUser(followeeId)),
+    
   };
 };
 

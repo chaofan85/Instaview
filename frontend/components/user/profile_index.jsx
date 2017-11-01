@@ -1,7 +1,7 @@
 import React from 'react';
 import HeaderContainer from '../header_container';
 import UserPhotoIndex from './user_photo_index';
-import UserAvatar from './user_avatar';
+import UserAvatarContainer from './user_avatar_container';
 import { Link, withRouter } from 'react-router-dom';
 import EditOrFollowContainer from './edit_or_follow_container';
 
@@ -45,7 +45,7 @@ class ProfileIndex extends React.Component {
   }
 
   render() {
-    console.log(this.props);
+    console.log(this.props.user);
     if (this.props.user) {
 
       return (
@@ -56,7 +56,7 @@ class ProfileIndex extends React.Component {
 
             <section className="profile-header">
 
-              <UserAvatar />
+              <UserAvatarContainer pageOwner={this.props.pageOwner} />
 
               <div className="user-profile-info">
                 <div className="user-profile-info-1">
@@ -100,11 +100,27 @@ class ProfileIndex extends React.Component {
                     null
                   }
                 </div>
+
                 <ul className="user-profile-info-2">
-                  <li>{this.props.user.post_number} posts</li>
-                  <li>xxx followers</li>
-                  <li>xxx following</li>
+                  <li>
+                    <span>{this.props.user.post_number}</span>
+                    {
+                      this.props.user.post_number > 1 ?
+                      " posts" : " post"
+                    }
+                  </li>
+                  <li>
+                    <span>{this.props.user.follower_num}</span>
+                    {
+                      this.props.user.follower_num > 1 ?
+                      " followers" : " follower"
+                    }
+                  </li>
+                  <li>
+                    <span>{this.props.user.following_num}</span> following
+                  </li>
                 </ul>
+
                 <div className="user-profile-info-3">
                   <span></span>
                 </div>
@@ -113,8 +129,10 @@ class ProfileIndex extends React.Component {
 
             {
               this.props.user.photos ?
-              <UserPhotoIndex  user={this.props.user}/> : null
-              }
+              <UserPhotoIndex  user={this.props.user}/>
+              :
+              <div>no post</div>
+            }
             </article>
           </div>
         );

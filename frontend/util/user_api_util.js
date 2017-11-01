@@ -1,3 +1,14 @@
+export const createPhoto = (id, formData) => {
+  return $.ajax({
+    url: `/api/users/${id}`,
+    type: 'PATCH',
+    processData: false,
+    contentType: false,
+    dataType: 'json',
+    data: { avatar: data}
+  });
+};
+
 export const followUser = (followeeId) => {
   // debugger
   return $.ajax({

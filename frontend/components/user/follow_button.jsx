@@ -19,7 +19,6 @@ class FollowButton extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     if (this.props.user.followed_by_current_user) {
       return (
         <span className="unfollow-user"

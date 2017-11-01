@@ -1,6 +1,6 @@
 import * as PhotoAPIUtil from '../util/photo_api_util';
 import * as UserAPIUtil from '../util/user_api_util';
-// import { receiveCurrentUser } from './session_actions';
+import { receiveCurrentUser } from './session_actions';
 
 export const RECEIVE_USER = 'RECEIVE_USER';
 
@@ -24,4 +24,9 @@ export const followUser = followeeId => dispatch => {
 export const unFollowUser = followeeId => dispatch => {
   return UserAPIUtil.unFollowUser(followeeId).then(
     user => dispatch(receiveUser(user)));
+};
+
+export const uploadAvatar = (formData) => (dispatch) => {
+  return UserAPIUtil.createPhoto(formData).then(
+  (user) => dispatch(receiveCurrentUser(user)));
 };

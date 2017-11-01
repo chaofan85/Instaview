@@ -14,7 +14,7 @@ class User < ApplicationRecord
   has_many :followers, through: :followed, source: :follower
   has_many :followings, through: :follows, source: :followed_user
 
-  has_attached_file :avatar, default_url: "avatar.png"
+  has_attached_file :avatar, default_url: ("avatar.png")
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
   after_initialize :ensure_session_token
@@ -56,6 +56,14 @@ class User < ApplicationRecord
 
   def followed_by_current_user(user)
     self.followers.include?(user)
+  end
+
+  def follower_num
+    self.followers.count
+  end
+
+  def following_num
+    self.followings.count
   end
 
 
