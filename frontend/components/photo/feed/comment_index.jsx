@@ -31,12 +31,17 @@ class CommentIndex extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.props.fetchComments(this.props.photo.photoId);
+  }
+
   render() {
-    const comments = this.props.photo.comments.map(comment => {
+    let comments = this.props.comments ?
+    this.props.comments.map(comment => {
       return (
         <CommentIndexItemContainer comment={comment} key={comment.id} />
       );
-    });
+    }) : null;
     return (
       <section className="comment-area">
         <ul className="comment-list">
@@ -51,7 +56,7 @@ class CommentIndex extends React.Component {
             null
           }
           {
-            this.props.photo.comment_ids.length ?
+            this.props.comments ?
             <li className="comments-text">Comments</li> : null
           }
           { comments }

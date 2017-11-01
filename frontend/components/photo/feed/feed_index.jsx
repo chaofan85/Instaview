@@ -7,16 +7,19 @@ class FeedIndex extends React.Component {
     super(props);
   }
 
-
+  componentDidMount() {
+    this.props.fetchPhotos(this.props.username);
+  }
 
   render() {
-    const feeds = this.props.photos.map(photo => {
+    const feeds = this.props.photos.length ?
+    this.props.photos.map(photo => {
       return (
         <FeedIndexItemContainer photo={photo}
           username={this.props.username}
           key={photo.photoId} />
       );
-    });
+    }) : null;
     return (
       <section className="feed-index">
         <ul>

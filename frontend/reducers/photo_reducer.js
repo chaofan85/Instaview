@@ -1,6 +1,7 @@
 import { RECEIVE_PHOTO,
          RECEIVE_COMMENT,
-         REMOVE_COMMENT } from '../actions/photo_actions';
+         REMOVE_COMMENT,
+         RECEIVE_PHOTOS } from '../actions/photo_actions';
 
 import {RECEIVE_CURRENT_USER} from '../actions/session_actions';
 
@@ -44,6 +45,10 @@ const PhotoReducer = (state = initialState, action) => {
         return {};
       }
 
+    case RECEIVE_PHOTOS:
+      return Object.values(action.photos).map(photo => {
+        return photo.photo;
+      });
 
     default:
       return state;

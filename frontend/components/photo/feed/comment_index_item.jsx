@@ -25,6 +25,7 @@ class CommentIndexItem extends React.Component {
     this.props.deleteComment(this.props.comment);
   }
 
+
   render() {
     return (
       <li className="comment-item" key={this.props.comment.id}>

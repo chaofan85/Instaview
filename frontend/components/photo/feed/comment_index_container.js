@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
 import CommentIndex from './comment_index';
-import { addComment } from '../../../actions/photo_actions';
+import { addComment, fetchComments } from '../../../actions/photo_actions';
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    fetchComments: (photoId) => dispatch(fetchComments(photoId)),
     addComment: (comment) => dispatch(addComment(comment)),
   };
 };

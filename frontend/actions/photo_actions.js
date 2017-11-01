@@ -1,14 +1,30 @@
 import * as PhotoAPIUtil from '../util/photo_api_util';
 
+export const RECEIVE_PHOTOS = 'RECEIVE_PHOTOS';
 export const RECEIVE_PHOTO = 'RECEIVE_PHOTO';
+export const RECEIVE_COMMENTS = 'RECEIVE_COMMENTS';
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 
+const receivePhotos = (payload) => {
+  // debugger
+  return {
+    type: RECEIVE_PHOTOS,
+    photos: payload.photos
+  };
+};
 
-const receivePhoto = (photo) => {
+const receivePhoto = (payload) => {
   return {
     type: RECEIVE_PHOTO,
-    photo
+    photo: payload.photo
+  };
+};
+
+const receiveComments = (payload) => {
+  return {
+    type: RECEIVE_COMMENTS,
+    comments: payload.comments
   };
 };
 
@@ -28,25 +44,35 @@ const removeComment = (commentId) => {
 
 export const uploadPhoto = (formData) => (dispatch) => {
   return PhotoAPIUtil.createPhoto(formData).then(
-  (photo) => dispatch(receivePhoto(photo)));
+  (payload) => dispatch(receivePhoto(payload)));
+};
+
+export const fetchPhotos = (username) => (dispatch) => {
+  return PhotoAPIUtil.fetchUserInfo(username).then(
+    payload => dispatch(receivePhotos(payload)));
 };
 
 export const addLike = (photoId) => (dispatch) => {
   return PhotoAPIUtil.addLike(photoId).then(
-    (photo) => dispatch(receivePhoto(photo)));
+    (payload) => dispatch(receivePhoto(payload)));
 };
 
 export const deleteLike = (photoId) => (dispatch) => {
   return PhotoAPIUtil.deleteLike(photoId).then(
-    (photo) => dispatch(receivePhoto(photo)));
+    (payload) => dispatch(receivePhoto(payload)));
+};
+
+export const fetchComments = (photoId) => (dispatch) => {
+  return PhotoAPIUtil.fetchComments(photoId).then(
+    (payload) => dispatch(receiveComments(payload)));
 };
 
 export const addComment = (comment) => (dispatch) => {
   return PhotoAPIUtil.addComment(comment).then(
-    (returnedComment) => dispatch(receiveComment(returnedComment)));
+    (payload) => dispatch(receiveComment(payload)));
 };
 
 export const deleteComment = (comment) => (dispatch) => {
   return PhotoAPIUtil.deleteComment(comment.id).then(
-    (returnedPhoto) => dispatch(receivePhoto(returnedPhoto)));
+    (payload) => dispatch(receivePhoto(payload)));
 };

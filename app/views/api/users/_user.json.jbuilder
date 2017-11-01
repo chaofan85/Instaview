@@ -1,4 +1,3 @@
-
   json.extract! user, :id, :username, :post_number
   json.follower_ids user.follower_ids
   json.following_ids user.following_ids

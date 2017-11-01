@@ -25,6 +25,13 @@ export const deleteLike = (photoId) => {
   });
 };
 
+export const fetchComments = (photoId) => {
+  return $.ajax({
+    method: 'GET',
+    url: `api/photos/${photoId}`
+  });
+};
+
 export const addComment = (comment) => {
   return $.ajax({
     method: 'POST',
