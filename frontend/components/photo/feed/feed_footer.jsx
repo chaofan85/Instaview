@@ -4,7 +4,6 @@ import CommentIndexContainer from './comment_index_container';
 class FeedFooter extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   likePhoto(photoId){
@@ -15,10 +14,8 @@ class FeedFooter extends React.Component {
     this.props.deleteLike(photoId);
   }
 
-
   render() {
     return (
-
       <div className="feed-footer">
         <div className="feed-footer-icons">
 
@@ -47,10 +44,8 @@ class FeedFooter extends React.Component {
           null
         }
 
-
         <CommentIndexContainer photo={this.props.photo}
           username={ this.props.username }/>
-
       </div>
     );
   }

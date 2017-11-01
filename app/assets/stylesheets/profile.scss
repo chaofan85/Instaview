@@ -63,6 +63,16 @@
   box-sizing: border-box;
 }
 
+.follow-user {
+  background: #3897f0;
+  border-color: #3897f0;
+  color: white;
+}
+
+.edit-profile:hover, .follow-user:hover, .unfollow-user:hover{
+  cursor: pointer;
+}
+
 .user-profile-info-1 a {
   width: 24px;
   height: 24px;

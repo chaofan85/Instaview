@@ -3,22 +3,19 @@ import React from 'react';
 class FollowButton extends React.Component {
   constructor(props) {
     super(props);
-    this.state= {
-      followee_id: this.props.user.id
-    };
 
     this.follow = this.follow.bind(this);
     this.unfollow = this.unfollow.bind(this);
   }
 
   follow() {
-    const follow = Object.assign({}, this.state);
-    this.props.followUser(follow);
+    const followeeId = this.props.user.id;
+    this.props.followUser(followeeId);
   }
 
   unfollow() {
-    const followId = this.props.user.follow_id;
-    this.props.unFollowUser(followId);
+    const followeeId = this.props.user.id;
+    this.props.unFollowUser(followeeId);
   }
 
   render() {

@@ -16,12 +16,12 @@ export const fetchUserInfo = username => dispatch => {
     user => dispatch(receiveUser(user)));
 };
 
-export const followUser = follow => dispatch => {
-  return UserAPIUtil.followUser(follow).then(
+export const followUser = followeeId => dispatch => {
+  return UserAPIUtil.followUser(followeeId).then(
     user => dispatch(receiveUser(user)));
 };
 
-export const unFollowUser = followId => dispatch => {
-  return UserAPIUtil.unFollowUser(followId).then(
+export const unFollowUser = followeeId => dispatch => {
+  return UserAPIUtil.unFollowUser(followeeId).then(
     user => dispatch(receiveUser(user)));
 };

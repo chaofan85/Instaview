@@ -199,7 +199,10 @@
   margin-bottom: 60px;
   border: 1px solid red;
   border: 1px solid #e6e6e6;
+  border-right: 0;
   background: #fff;
+  box-shadow: 2px 3px 2px #5b5b5b;
+  transition: 1s;
 }
 
 .feed-header {

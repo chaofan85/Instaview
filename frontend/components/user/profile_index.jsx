@@ -45,6 +45,7 @@ class ProfileIndex extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     if (this.props.user) {
 
       return (
@@ -65,11 +66,16 @@ class ProfileIndex extends React.Component {
                       this.props.user.username : null
                     }
                   </span>
-                  
+
                   <EditOrFollowContainer pageOwner={this.props.pageOwner}/>
 
-                  <span className="setting-options"
-                    onClick={this.openModal}></span>
+                  {
+                    this.props.currentUser.username === this.props.pageOwner ?
+                    <span className="setting-options"
+                      onClick={this.openModal}></span>
+                    :
+                    null
+                  }
 
                   {
                     this.state.renderOptions ?
