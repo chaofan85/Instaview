@@ -24,7 +24,6 @@ class Api::UsersController < ApplicationController
         photos_of_people_i_follow << photo
       end
     end
-    # debugger
 
     @photos += photos_of_people_i_follow
 
@@ -33,7 +32,6 @@ class Api::UsersController < ApplicationController
 
   def user_photos
     @user = User.includes(:photos).find_by(username: params[:username])
-    # debugger
     @photos = @user.photos
     render "api/photos/index.json.jbuilder"
   end

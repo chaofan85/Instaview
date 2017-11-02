@@ -10,7 +10,6 @@ const mapStateToProps = (state, ownProps) => {
     return state.entities.comments[id];
   });
   if (comments.indexOf(undefined) > -1) {
-    debugger
     comments = [];
   }
   if (state.session.currentUser) {

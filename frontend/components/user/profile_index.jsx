@@ -37,9 +37,7 @@ class ProfileIndex extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    // debugger
     if (nextProps.pageOwner !== this.props.pageOwner) {
-      // debugger
       this.props.fetchUserInfo(nextProps.pageOwner);
       this.props.fetchUserPhotos(nextProps.pageOwner);
 
@@ -48,7 +46,6 @@ class ProfileIndex extends React.Component {
   }
 
   render() {
-    // debugger
     if (this.props.user) {
       return (
         <div className='profile-page'>

@@ -17,14 +17,19 @@ class FeedIndex extends React.Component {
 
   render() {
     const photoArray = Object.values(this.props.photos);
+    const photoOrderByDate = photoArray.sort((a, b) => {
+      return Date.parse(b.created_at) - Date.parse(a.created_at);
+    });
+
     const feeds = photoArray.length ?
-    Object.values(this.props.photos).map(photo => {
+    photoOrderByDate.map(photo => {
       return (
         <FeedIndexItemContainer photo={photo}
           username={this.props.username}
           key={photo.photoId} />
       );
     }) : null;
+    
     return (
       <section className="feed-index">
         <ul>

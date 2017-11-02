@@ -1,9 +1,8 @@
 .photo-index {
   width: 600px;
-  /*height: 700px;*/
   margin: auto;
   margin-top: 77px;
-  /*border: 1px solid black;*/
+
 }
 
 .add {
@@ -207,6 +206,8 @@
 .feed-header {
   width: 100%;
   height: 60px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
   border-bottom-width: .5px;
   border-bottom: 1px solid #efefef;
   align-items: center;
@@ -219,11 +220,12 @@
   width: 300px;
   height: 35px;
   /*border: 1px solid black;*/
-  font-family: sans-serif;
+  font-family: -apple-system, system-ui, "Segoe UI", 'Roboto', Helvetica, Arial, sans-serif;
   margin-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  line-height: 18px;
 }
 
 .feed-username {
@@ -231,7 +233,7 @@
 }
 
 .feed-location {
-  font-weight: 300;
+  font-size: 14px;
 }
 
 .feed-user-avatar {
@@ -239,7 +241,7 @@
   height: 30px;
   border-radius: 100%;
   box-sizing: border-box;
-  border: 1px solid black;
+  overflow: hidden;
 }
 
 .feed-body {

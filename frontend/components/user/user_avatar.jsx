@@ -49,7 +49,6 @@ class UserAvatar extends React.Component {
 
 
   render() {
-    // debugger
     return (
       <section className="avatar-edit">
         <div className="user-profile-avatar" onClick={this.openModal}>

@@ -1,11 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const FeedHeader = ({ location, username }) => {
+const FeedHeader = ({ location, username, userAvatar }) => {
   return (
     <div className='feed-header'>
-      <div className='feed-user-avatar'></div>
+      <Link to={`/${username}`} >
+        <div className='feed-user-avatar'>
+          <img src={`${userAvatar}`} />
+        </div>
+      </Link>
       <div className="feed-user-info">
-        <div className='feed-username'>{ username }</div>
+        <Link to={`/${username}` }>
+          <div className='feed-username'>{ username }</div>
+        </Link>
         { location ?
           <div className="feed-location">{location}</div>
             :
