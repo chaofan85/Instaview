@@ -6,10 +6,10 @@ export const RECEIVE_COMMENTS = 'RECEIVE_COMMENTS';
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 
-const receivePhotos = (payload) => {
+const receivePhotos = (photos) => {
   return {
     type: RECEIVE_PHOTOS,
-    photos: payload.photos
+    photos
   };
 };
 
@@ -46,8 +46,8 @@ export const uploadPhoto = (formData) => (dispatch) => {
   (payload) => dispatch(receivePhoto(payload)));
 };
 
-export const fetchPhotos = (username) => (dispatch) => {
-  return PhotoAPIUtil.fetchUserInfo(username).then(
+export const fetchPhotos = (userId) => (dispatch) => {
+  return PhotoAPIUtil.fetchAllFeeds(userId).then(
     payload => dispatch(receivePhotos(payload)));
 };
 

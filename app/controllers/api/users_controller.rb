@@ -14,6 +14,21 @@ class Api::UsersController < ApplicationController
     render 'api/users/show.json.jbuilder'
   end
 
+  def feeds
+    @user = User.find(params[:id])
+
+    @photos = @user.photos
+    # following_photos = @user.followings.includes(:photos).map do |following|
+    #   following.photos
+    # end
+    #
+    # following_photos.each do |photo|
+    #   @photos << photo
+    # end
+    # debugger
+    render "api/photos/index.json.jbuilder"
+  end
+
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
@@ -39,6 +54,7 @@ class Api::UsersController < ApplicationController
     @follow.destroy
     render :show
   end
+
 
   private
 

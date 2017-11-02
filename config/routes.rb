@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :update] do
       post :follow, on: :member
       delete :unfollow, on: :member
+      get :feeds, on: :member
     end
     get "users/:username", to: "users#show"
     resource :session, only: [:create, :destroy]
