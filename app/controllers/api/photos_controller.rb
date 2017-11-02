@@ -1,6 +1,7 @@
 class Api::PhotosController < ApplicationController
   def create
     @photo = Photo.new(photo_params)
+
     @photo.user_id = current_user.id
     if @photo.save
       render :show
@@ -11,6 +12,7 @@ class Api::PhotosController < ApplicationController
 
   def show
     @photo = Photo.includes(:comments).find(params[:id])
+    render :show
   end
 
   def like

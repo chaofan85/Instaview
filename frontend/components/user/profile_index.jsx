@@ -29,24 +29,27 @@ class ProfileIndex extends React.Component {
   userLogout() {
     this.closeModal();
     this.props.logout();
-    this.props.history.push("/");
-
   }
 
   componentDidMount() {
-    this.props.fetchUserInfo(this.props.match.params.username);
+    this.props.fetchUserInfo(this.props.pageOwner);
+    this.props.fetchUserPhotos(this.props.pageOwner);
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.match.params.username !== this.props.match.params.username) {
-      this.props.fetchUserInfo(nextProps.match.params.username);
+    // debugger
+    if (nextProps.pageOwner !== this.props.pageOwner) {
+      // debugger
+      this.props.fetchUserInfo(nextProps.pageOwner);
+      this.props.fetchUserPhotos(nextProps.pageOwner);
+
     }
 
   }
 
   render() {
+    // debugger
     if (this.props.user) {
-
       return (
         <div className='profile-page'>
           <HeaderContainer />
@@ -55,7 +58,9 @@ class ProfileIndex extends React.Component {
 
             <section className="profile-header">
 
-              <UserAvatarContainer pageOwner={this.props.pageOwner} />
+              <UserAvatarContainer user={this.props.user}
+                currentUser={this.props.currentUser}
+                pageOwner={this.props.pageOwner} />
 
               <div className="user-profile-info">
                 <div className="user-profile-info-1">
@@ -66,7 +71,9 @@ class ProfileIndex extends React.Component {
                     }
                   </span>
 
-                  <EditOrFollowContainer pageOwner={this.props.pageOwner}/>
+                  <EditOrFollowContainer user={this.props.user}
+                    currentUser={this.props.currentUser}
+                    pageOwner={this.props.pageOwner}/>
 
                   {
                     this.props.currentUser.username === this.props.pageOwner ?
@@ -127,8 +134,9 @@ class ProfileIndex extends React.Component {
             </section>
 
             {
-              this.props.user.photos ?
-              <UserPhotoIndex  user={this.props.user}/>
+              Object.values(this.props.photos).length ?
+              <UserPhotoIndex  user={this.props.user}
+                photos={this.props.photos}/>
               :
               <div className="no-post">No posts yet</div>
             }

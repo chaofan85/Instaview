@@ -18,14 +18,23 @@ class Api::UsersController < ApplicationController
     @user = User.find(params[:id])
 
     @photos = @user.photos
-    # following_photos = @user.followings.includes(:photos).map do |following|
-    #   following.photos
-    # end
-    #
-    # following_photos.each do |photo|
-    #   @photos << photo
-    # end
+    photos_of_people_i_follow = []
+    @user.followings.includes(:photos).each do |following|
+      following.photos.each do |photo|
+        photos_of_people_i_follow << photo
+      end
+    end
     # debugger
+
+    @photos += photos_of_people_i_follow
+
+    render "api/photos/index.json.jbuilder"
+  end
+
+  def user_photos
+    @user = User.includes(:photos).find_by(username: params[:username])
+    # debugger
+    @photos = @user.photos
     render "api/photos/index.json.jbuilder"
   end
 

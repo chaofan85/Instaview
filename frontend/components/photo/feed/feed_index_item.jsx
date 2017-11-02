@@ -15,7 +15,7 @@ class FeedIndexItem extends React.Component  {
       <article className="feed">
 
         <FeedHeader location={ this.props.photo.location }
-          username={ this.props.username } />
+          username={ this.props.photo.author } />
 
         <FeedBody imageUrl={this.props.photo.image_url} />
 

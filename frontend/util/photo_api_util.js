@@ -54,6 +54,13 @@ export const fetchUserInfo = (username) => {
   });
 };
 
+export const fetchUserPhotos = (username) => {
+  return $.ajax({
+    method: "GET",
+    url: `api/users/${username}/user_photos`
+  });
+};
+
 export const fetchAllFeeds = (userId) => {
   return $.ajax({
     method: "GET",

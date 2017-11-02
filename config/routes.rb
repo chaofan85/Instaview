@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       delete :unfollow, on: :member
       get :feeds, on: :member
     end
+    get "users/:username/user_photos", to: "users#user_photos"
     get "users/:username", to: "users#show"
     resource :session, only: [:create, :destroy]
     resources :photos, only: [:create, :destroy, :show] do

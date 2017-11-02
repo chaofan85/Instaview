@@ -51,6 +51,12 @@ export const fetchPhotos = (userId) => (dispatch) => {
     payload => dispatch(receivePhotos(payload)));
 };
 
+export const fetchUserPhotos = (username) => (dispatch) => {
+  return PhotoAPIUtil.fetchUserPhotos(username).then(
+    payload => dispatch(receivePhotos(payload))
+  );
+};
+
 export const addLike = (photoId) => (dispatch) => {
   return PhotoAPIUtil.addLike(photoId).then(
     (payload) => dispatch(receivePhoto(payload)));

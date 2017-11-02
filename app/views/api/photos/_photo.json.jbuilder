@@ -1,7 +1,7 @@
-
   json.photoId photo.id
   json.location photo.location
   json.user_id photo.user_id
+  json.author photo.user.username
   json.caption photo.caption
   json.image_url asset_path(photo.image.url)
   json.likes photo.likes_number

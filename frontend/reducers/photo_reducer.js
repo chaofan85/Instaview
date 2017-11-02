@@ -15,7 +15,6 @@ const PhotoReducer = (state = initialState, action) => {
   switch (action.type) {
 
     case RECEIVE_PHOTO:
-    debugger
       return Object.assign({}, state, {
         [action.photo.photoId]: action.photo
        });
