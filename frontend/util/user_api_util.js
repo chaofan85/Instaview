@@ -10,7 +10,6 @@ export const createPhoto = (id, formData) => {
 };
 
 export const followUser = (followeeId) => {
-  // debugger
   return $.ajax({
     method: 'POST',
     url: `api/users/${followeeId}/follow`,

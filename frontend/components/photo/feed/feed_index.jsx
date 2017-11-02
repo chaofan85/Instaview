@@ -9,11 +9,16 @@ class FeedIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchPhotos(this.props.username);
+
+    this.props.currentUser.photo_ids.forEach(id => {
+      this.props.fetchComments(id);
+    });
   }
 
   render() {
-    const feeds = this.props.photos.length ?
-    this.props.photos.map(photo => {
+    const photoArray = Object.values(this.props.photos);
+    const feeds = photoArray.length ?
+    Object.values(this.props.photos).map(photo => {
       return (
         <FeedIndexItemContainer photo={photo}
           username={this.props.username}

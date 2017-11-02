@@ -14,40 +14,47 @@ class FeedFooter extends React.Component {
     this.props.deleteLike(photoId);
   }
 
+
   render() {
-    return (
-      <div className="feed-footer">
-        <div className="feed-footer-icons">
+    if (this.props.photo.photoId) {
+      return (
+        <div className="feed-footer">
+          <div className="feed-footer-icons">
+
+            {
+              this.props.photo.liked_by_current_user ?
+              <span className="liked"
+                onClick={() => this.cancleLike(this.props.photo.photoId)}>
+              </span>
+              :
+              <span className="unliked"
+                onClick={() => this.likePhoto(this.props.photo.photoId)}></span>
+            }
+
+            <span className="comment-icon"></span>
+          </div>
 
           {
-            this.props.photo.liked_by_current_user ?
-            <span className="liked"
-              onClick={() => this.cancleLike(this.props.photo.photoId)}></span>
+            this.props.photo.likes ?
+            <div className="likes-number">
+              {this.props.photo.likes} &nbsp;
+              {
+                this.props.photo.likes > 1 ?
+                <span>likes</span> : <span>like</span>
+              }
+            </div>
             :
-            <span className="unliked"
-              onClick={() => this.likePhoto(this.props.photo.photoId)}></span>
+            null
           }
 
-          <span className="comment-icon"></span>
+          <CommentIndexContainer photo={this.props.photo}
+            username={ this.props.username }
+            comments={ this.props.comments }/>
         </div>
-
-        {
-          this.props.photo.likes ?
-          <div className="likes-number">
-            {this.props.photo.likes} &nbsp;
-            {
-              this.props.photo.likes > 1 ?
-              <span>likes</span> : <span>like</span>
-            }
-          </div>
-          :
-          null
-        }
-
-        <CommentIndexContainer photo={this.props.photo}
-          username={ this.props.username }/>
-      </div>
-    );
+      );
+    } else {
+      return null;
+    }
   }
 }
 

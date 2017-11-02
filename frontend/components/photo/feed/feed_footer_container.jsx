@@ -6,10 +6,15 @@ import { addComment,
          deleteLike} from '../../../actions/photo_actions';
 
 const mapStateToProps = (state, ownProps) => {
+
+  let comments = ownProps.photo.comment_ids.map(id => {
+    return state.entities.comments[id];
+  });
   if (state.session.currentUser) {
     return {
       currentUserId: state.session.currentUser.id,
-      photo: ownProps.photo
+      photo: ownProps.photo,
+      comments: comments
     };
   } else {
     return {

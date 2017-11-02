@@ -28,7 +28,7 @@ class CommentIndexItem extends React.Component {
 
   render() {
     return (
-      <li className="comment-item" key={this.props.comment.id}>
+      <li className="comment-item">
         <span className="comment-body">
           <span className="author-name">
             {this.props.comment.username}

@@ -11,6 +11,7 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.includes(:photos).find_by(username: params[:username])
+    render 'api/users/show.json.jbuilder'
   end
 
   def update

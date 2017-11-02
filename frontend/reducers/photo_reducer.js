@@ -9,6 +9,7 @@ import merge from 'lodash/merge';
 
 const initialState = {};
 const PhotoReducer = (state = initialState, action) => {
+  let newState;
   let newComments;
   let newPhoto;
   switch (action.type) {
@@ -18,26 +19,6 @@ const PhotoReducer = (state = initialState, action) => {
         [action.photo.photoId]: action.photo
        });
 
-
-    case RECEIVE_COMMENT:
-      const newIds = state[action.comment.photo_id].
-                     comment_ids.
-                     concat(action.comment.id);
-      newComments = state[action.comment.photo_id].
-                         comments.
-                         concat(action.comment);
-      newPhoto = merge(
-        {},
-        state[action.comment.photo_id],
-        { comment_ids: newIds, comments: newComments }
-      );
-
-      return merge(
-        {},
-        state,
-        { [action.comment.photo_id]: newPhoto }
-      );
-
     case RECEIVE_CURRENT_USER:
       if (action.user) {
         return merge({}, state, action.user.photos);
@@ -46,9 +27,20 @@ const PhotoReducer = (state = initialState, action) => {
       }
 
     case RECEIVE_PHOTOS:
-      return Object.values(action.photos).map(photo => {
-        return photo.photo;
-      });
+      return action.photos;
+
+    case RECEIVE_COMMENT:
+      newState = merge({}, state);
+      newState[action.comment.photo_id].comment_ids.push(action.comment.id);
+      return newState;
+
+    case REMOVE_COMMENT:
+      newState = merge({}, state);
+      let ids = newState[action.comment.photo_id].comment_ids;
+      const index = ids.indexOf(action.comment.id);
+      const newIds = ids.slice(0, index).concat(ids.slice(index+1, ids.length));
+      newState[action.comment.photo_id].comment_ids = newIds;
+      return newState;
 
     default:
       return state;

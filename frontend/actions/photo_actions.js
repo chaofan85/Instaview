@@ -7,17 +7,16 @@ export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 
 const receivePhotos = (payload) => {
-  // debugger
   return {
     type: RECEIVE_PHOTOS,
     photos: payload.photos
   };
 };
 
-const receivePhoto = (payload) => {
+const receivePhoto = (photo) => {
   return {
     type: RECEIVE_PHOTO,
-    photo: payload.photo
+    photo
   };
 };
 
@@ -35,10 +34,10 @@ const receiveComment = (comment) => {
   };
 };
 
-const removeComment = (commentId) => {
+const removeComment = (comment) => {
   return {
     type: REMOVE_COMMENT,
-    commentId
+    comment
   };
 };
 
@@ -74,5 +73,5 @@ export const addComment = (comment) => (dispatch) => {
 
 export const deleteComment = (comment) => (dispatch) => {
   return PhotoAPIUtil.deleteComment(comment.id).then(
-    (payload) => dispatch(receivePhoto(payload)));
+    (payload) => dispatch(removeComment(payload)));
 };

@@ -6,6 +6,7 @@
   json.follower_num user.follower_num
   json.following_num user.following_num
   json.followees user.followings
+  json.photo_ids user.photo_ids
 
 json.photos do
   user.photos.each do |photo|
