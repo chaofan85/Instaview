@@ -37,7 +37,6 @@ class CommentIndex extends React.Component {
         <CommentIndexItemContainer comment={comment} key={comment.id} />
       );
     });
-
     return (
 
       <section className="comment-area">
@@ -46,7 +45,7 @@ class CommentIndex extends React.Component {
             this.props.photo.caption ?
             <li className="photo-caption">
               <span className="author-name">
-                {this.props.username}
+                {this.props.photo.author}
               </span> : {this.props.photo.caption}
             </li>
             :
