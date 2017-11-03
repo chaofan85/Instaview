@@ -18,9 +18,11 @@ class Api::PhotosController < ApplicationController
   def like
     @photo = Photo.find(params[:id])
     like = @photo.likes.new(liker_id: current_user.id)
+    # debugger
     if like.save
       render :show
     else
+      render json: like.errors.full_messages, status: 422
     end
   end
 
