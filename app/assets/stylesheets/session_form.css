@@ -29,7 +29,7 @@
   border-radius: 3px;
 }
 
-.signup-button, .login-button {
+.signup-button, .login-button, .guest-button {
   width: 262px;
   height: 26px;
   background: #3897f0;
@@ -42,6 +42,8 @@
   padding: 0 8px;
   box-sizing: border-box;
 }
+
+
 
 .slogan {
   font-size: 17px;

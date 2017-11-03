@@ -7,6 +7,7 @@ class LoginForm extends React.Component {
     this.state = props.userInfo;
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.guestLogin = this.guestLogin.bind(this);
   }
 
   handleSubmit(e) {
@@ -19,6 +20,14 @@ class LoginForm extends React.Component {
     return e => {
       this.setState({ [field]: e.target.value });
     };
+  }
+
+  guestLogin(e) {
+    this.setState({
+      username: "guest",
+      password: "iamguest",
+    });
+    this.handleSubmit(e);
   }
 
   componentWillUnmount() {
@@ -51,8 +60,14 @@ class LoginForm extends React.Component {
           <button className='login-button'>Log In</button>
           <p className='forgot'>Forgot password?</p>
         </form>
-
-        <div></div>
+        <div className="or">
+          <div className="line"></div>
+          <div className="or-text">OR</div>
+          <div className="line"></div>
+        </div>
+        <button className="guest-button" onClick={this.guestLogin}>
+          Login as Guest
+        </button>
       </div>
     );
   }
