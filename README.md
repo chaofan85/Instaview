@@ -62,4 +62,4 @@ json.photo_ids user.photo_ids
 json.feed_ids user.feed_ids
 ```
 
-After we request the current user's information and dispatch the action, the `currentUser` state will only `photo_ids`, instead of the big photos object. Then we can use these ids to fetch photos and comments.
+After we request the current user's information and dispatch the action, the `currentUser` state will only have `photo_ids`, instead of the big nested photos object. Then we can use these ids to fetch photos and comments.
