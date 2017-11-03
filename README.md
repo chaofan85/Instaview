@@ -26,3 +26,33 @@ Instaview, an Instagram clone, is a social media application that allows users t
 
 
 ![screenshot3](https://github.com/chaofan85/Instaview/blob/master/docs/screenshot3.png?raw=true)
+
+## Code Example
+
+Keeping the state shape flat is very important in React/Redux project. Many nested states will easily cause errors. For example, in this project, current user has many feeds, each feed has many comments, each comment also has information. If these state are all nested in the user state, the state shape will become very clumsy. So we need to separated these information from their parents, like this:
+
+```js
+{
+  entities: {
+    user: {
+      id: 1,
+      feedIds: [2, 4, 7],
+    },
+    photos: {
+      2: {
+        id: 1,
+        commentIds: [3, 6, 10],
+      }
+    },
+    comments: {
+      3: {
+        id: 3,
+        body: "nice picture!"
+      }
+    }
+  }
+}
+
+```
+
+Keeping state shape flat can allow us to fetch and update data easily.
