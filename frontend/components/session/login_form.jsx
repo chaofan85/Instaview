@@ -22,12 +22,12 @@ class LoginForm extends React.Component {
     };
   }
 
-  guestLogin(e) {
-    this.setState({
+  guestLogin() {
+    const guest = {
       username: "guest",
       password: "iamguest",
-    });
-    this.handleSubmit(e);
+    };
+    this.props.login(guest);
   }
 
   componentWillUnmount() {
