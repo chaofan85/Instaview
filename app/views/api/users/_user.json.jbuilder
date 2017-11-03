@@ -6,11 +6,3 @@
   json.followees user.followings
   json.photo_ids user.photo_ids
   json.feed_ids user.feed_ids
-
-# json.photos do
-#   user.photos.each do |photo|
-#     json.set! photo.id do
-#       json.partial! "api/photos/photo.json.jbuilder", photo: photo, user: user
-#     end
-#   end
-# end

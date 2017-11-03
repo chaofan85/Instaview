@@ -38,7 +38,7 @@ Keeping the state shape flat is very important in React/Redux project. Many nest
       id: 1,
       feedIds: [2, 4, 7],
     },
-    photos: {
+    feed: {
       2: {
         id: 1,
         commentIds: [3, 6, 10],
@@ -55,4 +55,16 @@ Keeping the state shape flat is very important in React/Redux project. Many nest
 
 ```
 
-Keeping state shape flat can allow us to fetch and update data easily.
+Keeping state shape flat can allow us to fetch and update data easily. To do that, we need to use reducers to separate the information we fetched from the database. For example, if we don't want the `photos` state to be
+nested under the `user` state, in `users`'s view, we don't need to list all the photos and their information, we can just have an array of `photo_ids` or `feed_ids`.
+```
+json.photo_ids user.photo_ids
+json.feed_ids user.feed_ids
+[comment]: <> (This is a comment, it will not be included)
+```
+
+```
+
+```
+
+want to have a separated `photos` state, we can add a reducer under the  `entities` reducer, which is nested under the `root` reducer.

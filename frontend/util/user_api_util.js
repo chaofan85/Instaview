@@ -24,9 +24,3 @@ export const unFollowUser = (followeeId) => {
     data: { id: followeeId }
   });
 };
-
-// export const fetchFollowees = (userId) => {
-//   return $.ajax({
-//
-//   })
-// }
