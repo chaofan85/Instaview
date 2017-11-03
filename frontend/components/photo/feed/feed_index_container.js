@@ -5,12 +5,14 @@ import { fetchPhotos, fetchComments } from '../../../actions/photo_actions';
 const mapStateToProps = (state) => {
 
   if (state.session.currentUser) {
+    const ids = Object.keys(state.entities.photos).map(id => parseInt(id));
     return {
       photos: state.entities.photos,
       username: state.session.currentUser.username,
       userId: state.session.currentUser.id,
       comments: state.entities.comments,
-      currentUser: state.session.currentUser
+      currentUser: state.session.currentUser,
+      photoIds: ids,
     };
   } else {
     return {

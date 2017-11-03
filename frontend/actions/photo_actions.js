@@ -21,6 +21,7 @@ const receivePhoto = (photo) => {
 };
 
 const receiveComments = (payload) => {
+  // debugger
   return {
     type: RECEIVE_COMMENTS,
     comments: payload.comments
@@ -68,6 +69,7 @@ export const deleteLike = (photoId) => (dispatch) => {
 };
 
 export const fetchComments = (photoId) => (dispatch) => {
+  // debugger
   return PhotoAPIUtil.fetchComments(photoId).then(
     (payload) => dispatch(receiveComments(payload)));
 };

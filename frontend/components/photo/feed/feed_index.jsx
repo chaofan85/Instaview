@@ -29,7 +29,7 @@ class FeedIndex extends React.Component {
           key={photo.photoId} />
       );
     }) : null;
-    
+
     return (
       <section className="feed-index">
         <ul>
