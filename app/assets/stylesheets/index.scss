@@ -188,6 +188,7 @@
   padding-top: 30px;
   margin: auto;
   background-color: #fff;
+  box-shadow: 2px 2px 2px #5b5b5b;
 }
 
 .signup-container {
@@ -203,7 +204,8 @@
   border: 1px solid #e6e6e6;
   margin: auto;
   font-family: sans-serif;
-  line-height: 1.2
+  line-height: 1.2;
+  box-shadow: 2px 2px 2px #5b5b5b;
 }
 
 
@@ -221,7 +223,7 @@
 
 .login-link, .signup-link {
   width: 350px;
-  height: 60px;
+  height: 70px;
   text-align: center;
   border-radius: 1px;
   border: 1px solid #e6e6e6;
@@ -229,6 +231,8 @@
   margin: auto;
   margin-top: 10px;
   background-color: #fff;
+  box-shadow: 2px 2px 2px #5b5b5b;
+  box-sizing: border-box;
 }
 
 .login-link p, .signup-link p {

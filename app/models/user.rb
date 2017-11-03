@@ -66,6 +66,18 @@ class User < ApplicationRecord
     self.followings.count
   end
 
+  def feed_ids
+    photos = self.photos
+    photos_of_people_i_follow = []
+    self.followings.includes(:photos).each do |following|
+      following.photos.each do |photo|
+        photos_of_people_i_follow << photo
+      end
+    end
+
+    photos += photos_of_people_i_follow
+    feed_ids = photos.map{|p| p.id}
+  end
 
   private
 

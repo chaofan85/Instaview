@@ -5,11 +5,11 @@ Instaview, an Instagram clone, is a social media application that allows users t
 
 [Instaview Link](https://instaview-app.herokuapp.com/)
 
-# Technology
+## Technology
 * Back-End Language: Ruby on Rails
-* Front-End Language: ReactJS/Redux
+* Front-End Language: ReactJS/Redux, jQuery
 
-# Features
+## Features
 * Users can upload photos on their feed page, they can choose photos from their machines. They can add location and caption for the photo. After they submit, the photo will be uploaded to the server and showed on their feed page.
 
 

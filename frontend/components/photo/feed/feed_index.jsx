@@ -10,7 +10,7 @@ class FeedIndex extends React.Component {
   componentDidMount() {
     this.props.fetchPhotos(this.props.userId);
 
-    this.props.currentUser.photo_ids.forEach(id => {
+    this.props.photoIds.forEach(id => {
       this.props.fetchComments(id);
     });
   }

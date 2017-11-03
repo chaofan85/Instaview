@@ -1,6 +1,5 @@
 json.partial! "api/photos/photo", photo: @photo, user: @photo.user, current_user: current_user
 
-
 json.comments do
   @photo.comments.each do |comment|
     json.set! comment.id do

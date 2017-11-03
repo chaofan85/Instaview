@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
       userId: state.session.currentUser.id,
       comments: state.entities.comments,
       currentUser: state.session.currentUser,
-      photoIds: ids,
+      photoIds: state.session.currentUser.feed_ids
     };
   } else {
     return {
