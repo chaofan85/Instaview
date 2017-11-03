@@ -27,9 +27,9 @@ Instaview, an Instagram clone, is a social media application that allows users t
 
 ![screenshot3](https://github.com/chaofan85/Instaview/blob/master/docs/screenshot3.png?raw=true)
 
-## Code Example
+## My lesson
 
-Keeping the state shape flat is very important in React/Redux project. Many nested states will easily cause errors. For example, in this project, current user has many feeds, each feed has many comments, each comment also has information. If these state are all nested in the user state, the state shape will become very clumsy. So we need to separated these information from their parents, like this:
+The biggest lesson I have learned from this project is that keeping the state shape flat is very important in React/Redux project. Many nested states will easily cause errors. For example, in this project, current user has many feeds, each feed has many comments, each comment also has information. If these state are all nested in the user state, the state shape will become very clumsy. So we need to separated these information from their parents, like this:
 
 ```js
 {
@@ -57,14 +57,9 @@ Keeping the state shape flat is very important in React/Redux project. Many nest
 
 Keeping state shape flat can allow us to fetch and update data easily. To do that, we need to use reducers to separate the information we fetched from the database. For example, if we don't want the `photos` state to be
 nested under the `user` state, in `users`'s view, we don't need to list all the photos and their information, we can just have an array of `photo_ids` or `feed_ids`.
-```
+```js
 json.photo_ids user.photo_ids
 json.feed_ids user.feed_ids
-[comment]: <> (This is a comment, it will not be included)
 ```
 
-```
-
-```
-
-want to have a separated `photos` state, we can add a reducer under the  `entities` reducer, which is nested under the `root` reducer.
+After we request the current user's information and dispatch the action, the `currentUser` state will only `photo_ids`, instead of the big photos object. Then we can use these ids to fetch photos and comments.
