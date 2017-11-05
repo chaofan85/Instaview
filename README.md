@@ -5,14 +5,10 @@ Instaview, an Instagram clone, is a social media application that allows users t
 [Instaview Link](https://instaview-app.herokuapp.com/)
 
 ## Technology
-* Back-End Language: Ruby on Rails
+* Back-End Language: Ruby on Rails<img src="https://github.com/chaofan85/Instaview/blob/master/docs/rails-logo.png?raw=true" width="50">
 
-<img src="https://github.com/chaofan85/Instaview/blob/master/docs/rails-logo.png?raw=true" width="100">
+* Front-End Language: ReactJS/Redux, jQuery<img src="https://github.com/chaofan85/Instaview/blob/master/docs/react.png?raw=true" width="50"><img src="https://github.com/chaofan85/Instaview/blob/master/docs/redux.png?raw=true" width="50"><img src="https://github.com/chaofan85/Instaview/blob/master/docs/jquery_logo.png?raw=true" width="50">
 
-![rails](https://github.com/chaofan85/Instaview/blob/master/docs/rails-logo.png?raw=true width="100")
-* Front-End Language: ReactJS/Redux, jQuery
-
-![react](https://github.com/chaofan85/Instaview/blob/master/docs/react.png?raw=true width="100")![redux](https://github.com/chaofan85/Instaview/blob/master/docs/redux.png?raw=true width='100')![jquery](https://github.com/chaofan85/Instaview/blob/master/docs/jquery_logo.png?raw=true width='100')
 
 ## Features
 * Users can upload photos on their feed page, they can choose photos from their machines. They can add location and caption for the photo. After they submit, the photo will be uploaded to the server and showed on their feed page.
