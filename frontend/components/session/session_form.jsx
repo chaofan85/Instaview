@@ -35,7 +35,7 @@ class SessionForm extends React.Component {
           <div className='signup-container'>
             <h2>Instaview</h2>
             <p className='slogan'>
-              Sign up to see photos and videos from your friends.
+              Sign up to see photos <br/> from your friends.
             </p>
             <SignupFormContainer />
           </div>

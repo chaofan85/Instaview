@@ -33,12 +33,16 @@ nav {
 }
 
 .header-logo {
-  font-family: cursive;
+  font-family: 'Elsie', cursive;
+  color: #3f3f3f;
   font-size: 28px;
   line-height: 1.1;
   font-weight: 600;
+  text-shadow: 1px 1px 1px #686868;
+  font-style: italic;
   margin-left: 5px;
   box-sizing: border-box;
+  margin-top: 3px;
 }
 
 .search-area {

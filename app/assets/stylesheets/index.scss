@@ -208,9 +208,13 @@
 
 
 .login-container h2, .signup-container h2 {
-  font-family: cursive;
+  font-family: 'Elsie', cursive;
+  color: #3f3f3f;
+  text-shadow: 1px 1px 1px #686868;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 36px;
+  font-style: italic;
+  letter-spacing: 1px;
   margin-bottom: 10px;
 }
 
