@@ -5,9 +5,11 @@ Instaview, an Instagram clone, is a social media application that allows users t
 [Instaview Link](https://instaview-app.herokuapp.com/)
 
 ## Technology
-* Back-End Language: Ruby on Rails<img src="https://github.com/chaofan85/Instaview/blob/master/docs/rails-logo.png?raw=true" width="50">
+* Back-End Language: Ruby on Rails
+  <img src="https://github.com/chaofan85/Instaview/blob/master/docs/rails-logo.png?raw=true" width="50">
 
-* Front-End Language: ReactJS/Redux, jQuery<img src="https://github.com/chaofan85/Instaview/blob/master/docs/react.png?raw=true" width="50"><img src="https://github.com/chaofan85/Instaview/blob/master/docs/redux.png?raw=true" width="50"><img src="https://github.com/chaofan85/Instaview/blob/master/docs/jquery_logo.png?raw=true" width="50">
+* Front-End Language: ReactJS/Redux, jQuery
+  <img src="https://github.com/chaofan85/Instaview/blob/master/docs/react.png?raw=true" width="50"><img src="https://github.com/chaofan85/Instaview/blob/master/docs/redux.png?raw=true" width="50"><img src="https://github.com/chaofan85/Instaview/blob/master/docs/jquery_logo.png?raw=true" width="50">
 
 
 ## Features
