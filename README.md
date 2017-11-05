@@ -7,6 +7,8 @@ Instaview, an Instagram clone, is a social media application that allows users t
 ## Technology
 * Back-End Language: Ruby on Rails
 
+<img src="https://github.com/chaofan85/Instaview/blob/master/docs/rails-logo.png?raw=true" width="100">
+
 ![rails](https://github.com/chaofan85/Instaview/blob/master/docs/rails-logo.png?raw=true width="100")
 * Front-End Language: ReactJS/Redux, jQuery
 
