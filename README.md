@@ -24,7 +24,7 @@ Instaview, an Instagram clone, is a social media application that allows users t
 
 
 ## Features
-* Allows users to upload photos on their feed page, they can choose photos from their machines. They can add location and caption for the photo. After they submit, the photo will be uploaded to the server and showed on their feed page.
+* Allows users to upload photos to their feed page. Users can choose photos from their machines, and they can add location and caption for the photo. After users submit, the photo will be uploaded to the server and showed on their feed page.
 
 
 ![screenshot1](https://github.com/chaofan85/Instaview/blob/master/docs/screenshot1.png?raw=true)
@@ -36,7 +36,7 @@ Instaview, an Instagram clone, is a social media application that allows users t
 ![screenshot2](https://github.com/chaofan85/Instaview/blob/master/docs/screenshot2.png?raw=true)
 
 
-* Allows users to like photos (even their own photos). And they can also leave comments under the photo, the comment will show up immediately after the user submits.
+* Allows users to like photos (even their own photos). And they can also write comments under the photo, the comment will show up immediately after the user submits.
 
 
 ![screenshot3](https://github.com/chaofan85/Instaview/blob/master/docs/screenshot3.png?raw=true)
