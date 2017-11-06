@@ -4,7 +4,7 @@
 
 <img src="https://github.com/chaofan85/Instaview/blob/master/docs/instaview.png?raw=true" width="150">
 
-[Instaview Link](https://instaview-app.herokuapp.com/)
+[Instaview](https://instaview-app.herokuapp.com/)
 
 Instaview, an Instagram clone, is a social media application that allows users to share their photos, like other users' photos, make comments and follow the users that they are interested in.
 
