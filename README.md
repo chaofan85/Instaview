@@ -2,7 +2,7 @@
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
-<img src="https://github.com/chaofan85/Instaview/blob/master/docs/instaview-logo.png?raw=true" width="200">
+<img src="https://github.com/chaofan85/Instaview/blob/master/docs/instaview.png?raw=true" width="150">
 
 [Instaview Link](https://instaview-app.herokuapp.com/)
 
