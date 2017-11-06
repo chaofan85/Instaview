@@ -39,7 +39,7 @@ Instaview, an Instagram clone, is a social media application that allows users t
 
 ### Open/Close Modal
 
-In this project, modals are used in many places, such as photo uploading, user avatar uploading and logout session. To make it simple, I used React to create modal component, which can be reused in different places. It's not involved in any redux cycle, only component state indicate that whether the modal should be rendered or not.
+In this project, modals are used in many places, such as photo uploading, user avatar uploading and logout session. To make it simple, I used React to create modal component, which can be reused in different situations. The modal component is not involved in any redux cycle, only the component state indicates that whether the modal should be rendered or not.
 
 ```js
 // frontend/components/photo/upload/photo_upload.jsx
@@ -89,7 +89,7 @@ class PhotoUpload extends React.Component {
 
 ## The biggest lesson that I learned
 
-This is my first React/Redux project. The biggest lesson I have learned from this project is that keeping the state shape flat is very important in React/Redux project. Many nested states will easily cause errors. For example, in this project, current user has many feeds, each feed has many comments, each comment also has information. If these state are all nested in the user state, the state shape will become very clumsy. So we need to separated these information from their parents, like this:
+This is my first React/Redux project. The biggest lesson I have learned is that keeping the state shape flat is very important in React/Redux project. Many nested states will easily cause errors. For example, in Instaview project, current user has many feeds, each feed has many comments, each comment also has many information. If these states are all nested in the user state, the state shape will become very clumsy. So we need to separated these information from their parents, like this:
 
 ```js
 {
@@ -115,11 +115,15 @@ This is my first React/Redux project. The biggest lesson I have learned from thi
 
 ```
 
-Keeping state shape flat can allow us to fetch and update data easily. To do that, we need to use reducers to separate the information we fetched from the database. For example, if we don't want the `photos` state to be
-nested under the `user` state, in `users`'s view, we don't need to list all the photos and their information, we can just have an array of `photo_ids` or `feed_ids`.
+Keeping state shape flat will allow us to fetch and update data easily. To do that, we need to use reducers to separate the information we fetched from the database. For example, if we don't want the `photos` state to be nested under the `user` state, in `users`'s view, we don't need to list all the photos and their information, we can just have an array of `photo_ids` or `feed_ids`.
 ```js
 json.photo_ids user.photo_ids
 json.feed_ids user.feed_ids
 ```
 
 After we request the current user's information and dispatch the action, the `currentUser` state will only have `photo_ids`, instead of the big nested photos object. Then we can use these ids to fetch photos and comments.
+
+## Future Features
+* Photo's show page
+* Notification
+* Photo deletion
