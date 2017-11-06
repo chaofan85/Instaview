@@ -2,9 +2,12 @@
 
  [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)  [![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](http://forthebadge.com)
 
-<img src="https://github.com/chaofan85/Instaview/blob/master/docs/instaview.png?raw=true" width="150">
 
 [Instaview](https://instaview-app.herokuapp.com/)
+
+## Summary
+
+<img src="https://github.com/chaofan85/Instaview/blob/master/docs/instaview.png?raw=true" width="150">
 
 Instaview, an Instagram clone, is a social media application that allows users to share their photos, like other users' photos, make comments and follow the users that they are interested in.
 
