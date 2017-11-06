@@ -1,6 +1,7 @@
 # Instaview
 
 <img src="https://github.com/chaofan85/Instaview/blob/master/docs/instaview-logo.png?raw=true" width="200">
+
 [Instaview Link](https://instaview-app.herokuapp.com/)
 
 Instaview, an Instagram clone, is a social media application that allows users to share their photos, like other users' photos, make comments and follow the users that they are interested in.
@@ -9,7 +10,7 @@ Instaview, an Instagram clone, is a social media application that allows users t
 ## Technology
 * Back-End Language and Tools: Ruby on Rails, PostgreSQL
 
-  <img src="https://github.com/chaofan85/Instaview/blob/master/docs/rails-logo.png?raw=true" width="50">  <img src="https://github.com/chaofan85/Instaview/blob/master/docs/postgresql-logo.png?raw=true" width="50">
+  <img src="https://github.com/chaofan85/Instaview/blob/master/docs/rails-logo.png?raw=true" width="50">  <img src="https://github.com/chaofan85/Instaview/blob/master/docs/postgresql-logo.png?raw=true" height="50">
 
 * Front-End Language and Libraries: HTML, CSS, ReactJS/Redux, jQuery
 
