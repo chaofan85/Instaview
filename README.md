@@ -64,13 +64,14 @@ class PhotoUpload extends React.Component {
       <div className="photo-upload">
         <button className='new-photo-button'
           onClick={this.openModal}>+</button>
-
+          //clicking upload button will trigger openModal()
         { this.state.renderUpload ? (
           <div className='upload-panel'>
             <div className='modal-form'>
-              <PhotoUploadPanelContainer closeModal={this.closeModal} />
+              <Some other component />
               <span className="modal-close"
                 onClick={this.closeModal}>&times;</span>
+                //clicking 'X' will trigger closeModal()
             </div>
             <div className="modal-bg"></div>
           </div>) : null }
