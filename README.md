@@ -1,5 +1,7 @@
 # Instaview
 
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+
 <img src="https://github.com/chaofan85/Instaview/blob/master/docs/instaview-logo.png?raw=true" width="200">
 
 [Instaview Link](https://instaview-app.herokuapp.com/)
@@ -16,11 +18,14 @@ Instaview, an Instagram clone, is a social media application that allows users t
 
   <img src="https://github.com/chaofan85/Instaview/blob/master/docs/HTML5_Logo.png?raw=true" width="50">  <img src="https://github.com/chaofan85/Instaview/blob/master/docs/css3.png?raw=true" height="50">  <img src="https://github.com/chaofan85/Instaview/blob/master/docs/react.png?raw=true" width="50">  <img src="https://github.com/chaofan85/Instaview/blob/master/docs/redux.png?raw=true" width="50">  <img src="https://github.com/chaofan85/Instaview/blob/master/docs/jquery_logo.png?raw=true" width="50">
 
-* Other Libraries
+* Other Libraries and Tools
   * BCrypt
   * Jbuilder
   * paperclip
   * react-router
+  * lodash
+  * Webpack
+  * AWS
 
 
 ## Features
