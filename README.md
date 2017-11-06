@@ -42,6 +42,8 @@ Instaview, an Instagram clone, is a social media application that allows users t
 In this project, modals are used in many places, such as photo uploading, user avatar uploading and logout session. To make it simple, I used React to create modal component, which can be reused in different places. It's not involved in any redux cycle, only component state indicate that whether the modal should be rendered or not.
 
 ```js
+// frontend/components/photo/upload/photo_upload.jsx
+
 class PhotoUpload extends React.Component {
   constructor(props) {
     super(props);
@@ -74,6 +76,7 @@ class PhotoUpload extends React.Component {
                 //clicking 'X' will trigger closeModal()
             </div>
             <div className="modal-bg"></div>
+            // this is the background outside the modal
           </div>) : null }
 
       </div>
