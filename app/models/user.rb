@@ -14,7 +14,7 @@ class User < ApplicationRecord
   has_many :followers, through: :followed, source: :follower
   has_many :followings, through: :follows, source: :followed_user
 
-  has_attached_file :avatar, default_url: ("avatar.png")
+  has_attached_file :avatar, default_url: ("avatar.png"), :s3_protocol => :https
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
   after_initialize :ensure_session_token
