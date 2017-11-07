@@ -89,9 +89,7 @@ class ProfileIndex extends React.Component {
                             <button onClick={this.userLogout}>Log Out</button>
                           </li>
                           <li>
-                            <Link to='/'>
-                              <button onClick={this.closeModal}>Cancel</button>
-                            </Link>
+                            <button onClick={this.closeModal}>Cancel</button>
                           </li>
                         </ul>
                         <span className="modal-close"
