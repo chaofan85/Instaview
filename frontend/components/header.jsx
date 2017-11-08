@@ -30,13 +30,11 @@ class Header extends React.Component {
           </div>
 
           <div className='header-icons'>
-             <span className='explore-icon'></span>
-             <span className='notification-icon'></span>
              <Link to={`/${username}`}>
                <span className='profile-icon'></span>
              </Link>
           </div>
-          
+
         </nav>
       </header>
     );

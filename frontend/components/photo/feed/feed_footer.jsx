@@ -30,8 +30,6 @@ class FeedFooter extends React.Component {
               <span className="unliked"
                 onClick={() => this.likePhoto(this.props.photo.photoId)}></span>
             }
-
-            <span className="comment-icon"></span>
           </div>
 
           {

@@ -9,7 +9,7 @@ class EditOrFollow extends React.Component {
   render() {
     if (this.props.pageOwner === this.props.currentUser.username) {
       return (
-        <span className="edit-profile">Edit Profile</span>
+        null
       );
     } else {
       return (

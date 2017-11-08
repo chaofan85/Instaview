@@ -61,11 +61,6 @@ class UserAvatar extends React.Component {
             <div className='modal-form'>
               <ul className='modal-options'>
                 <li>
-                  <button>
-                    Remove Current Photo
-                  </button>
-                </li>
-                <li>
                   <label htmlFor="upload">
                     <div>Upload Photo</div>
                     <input type="file"
