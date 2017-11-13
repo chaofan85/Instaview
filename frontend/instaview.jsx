@@ -25,11 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const root = document.getElementById('root');
-  window.store = store;
-  window.dispatch = store.dispatch;
-  window.fetchUserInfo = fetchUserInfo;
-  window.merge = merge;
-  window.followUser = followUser;
 
   ReactDOM.render(<Root store={ store } />, root);
 });
