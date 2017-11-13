@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-// import { addComment, fetchUserInfo } from './util/photo_api_util';
 import {fetchUserInfo, followUser, fetchPhotos } from './actions/user_actions';
 import merge from 'lodash/merge';
 
