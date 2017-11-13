@@ -3,22 +3,22 @@
  [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)  [![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](http://forthebadge.com)
 
 
- <img src="https://github.com/chaofan85/Instaview/blob/master/docs/instaview.png?raw=true" width="150">
+ <img src="http://github.com/chaofan85/Instaview/blob/master/docs/instaview.png?raw=true" width="150">
 
  Instaview, an Instagram clone, is a social media application that allows users to share their photos, like other users' photos, make comments and follow the users that they are interested in.
 
 
-[Instaview](https://instaview-app.herokuapp.com/)
+[Instaview](http://instaview-app.herokuapp.com/)
 
 
 ## Technology
 * Back-End Language and Tools: Ruby on Rails, PostgreSQL
 
-  <img src="https://github.com/chaofan85/Instaview/blob/master/docs/rails-logo.png?raw=true" width="50">  <img src="https://github.com/chaofan85/Instaview/blob/master/docs/postgresql-logo.png?raw=true" height="50">
+  <img src="http://github.com/chaofan85/Instaview/blob/master/docs/rails-logo.png?raw=true" width="50">  <img src="http://github.com/chaofan85/Instaview/blob/master/docs/postgresql-logo.png?raw=true" height="50">
 
 * Front-End Language and Libraries: HTML, CSS, ReactJS/Redux, jQuery
 
-  <img src="https://github.com/chaofan85/Instaview/blob/master/docs/HTML5_Logo.png?raw=true" width="50">  <img src="https://github.com/chaofan85/Instaview/blob/master/docs/css3.png?raw=true" height="50">  <img src="https://github.com/chaofan85/Instaview/blob/master/docs/react.png?raw=true" width="50">  <img src="https://github.com/chaofan85/Instaview/blob/master/docs/redux.png?raw=true" width="50">  <img src="https://github.com/chaofan85/Instaview/blob/master/docs/jquery_logo.png?raw=true" width="50">
+  <img src="http://github.com/chaofan85/Instaview/blob/master/docs/HTML5_Logo.png?raw=true" width="50">  <img src="http://github.com/chaofan85/Instaview/blob/master/docs/css3.png?raw=true" height="50">  <img src="http://github.com/chaofan85/Instaview/blob/master/docs/react.png?raw=true" width="50">  <img src="http://github.com/chaofan85/Instaview/blob/master/docs/redux.png?raw=true" width="50">  <img src="http://github.com/chaofan85/Instaview/blob/master/docs/jquery_logo.png?raw=true" width="50">
 
 * Other Libraries and Tools
   * BCrypt
@@ -34,19 +34,19 @@
 * Allows users to upload photos to their feed page. Users can choose photos from their machines, and they can add location and caption for the photo. After users submit, the photo will be uploaded to the server and showed on their feed page.
 
 
-![screenshot1](https://github.com/chaofan85/Instaview/blob/master/docs/screenshot1.png?raw=true)
+![screenshot1](http://github.com/chaofan85/Instaview/blob/master/docs/screenshot1.png?raw=true)
 
 
 * Allows uses to follow other users, and their feed page will show the photos from the people they are following.
 
 
-![screenshot2](https://github.com/chaofan85/Instaview/blob/master/docs/screenshot2.png?raw=true)
+![screenshot2](http://github.com/chaofan85/Instaview/blob/master/docs/screenshot2.png?raw=true)
 
 
 * Allows users to like photos (even their own photos). And they can also write comments under the photo, the comment will show up immediately after the user submits.
 
 
-![screenshot3](https://github.com/chaofan85/Instaview/blob/master/docs/screenshot3.png?raw=true)
+![screenshot3](http://github.com/chaofan85/Instaview/blob/master/docs/screenshot3.png?raw=true)
 
 ## Code Example
 
