@@ -21,14 +21,6 @@ class Header extends React.Component {
             </div>
           </Link>
 
-          <div className="search-area">
-            <input className='search-bar' type='text'/>
-            <div>
-              <span className='search-icon'></span>
-              <span className='search-text'>Search</span>
-            </div>
-          </div>
-
           <div className='header-icons'>
              <Link to={`/${username}`}>
                <span className='profile-icon'></span>
