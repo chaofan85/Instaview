@@ -67,3 +67,11 @@ export const fetchAllFeeds = (userId) => {
     url: `api/users/${userId}/feeds`
   });
 };
+
+export const fetchFeeds = (userId, start, end) => {
+  return $.ajax({
+    method: "GET",
+    url: `api/users/${userId}/feeds`,
+    data: {start: start, end: end}
+  });
+};

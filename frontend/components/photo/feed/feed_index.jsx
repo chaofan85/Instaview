@@ -5,14 +5,49 @@ class FeedIndex extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      start: -5,
+      end: -1,
+      max: this.props.currentUser.feed_ids.length
+    };
+    this.ifBottom = this.ifBottom.bind(this);
+    this.trackScrolling = this.trackScrolling.bind(this);
+
   }
 
   componentDidMount() {
-    this.props.fetchPhotos(this.props.userId);
+    this.props.fetchPhotos(this.props.userId,
+                           this.state.start,
+                           this.state.end);
 
     this.props.photoIds.forEach(id => {
       this.props.fetchComments(id);
     });
+  }
+
+  ifBottom(el) {
+    return el.getBoundingClientRect().bottom - window.innerHeight < -160;
+  }
+
+  trackScrolling () {
+    const wrappedElement = document.querySelector('.photo-index');
+    if (this.ifBottom(wrappedElement)) {
+      document.removeEventListener('scroll', this.trackScrolling);
+      this.setState({
+        start: Math.abs(this.state.start - 5) > this.state.max ?
+               -(this.state.max) : this.state.start - 5,
+        end: this.state.end - 5
+      });
+      this.props.fetchPhotos(this.props.userId,
+                             this.state.start,
+                             this.state.end);
+    }
+  }
+
+  componentDidUpdate() {
+    if (Math.abs(this.state.start) < this.state.max) {
+      document.addEventListener('scroll', this.trackScrolling);
+    }
   }
 
   render() {

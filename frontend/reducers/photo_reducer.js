@@ -27,7 +27,7 @@ const PhotoReducer = (state = initialState, action) => {
       }
 
     case RECEIVE_PHOTOS:
-      return action.photos;
+      return Object.assign({}, state, action.photos);
 
     case RECEIVE_COMMENT:
       newState = merge({}, state);

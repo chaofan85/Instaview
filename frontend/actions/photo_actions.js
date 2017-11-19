@@ -46,8 +46,8 @@ export const uploadPhoto = (formData) => (dispatch) => {
   (payload) => dispatch(receivePhoto(payload)));
 };
 
-export const fetchPhotos = (userId) => (dispatch) => {
-  return PhotoAPIUtil.fetchAllFeeds(userId).then(
+export const fetchPhotos = (userId, start, end) => (dispatch) => {
+  return PhotoAPIUtil.fetchFeeds(userId, start, end).then(
     payload => dispatch(receivePhotos(payload)));
 };
 

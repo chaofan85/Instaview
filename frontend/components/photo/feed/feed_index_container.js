@@ -24,7 +24,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchPhotos: userId => dispatch(fetchPhotos(userId)),
+    fetchPhotos: (userId, start, end) =>
+    dispatch(fetchPhotos(userId, start, end)),
     fetchComments: (photoId) => dispatch(fetchComments(photoId))
   };
 };
