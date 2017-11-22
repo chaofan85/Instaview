@@ -26,6 +26,7 @@ class FeedIndex extends React.Component {
   }
 
   ifBottom(el) {
+    console.log(el.getBoundingClientRect().bottom - window.innerHeight);
     return el.getBoundingClientRect().bottom - window.innerHeight < -160;
   }
 
