@@ -26,19 +26,19 @@ class FeedIndex extends React.Component {
   }
 
   ifBottom(el) {
-    console.log(el.getBoundingClientRect().bottom - window.innerHeight);
-    return el.getBoundingClientRect().bottom - window.innerHeight < -160;
+    return el.getBoundingClientRect().bottom - window.innerHeight < -140;
   }
 
   trackScrolling () {
     const wrappedElement = document.querySelector('.photo-index');
     if (this.ifBottom(wrappedElement)) {
-      document.removeEventListener('scroll', this.trackScrolling);
       this.setState({
         start: Math.abs(this.state.start - 5) > this.state.max ?
                -(this.state.max) : this.state.start - 5,
         end: this.state.end - 5
       });
+      document.removeEventListener('scroll', this.trackScrolling);
+
       this.props.fetchPhotos(this.props.userId,
                              this.state.start,
                              this.state.end);
@@ -50,6 +50,7 @@ class FeedIndex extends React.Component {
       document.addEventListener('scroll', this.trackScrolling);
     }
   }
+
 
   render() {
     const photoArray = Object.values(this.props.photos);
