@@ -124,7 +124,12 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
+}
+
+.user-gallery ul div:nth-child(3n+2) {
+  margin-left: 35px;
+  margin-right: 35px;
 }
 
 .photo-item {

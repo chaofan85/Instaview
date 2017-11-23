@@ -45,14 +45,13 @@ class Api::UsersController < ApplicationController
 
     @photos += photos_of_people_i_follow
     @photos.sort!{|x,y| x.created_at <=> y.created_at}
-    # debugger
     @loadedPhotos = @photos[(@start.to_i)..(@end.to_i)]
     render "api/photos/index.json.jbuilder"
   end
 
   def user_photos
     @user = User.includes(:photos).find_by(username: params[:username])
-    @photos = @user.photos
+    @loadedPhotos = @user.photos
     render "api/photos/index.json.jbuilder"
   end
 
