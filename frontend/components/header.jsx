@@ -14,12 +14,12 @@ class Header extends React.Component {
     return (
       <header>
         <nav>
-          <Link to='/'>
+          <a href="/">
             <div className="logo">
               <div className='header-bg-logo'></div>
               <div className='header-logo'>Instaview</div>
             </div>
-          </Link>
+          </a>
 
           <div className='header-icons'>
              <Link to={`/${username}`}>
