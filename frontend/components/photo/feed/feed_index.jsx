@@ -26,7 +26,9 @@ class FeedIndex extends React.Component {
   }
 
   ifBottom(el) {
-    return el.getBoundingClientRect().bottom - window.innerHeight < -140;
+    if (el) {
+      return el.getBoundingClientRect().bottom - window.innerHeight < -140;
+    }
   }
 
   trackScrolling () {
