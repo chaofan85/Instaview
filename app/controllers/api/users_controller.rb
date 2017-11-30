@@ -15,21 +15,6 @@ class Api::UsersController < ApplicationController
     render 'api/users/show.json.jbuilder'
   end
 
-  # def feeds
-  #   @user = User.find(params[:id])
-  #
-  #   @photos = @user.photos
-  #   photos_of_people_i_follow = []
-  #   @user.followings.includes(:photos).each do |following|
-  #     following.photos.each do |photo|
-  #       photos_of_people_i_follow << photo
-  #     end
-  #   end
-  #
-  #   @photos += photos_of_people_i_follow
-  #   render "api/photos/index.json.jbuilder"
-  # end
-
   def feeds
     @user = User.find(params[:id])
     @start = params[:start]
@@ -45,7 +30,12 @@ class Api::UsersController < ApplicationController
 
     @photos += photos_of_people_i_follow
     @photos.sort!{|x,y| x.created_at <=> y.created_at}
-    @loadedPhotos = @photos[(@start.to_i)..(@end.to_i)]
+    if @photos.length < 5
+      @loadedPhotos = @photos[(0-@photos.length)..(@end.to_i)]
+    else
+      @loadedPhotos = @photos[(@start.to_i)..(@end.to_i)]
+    end
+
     render "api/photos/index.json.jbuilder"
   end
 
