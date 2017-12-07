@@ -335,18 +335,43 @@
   margin-bottom: 4px;
 }
 
-.comment-adding {
+.comment-column {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  height: 56px;
+  height: 65px;
+
+}
+
+.comment-adding, .feed-options {
+  height: 100%;
   padding: 16px 26px 16px 0;
   margin-top: 10px;
+}
+
+.comment-adding {
+  width: 85%;
   border-top: 1px solid #efefef;
 }
 
-.comment-adding textarea {
+.comment-adding input {
   width: 100%;
-  height: 18px;
+  height: 23px;
   resize: none;
+}
+
+.feed-options {
+  width: 10%;
+}
+
+.feed-options-icon {
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  background: image-url("icons.png");
+  background-repeat: no-repeat;
+  background-position: -330px -110px;
+  background-size: 395px 371px;
 }
 
 .author-name {

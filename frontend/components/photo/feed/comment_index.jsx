@@ -57,13 +57,18 @@ class CommentIndex extends React.Component {
           }
           { comments }
         </ul>
-        <div className="comment-adding">
-          <form onSubmit={this.handleSubmit}>
-            <input type="text"
-              placeholder="Add a comment..."
-              value={this.state.body}
-              onChange={this.handleChange()}></input>
-          </form>
+        <div className='comment-column'>
+          <div className="comment-adding">
+            <form onSubmit={this.handleSubmit}>
+              <input type="text"
+                placeholder="Add a comment..."
+                value={this.state.body}
+                onChange={this.handleChange()}></input>
+            </form>
+          </div>
+          <div className="feed-options">
+            <div className="feed-options-icon"></div>
+          </div>
         </div>
       </section>
     );
