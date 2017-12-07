@@ -66,6 +66,7 @@
   font-size: 36px;
   line-height: 1;
   cursor: pointer;
+  color: white;
 }
 
 .new-photo-button {
@@ -362,6 +363,10 @@
 
 .feed-options {
   width: 10%;
+}
+
+.feed-options:hover {
+  cursor: pointer;
 }
 
 .feed-options-icon {

@@ -11,6 +11,20 @@ class CommentIndex extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+
+    this.closeModal = this.closeModal.bind(this);
+    this.openModal = this.openModal.bind(this);
+
+  }
+
+  openModal() {
+    this.setState({ renderOptions: true });
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeModal() {
+    this.setState({ renderOptions: false });
+    document.body.style.overflow = 'visible';
   }
 
   handleSubmit(e) {
@@ -66,9 +80,30 @@ class CommentIndex extends React.Component {
                 onChange={this.handleChange()}></input>
             </form>
           </div>
-          <div className="feed-options">
+          <div className="feed-options" onClick={this.openModal}>
             <div className="feed-options-icon"></div>
           </div>
+
+          {
+            this.state.renderOptions ?
+            <div className='user-info-edit'>
+              <div className='modal-form'>
+                <ul className='modal-options'>
+                  <li>
+                    <button onClick={this.userLogout}>Go to post</button>
+                  </li>
+                  <li>
+                    <button onClick={this.closeModal}>Cancel</button>
+                  </li>
+                </ul>
+                <span className="modal-close"
+                  onClick={this.closeModal}>&times;</span>
+              </div>
+              <div className="modal-bg"></div>
+            </div>
+            :
+            null
+          }
         </div>
       </section>
     );
