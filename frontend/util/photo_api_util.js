@@ -9,6 +9,13 @@ export const createPhoto = (formData) => {
   });
 };
 
+export const fetchPhoto = (photoId) => {
+  return $.ajax({
+    url: `/api/photos/${photoId}`,
+    method: 'GET',
+  });
+};
+
 export const addLike = (photoId) => {
   return $.ajax({
     method: 'POST',

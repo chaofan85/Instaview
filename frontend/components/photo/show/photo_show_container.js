@@ -1,8 +1,9 @@
 import { connect } from 'react-redux';
 import photoShow from './photo_show';
+import { fetchPhoto } from '../../../actions/photo_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state);
+  // console.log(state);
   return {
     photoId: ownProps.match.params.photoId,
 
@@ -11,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-
+    fetchPhoto: (photoId) => dispatch(fetchPhoto(photoId))
   };
 };
 

@@ -46,6 +46,11 @@ export const uploadPhoto = (formData) => (dispatch) => {
   (payload) => dispatch(receivePhoto(payload)));
 };
 
+export const fetchPhoto = (photoId) => (dispatch) => {
+  return PhotoAPIUtil.fetchPhoto(photoId).then(
+  (payload) => dispatch(receivePhoto(payload)));
+};
+
 export const fetchPhotos = (userId, start, end) => (dispatch) => {
   return PhotoAPIUtil.fetchFeeds(userId, start, end).then(
     payload => dispatch(receivePhotos(payload)));
@@ -66,6 +71,8 @@ export const deleteLike = (photoId) => (dispatch) => {
   return PhotoAPIUtil.deleteLike(photoId).then(
     (payload) => dispatch(receivePhoto(payload)));
 };
+
+
 
 export const fetchComments = (photoId) => (dispatch) => {
   return PhotoAPIUtil.fetchComments(photoId).then(
