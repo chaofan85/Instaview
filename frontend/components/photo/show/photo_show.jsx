@@ -17,6 +17,7 @@ class photoShow extends React.Component {
       <div className="feed-showpage">
         <HeaderContainer />
         <div className="showpage-main">lalala</div>
+    
       </div>
     );
   }
