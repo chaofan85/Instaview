@@ -10,15 +10,16 @@ class PhotoShowFrame extends React.Component {
   }
 
   render() {
-    console.log(this.props);
-    return (
+    const photo = this.props.photo[this.props.photoId];
+    return photo ?
+    (
       <div className="photo-frame">
         <div className="single-photo">
-
+          <img src={`${photo.image_url}`} />
         </div>
         <div className="single-photo-info"></div>
       </div>
-    );
+    ) : null;
   }
 }
 
