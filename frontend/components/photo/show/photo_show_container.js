@@ -3,7 +3,6 @@ import photoShow from './photo_show';
 import { fetchPhoto } from '../../../actions/photo_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log(state);
   return {
     photoId: ownProps.match.params.photoId,
 
