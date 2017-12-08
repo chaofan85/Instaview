@@ -2,10 +2,10 @@ import { connect } from 'react-redux';
 import photoShow from './photo_show';
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(ownProps);
+  console.log(state);
   return {
     photoId: ownProps.match.params.photoId,
-    
+
   };
 };
 
