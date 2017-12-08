@@ -1,7 +1,8 @@
 import React from 'react';
 import HeaderContainer from '../../header_container';
+import PhotoShowFrame from './photo_show_frame';
 
-class photoShow extends React.Component {
+class PhotoShow extends React.Component {
 
   constructor(props) {
     super(props);
@@ -16,10 +17,13 @@ class photoShow extends React.Component {
     return (
       <div className="feed-showpage">
         <HeaderContainer />
-        <div className="showpage-main">lalala</div>
+        <div className="showpage-main">
+          <PhotoShowFrame />
+        </div>
+
       </div>
     );
   }
 }
 
-export default photoShow;
+export default PhotoShow;

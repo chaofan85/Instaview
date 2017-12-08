@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import photoShow from './photo_show';
+import PhotoShow from './photo_show';
 import { fetchPhoto } from '../../../actions/photo_actions';
 
 const mapStateToProps = (state, ownProps) => {
@@ -18,4 +18,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(photoShow);
+)(PhotoShow);

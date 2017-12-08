@@ -92,7 +92,7 @@ class CommentIndex extends React.Component {
                 <ul className='modal-options'>
                   <li>
                     <Link to={`/p/${this.state.photo_id}`}>
-                    <button>Go to post</button>
+                    <button onClick={this.closeModal}>Go to post</button>
                     </Link>
                   </li>
                   <li>
