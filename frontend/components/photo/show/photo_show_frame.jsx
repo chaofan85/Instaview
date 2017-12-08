@@ -5,6 +5,10 @@ class PhotoShowFrame extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.fetchPhoto(this.props.photoId);
+  }
+
   render() {
     console.log(this.props);
     return (

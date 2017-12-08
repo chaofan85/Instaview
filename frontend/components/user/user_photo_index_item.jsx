@@ -6,7 +6,6 @@ class UserPhotoIndexItem extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="photo-item">
         <img src={`${this.props.photo.image_url}`} />

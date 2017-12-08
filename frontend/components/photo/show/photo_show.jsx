@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderContainer from '../../header_container';
-import PhotoShowFrame from './photo_show_frame';
+import PhotoShowFrameContainer from './photo_show_frame_container';
 
 class PhotoShow extends React.Component {
 
@@ -8,17 +8,12 @@ class PhotoShow extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
-    console.log(this.props);
-    this.props.fetchPhoto(this.props.photoId);
-  }
-
   render() {
     return (
       <div className="feed-showpage">
         <HeaderContainer />
         <div className="showpage-main">
-          <PhotoShowFrame />
+          <PhotoShowFrameContainer photoId={this.props.photoId}/>
         </div>
 
       </div>
