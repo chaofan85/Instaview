@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentIndexItemContainer from './comment_index_item_container';
+import { Link } from 'react-router-dom';
 
 class CommentIndex extends React.Component {
   constructor(props) {
@@ -90,7 +91,9 @@ class CommentIndex extends React.Component {
               <div className='modal-form'>
                 <ul className='modal-options'>
                   <li>
-                    <button onClick={this.userLogout}>Go to post</button>
+                    <Link to={`/p/${this.state.photo_id}`}>
+                    <button>Go to post</button>
+                    </Link>
                   </li>
                   <li>
                     <button onClick={this.closeModal}>Cancel</button>

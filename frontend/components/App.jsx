@@ -13,7 +13,7 @@ const App = () => (
   <div className="app">
     <Switch>
       <Route exact path='/' component={ IndexContainer } />
-      {/*}<Route path="/p/:photoId" component={ PhotoShowContainer } />*/}
+      <Route path="/p/:photoId" component={ PhotoShowContainer } />
       <ProtectedRoute path="/:username" component={ ProfileIndexContainer } />
     </Switch>
 
