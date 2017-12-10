@@ -8,14 +8,13 @@ class CommentSection extends React.Component {
 
   componentDidMount() {
     let frameHeight = $(".photo-frame").height();
-    console.log(frameHeight);
-    $(".comments").height(frameHeight-210);
+    $(".comments").height(frameHeight-230);
   }
 
 
   render() {
     let frameHeight = $(".photo-frame").height();
-    console.log(this.props.comments);
+
     let comments;
     if (this.props.comments) {
       comments = Object.values(this.props.comments).map(comment => {

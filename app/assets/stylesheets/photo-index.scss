@@ -237,7 +237,7 @@
 }
 
 .feed-location {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .feed-user-avatar {
@@ -323,6 +323,12 @@
   font-family: sans-serif;
   color: #262626;
   font-weight: 600;
+}
+
+.single-photo-info .likes-number {
+  font-size: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #efefef;
 }
 
 .comment-area {
