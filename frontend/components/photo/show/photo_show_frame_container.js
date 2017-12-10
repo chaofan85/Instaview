@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchPhoto: (photoId) => dispatch(fetchPhoto(photoId))
+    fetchPhoto: (photoId) => dispatch(fetchPhoto(photoId)),
   };
 };
 

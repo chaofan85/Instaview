@@ -13,9 +13,8 @@ class PhotoShowFrame extends React.Component {
 
   render() {
     const photo = this.props.photo[this.props.photoId];
-
-
-    console.log(photo);
+    let comments;
+    if (photo) { comments = photo.comments; }
     return photo ?
     (
       <div className="photo-frame">
@@ -25,7 +24,9 @@ class PhotoShowFrame extends React.Component {
             location={photo.location}
             username={photo.author}
             userAvatar={photo.author_avatar} />
-          <CommentSection />
+          <CommentSection
+            photo={photo}
+            comments={comments}/>
         </div>
       </div>
     ) : null;
