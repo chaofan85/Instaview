@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import CommentSection from './comment_section';
+import { fetchComments } from '../../../actions/photo_actions';
 
 const mapStateToProps = (state, ownProps) => {
   let comments = ownProps.commentIds.map(id => {
@@ -19,7 +20,13 @@ const mapStateToProps = (state, ownProps) => {
   }
 };
 
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchComments: photoId => dispatch(fetchComments(photoId))
+  };
+};
+
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(CommentSection);
