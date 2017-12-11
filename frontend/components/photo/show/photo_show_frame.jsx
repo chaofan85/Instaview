@@ -44,12 +44,10 @@ class PhotoShowFrame extends React.Component {
   componentDidMount() {
     this.props.fetchPhoto(this.props.photoId);
     let photoSize = $('.photo').width();
-    console.log(photoSize);
   }
 
   render() {
     const photo = this.props.photo[this.props.photoId];
-    // console.log(photo);
     let comments;
     if (photo) { comments = photo.comments; }
     return photo ?
