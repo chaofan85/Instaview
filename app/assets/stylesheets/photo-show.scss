@@ -1,7 +1,59 @@
 .showpage-main {
   margin-top: 77px;
   width: 100%;
+<<<<<<< HEAD
   height: 600px;
   border-bottom: 1px solid black;
   padding-top: 20px;
+=======
+  max-height: 680px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.photo-frame {
+  max-width: 950px;
+  width: auto;
+  border: 1px solid #e6e6e6;
+  margin: auto;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.photo-frame .photo {
+  max-width: 600px;
+  max-height: 620px;
+  width: auto;
+  height: auto;
+}
+
+.single-photo-info {
+  width: 287px;
+  background: white;
+  height: 620px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0 24px;
+}
+
+.comments {
+  width: 100%;
+  font-family: -apple-system, system-ui, "Segoe UI", 'Roboto', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  padding: 20px 0;
+  border-bottom: 1px solid #efefef;
+  overflow-y: scroll;
+  overflow-wrap: break-word;
+}
+
+.comments .comment-list {
+  width: 287px;
+}
+
+.comments .comment-body {
+  width: 100%;
+  display: block;
+>>>>>>> showpage
 }

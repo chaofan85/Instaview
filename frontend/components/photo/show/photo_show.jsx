@@ -1,26 +1,29 @@
 import React from 'react';
 import HeaderContainer from '../../header_container';
+import PhotoShowFrameContainer from './photo_show_frame_container';
 
-class photoShow extends React.Component {
+class PhotoShow extends React.Component {
 
   constructor(props) {
     super(props);
-  }
-
-  componentDidMount() {
-    console.log(this.props);
-    this.props.fetchPhoto(this.props.photoId);
   }
 
   render() {
     return (
       <div className="feed-showpage">
         <HeaderContainer />
+<<<<<<< HEAD
         <div className="showpage-main">lalala</div>
     
+=======
+        <div className="showpage-main">
+          <PhotoShowFrameContainer photoId={this.props.photoId}/>
+        </div>
+
+>>>>>>> showpage
       </div>
     );
   }
 }
 
-export default photoShow;
+export default PhotoShow;

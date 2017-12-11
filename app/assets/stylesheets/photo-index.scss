@@ -217,6 +217,10 @@
   box-sizing: border-box;
 }
 
+.single-photo-info .feed-header {
+  padding-left: 0;
+}
+
 .feed-user-info {
   width: 300px;
   height: 35px;
@@ -233,7 +237,7 @@
 }
 
 .feed-location {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .feed-user-avatar {
@@ -321,6 +325,12 @@
   font-weight: 600;
 }
 
+.single-photo-info .likes-number {
+  font-size: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #efefef;
+}
+
 .comment-area {
   width: 568px;
   margin-top: 5px;
@@ -330,7 +340,8 @@
 .comments-text {
   font-weight: 600;
   margin-top: 7px;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
+
 }
 
 .comment-column {
@@ -350,6 +361,8 @@
 
 .comment-adding {
   width: 85%;
+  font-family: -apple-system, system-ui, "Segoe UI", 'Roboto', Helvetica, Arial, sans-serif;
+  font-size: 14px;
 }
 
 .comment-adding input {
@@ -383,20 +396,28 @@
 }
 
 .comment-item {
-  height: 25px;
+  min-height: 25px;
   padding-top: 5px;
+  margin-bottom: 1px;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
+  position: relative;
 }
 
 
 .delete-comment {
+  width: 15px;
+  height: 15px;
   color: #c7c7c7;
   cursor: pointer;
   font-family: -apple-system, system-ui, "Segoe UI", 'Roboto', Helvetica, Arial, sans-serif;
   font-size: 18px;
   box-sizing: border-box;
+  position: absolute;
+  top: 3px;
+  right: 0;
+  margin-left: 5px;
 }
 
 .confirmation .modal-form, .user-info-edit .modal-form {

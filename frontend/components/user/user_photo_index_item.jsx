@@ -1,11 +1,17 @@
 import React from 'react';
 
-const UserPhotoIndexItem = ({ photo }) => {
-  return (
-    <div className="photo-item">
-      <img src={`${photo.image_url}`} />
-    </div>
-  );
-};
+class UserPhotoIndexItem extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div className="photo-item">
+        <img src={`${this.props.photo.image_url}`} />
+      </div>
+    );
+  }
+}
 
 export default UserPhotoIndexItem;

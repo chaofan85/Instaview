@@ -7,7 +7,9 @@ const UserPhotoIndex = ({ user, photos }) => {
   });
 
   const userPhotos = photosArray.map(photo => {
-    return (<UserPhotoIndexItem photo={photo} key={photo.photoId}/>);
+    return (<UserPhotoIndexItem photo={photo}
+      photoId={photo.photoId}
+      key={photo.photoId}/>);
   });
   return (
     <section className="user-gallery">
