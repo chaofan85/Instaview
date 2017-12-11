@@ -1,10 +1,18 @@
 import React from 'react';
 import FeedHeader from '../feed/feed_header';
-import CommentSection from './comment_section';
+import CommentSectionContainer from './comment_section_container';
 
 class PhotoShowFrame extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      photo_id: this.props.photoId,
+      body: ""
+    };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   likePhoto(photoId){
@@ -13,6 +21,24 @@ class PhotoShowFrame extends React.Component {
 
   cancleLike(photoId) {
     this.props.deleteLike(photoId);
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.setState({ photoId: this.props.photoId });
+    const comment = Object.assign({}, this.state);
+    this.props.addComment(comment).then(
+      () => {
+        this.setState({
+        body: ""
+      });}
+    );
+  }
+
+  handleChange() {
+    return e => {
+      this.setState({ body: e.target.value });
+    };
   }
 
   componentDidMount() {
@@ -35,9 +61,9 @@ class PhotoShowFrame extends React.Component {
             location={photo.location}
             username={photo.author}
             userAvatar={photo.author_avatar} />
-          <CommentSection
+          <CommentSectionContainer
             photo={photo}
-            comments={comments}/>
+            commentIds={photo.comment_ids}/>
           <div className="feed-footer-icons">
             {
               photo.liked_by_current_user ?
@@ -62,6 +88,19 @@ class PhotoShowFrame extends React.Component {
             :
             null
           }
+
+          <div className="comment-adding">
+            <form onSubmit={this.handleSubmit}>
+              <input type="text"
+                placeholder="Add a comment..."
+                value={this.state.body}
+                onChange={this.handleChange()}></input>
+            </form>
+          </div>
+          <div className="feed-options" onClick={this.openModal}>
+            <div className="feed-options-icon"></div>
+          </div>
+
         </div>
       </div>
     ) : null;
