@@ -396,20 +396,28 @@
 }
 
 .comment-item {
-  height: 25px;
+  min-height: 25px;
   padding-top: 5px;
+  margin-bottom: 1px;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
+  position: relative;
 }
 
 
 .delete-comment {
+  width: 15px;
+  height: 15px;
   color: #c7c7c7;
   cursor: pointer;
   font-family: -apple-system, system-ui, "Segoe UI", 'Roboto', Helvetica, Arial, sans-serif;
   font-size: 18px;
   box-sizing: border-box;
+  position: absolute;
+  top: 3px;
+  right: 0;
+  margin-left: 5px;
 }
 
 .confirmation .modal-form, .user-info-edit .modal-form {
