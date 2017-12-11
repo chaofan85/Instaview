@@ -9,6 +9,8 @@ class CommentSection extends React.Component {
   componentDidMount() {
     let frameHeight = $(".photo-frame").height();
     $(".comments").height(frameHeight-230);
+    let photoSize = $('.photo').width();
+    $(".photo-frame").width(photoSize+335);
   }
 
 
