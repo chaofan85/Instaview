@@ -13,7 +13,7 @@ const UserPhotoIndex = ({ user, photos }) => {
   });
   return (
     <section className="user-gallery">
-      <ul>
+      <ul className="photo-list">
         { userPhotos }
       </ul>
     </section>

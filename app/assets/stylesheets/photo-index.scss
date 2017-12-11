@@ -27,7 +27,6 @@
 }
 
 .modal-bg {
-  // height: 700px;
   position: fixed;
   top: 0px;
   bottom: 0px;
@@ -35,6 +34,7 @@
   left: 0px;
   z-index: 10;
   background: rgba(0,0,0,0.7);
+  overflow-y: auto;
 }
 
 .upload-panel .modal-form {
@@ -58,6 +58,18 @@
   transition: 2s;
 }
 
+.user-gallery .modal-form {
+  position: fixed;
+  top: 320px;
+
+}
+
+.photo-item .modal-form {
+  width: 1000px;
+  height: 680px;
+  overflow-y: scroll;
+}
+
 
 .modal-close {
   position: absolute;
@@ -67,6 +79,10 @@
   line-height: 1;
   cursor: pointer;
   color: white;
+}
+
+.user-gallery .modal-close {
+  top: 30px;
 }
 
 .new-photo-button {

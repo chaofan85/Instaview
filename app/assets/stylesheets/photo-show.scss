@@ -25,6 +25,10 @@
   height: auto;
 }
 
+.user-gallery .photo-frame .photo {
+  max-height: 580px;
+}
+
 .single-photo-info {
   width: 287px;
   background: white;
@@ -33,6 +37,11 @@
   right: 0;
   top: 0;
   padding: 0 24px;
+  box-sizing: content-box;
+}
+
+.user-gallery .single-photo-info {
+  height: 600px;
 }
 
 .comments {

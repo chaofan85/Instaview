@@ -120,17 +120,32 @@
   margin: 0 auto;
 }
 
-.user-gallery ul {
+.user-gallery .photo-list {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   // justify-content: space-between;
 }
 
-.user-gallery ul div:nth-child(3n+2) {
+.user-gallery ul .photo-item:nth-child(3n+2) {
   margin-left: 35px;
   margin-right: 35px;
 }
+
+// .user-gallery ul div .modal-bg {
+//   margin-left: 0;
+//   margin-right: 0;
+// }
+//
+// .user-gallery ul div .single-photo-info {
+//   margin-left: 0;
+//   margin-right: 0;
+// }
+// .user-gallery ul div .comments {
+//   margin-left: 0;
+//   margin-right: 0;
+//
+// }
 
 .photo-item {
   width: 293px;
