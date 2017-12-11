@@ -12,15 +12,9 @@ class PhotoShow extends React.Component {
     return (
       <div className="feed-showpage">
         <HeaderContainer />
-<<<<<<< HEAD
-        <div className="showpage-main">lalala</div>
-    
-=======
         <div className="showpage-main">
           <PhotoShowFrameContainer photoId={this.props.photoId}/>
         </div>
-
->>>>>>> showpage
       </div>
     );
   }
