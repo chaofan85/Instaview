@@ -1,12 +1,15 @@
 import React from 'react';
 
-class PhotoShow extends React.Component {
+class Follower extends React.Component {
 
   constructor(props) {
     super(props);
+  }
 
+  render() {
 
   }
+
 }
 
 export default Follower;

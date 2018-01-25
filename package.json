@@ -43,5 +43,8 @@
   "bugs": {
     "url": "https://github.com/chaofan85/Instaview/issues"
   },
-  "homepage": "https://github.com/chaofan85/Instaview#readme"
+  "homepage": "https://github.com/chaofan85/Instaview#readme",
+  "devDependencies": {
+    "eslint": "^4.16.0"
+  }
 }
