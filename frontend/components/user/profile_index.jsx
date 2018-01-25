@@ -4,6 +4,7 @@ import UserPhotoIndex from './user_photo_index';
 import UserAvatarContainer from './user_avatar_container';
 import { Link, withRouter } from 'react-router-dom';
 import EditOrFollowContainer from './edit_or_follow_container';
+import FollowerContainer from './follower_container';
 
 
 class ProfileIndex extends React.Component {
@@ -111,11 +112,16 @@ class ProfileIndex extends React.Component {
                     }
                   </li>
                   <li>
-                    <span>{this.props.user.follower_num}</span>
-                    {
-                      this.props.user.follower_num > 1 ?
-                      " followers" : " follower"
-                    }
+                    {/*
+                      <span>{this.props.user.follower_num}</span>
+                      {
+                        this.props.user.follower_num > 1 ?
+                        " followers" : " follower"
+                      }
+                    */}
+
+                    <Follower
+
                   </li>
                   <li>
                     <span>{this.props.user.following_num}</span> following
