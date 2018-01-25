@@ -1,7 +1,10 @@
 import { connect } from 'react-redux';
+import Follower from './follower';
 
 const mapStateToProps = (state, ownProps) => {
+  return {
 
+  };
 };
 
 const mapDispatchToProps = dispatch => {
@@ -9,3 +12,8 @@ const mapDispatchToProps = dispatch => {
 
   };
 };
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Follower);

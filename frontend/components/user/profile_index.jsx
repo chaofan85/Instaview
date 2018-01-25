@@ -120,7 +120,7 @@ class ProfileIndex extends React.Component {
                       }
                     */}
 
-                    <Follower
+                    <FollowerContainer />
 
                   </li>
                   <li>
