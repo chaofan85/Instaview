@@ -33,6 +33,7 @@ class ProfileIndex extends React.Component {
   }
 
   componentDidMount() {
+    console.log(this.props);
     this.props.fetchUserInfo(this.props.pageOwner);
     this.props.fetchUserPhotos(this.props.pageOwner);
   }
