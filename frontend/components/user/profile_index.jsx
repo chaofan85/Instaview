@@ -33,7 +33,6 @@ class ProfileIndex extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props);
     this.props.fetchUserInfo(this.props.pageOwner);
     this.props.fetchUserPhotos(this.props.pageOwner);
   }
@@ -121,7 +120,8 @@ class ProfileIndex extends React.Component {
                       }
                     */}
 
-                    <FollowerContainer />
+                    <FollowerContainer
+                      followers={this.props.currentUser.followers}/>
 
                   </li>
                   <li>
