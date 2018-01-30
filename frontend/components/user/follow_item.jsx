@@ -1,5 +1,9 @@
 import React from 'react';
 
-class Follower extends React.Component {
+const FollowItem = ({ username, realname, avatarUrl, followed }) => {
+  return (
+    <div className="follow-item">
 
-}
+    </div>
+  );
+};

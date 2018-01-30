@@ -26,7 +26,10 @@ class Follower extends React.Component {
     let followerList = followers.length ?
       followers.map(follower => {
         return (
-          <FollowItem />
+          <FollowItem username={follower.name}
+            realname={follower.real_name}
+            avatarUrl={follower.avatar_url}
+            followed={follower.followed_by_current_user}/>
         );
       }) : null;
 
