@@ -7,8 +7,9 @@ class Follower extends React.Component {
   }
 
   render() {
+    console.log(this.props.followers);
     return (
-      <div>lalala</div>
+      <div><span>{this.props.followers.length}</span> followers</div>
     );
   }
 
