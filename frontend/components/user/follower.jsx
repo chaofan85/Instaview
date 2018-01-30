@@ -22,14 +22,15 @@ class Follower extends React.Component {
   render() {
     console.log(this.props.followers);
     return (
-      <div>
-        <div onClick={this.openModal}><span className="followers">
+      <div className="followers-open">
+        <div className="followers" onClick={this.openModal}><span>
           {this.props.followers.length}
         </span>followers</div>
 
         { this.state.renderUpload ? (
-          <div className='upload-panel'>
+          <div className='modal-panel'>
             <div className='modal-form'>
+              <div className="follower-list-title">Followers</div>
               <span className="modal-close"
                 onClick={this.closeModal}>&times;</span>
             </div>
