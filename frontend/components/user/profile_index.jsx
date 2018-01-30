@@ -112,14 +112,6 @@ class ProfileIndex extends React.Component {
                     }
                   </li>
                   <li>
-                    {/*
-                      <span>{this.props.user.follower_num}</span>
-                      {
-                        this.props.user.follower_num > 1 ?
-                        " followers" : " follower"
-                      }
-                    */}
-
                     <FollowerContainer
                       followers={this.props.currentUser.followers}/>
 

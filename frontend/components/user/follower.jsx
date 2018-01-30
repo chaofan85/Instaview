@@ -1,4 +1,5 @@
 import React from 'react';
+import FollowItem from './follow_item';
 
 class Follower extends React.Component {
 
@@ -21,6 +22,14 @@ class Follower extends React.Component {
 
   render() {
     console.log(this.props.followers);
+    const followers = this.props.followers;
+    let followerList = followers.length ?
+      followers.map(follower => {
+        return (
+          <FollowItem />
+        );
+      }) : null;
+
     return (
       <div className="followers-open">
         <div className="followers" onClick={this.openModal}><span>

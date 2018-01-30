@@ -14,9 +14,7 @@ const FeedHeader = ({ location, username, userAvatar }) => {
           <div className='feed-username'>{ username }</div>
         </a>
         { location ?
-          <div className="feed-location">{location}</div>
-            :
-          null }
+          <div className="feed-location">{location}</div> : null }
       </div>
     </div>
   );
