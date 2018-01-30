@@ -26,13 +26,11 @@ class Follower extends React.Component {
     let followerList = followers.length ?
       followers.map(follower => {
         return (
-          <li>
-            <FollowItem username={follower.name}
-              realname={follower.real_name}
-              avatarUrl={follower.avatar_url}
-              followed={follower.followed_by_current_user}
-              key={follower.id}/>
-          </li>
+          <FollowItem username={follower.name}
+            realname={follower.real_name}
+            avatarUrl={follower.avatar_url}
+            followed={follower.followed_by_current_user}
+            key={follower.id} />
         );
       }) : null;
 
@@ -46,7 +44,7 @@ class Follower extends React.Component {
           <div className='modal-panel'>
             <div className='modal-form'>
               <div className="follower-list-title">Followers</div>
-              <ul>
+              <ul className="follower-list">
                 { followerList }
               </ul>
               <span className="modal-close"
