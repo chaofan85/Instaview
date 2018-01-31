@@ -20,17 +20,19 @@ class FollowButton extends React.Component {
 
   render() {
     // console.log(this.props);
-    if (this.props.user.followed_by_current_user) {
-      return (
-        <span className="unfollow-user"
-          onClick={this.unfollow}>Following</span>
-      );
-    } else {
-      return (
-        <span className="follow-user"
-          onClick={this.follow}>Follow</span>
-      );
-    }
+    if(this.props.user) {
+      if (this.props.user.followed_by_current_user) {
+        return (
+          <span className="unfollow-user"
+            onClick={this.unfollow}>Following</span>
+        );
+      } else {
+        return (
+          <span className="follow-user"
+            onClick={this.follow}>Follow</span>
+        );
+      }
+    } else {return null;}
   }
 }
 

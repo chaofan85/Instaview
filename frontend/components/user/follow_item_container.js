@@ -4,7 +4,6 @@ import { fetchUserInfo } from '../../actions/user_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(ownProps);
   return {
     username: ownProps.username,
     realname: ownProps.realname,
