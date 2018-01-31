@@ -3,7 +3,8 @@ import Follower from './follower';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    followers: ownProps.followers
+    followers: ownProps.followers,
+    pageOwner: ownProps.pageOwner
   };
 };
 

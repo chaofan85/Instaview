@@ -5,7 +5,6 @@ import { followUser,
          uploadAvatar } from '../../actions/user_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state.entities);
   const username = ownProps.pageOwner;
   const user = state.entities.user[username];
   return {

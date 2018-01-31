@@ -7,17 +7,20 @@ class FollowItem extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props);
     this.props.fetchUserInfo(this.props.username);
   }
 
   render() {
+    console.log(this.props);
     return (
       <div className="follow-item">
         <div><img src={this.props.avatarUrl}/></div>
         <div>{this.props.username}</div>
-        <FollowButtonContainer pageOwner={this.props.username}
-          followed_by_current_user={this.props.followed}/>
+        {
+          this.props.currentUser !== this.props.username ?
+          <FollowButtonContainer pageOwner={this.props.username}
+            followed_by_current_user={this.props.followed}/> : null
+        }
       </div>
     );
   }
