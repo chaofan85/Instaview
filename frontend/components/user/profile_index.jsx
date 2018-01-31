@@ -113,6 +113,7 @@ class ProfileIndex extends React.Component {
                   </li>
                   <li>
                     <FollowerContainer
+                      pageOwner={this.props.pageOwner}
                       followers={this.props.currentUser.followers}/>
 
                   </li>

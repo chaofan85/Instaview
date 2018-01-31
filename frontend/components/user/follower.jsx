@@ -22,7 +22,6 @@ class Follower extends React.Component {
 
   render() {
     const followers = this.props.followers;
-    console.log(followers);
     let followerList = followers.length ?
       followers.map(follower => {
         return (
@@ -30,6 +29,7 @@ class Follower extends React.Component {
             realname={follower.real_name}
             avatarUrl={follower.avatar_url}
             followed={follower.followed_by_current_user}
+            pageOwner={this.props.pageOwner}
             key={follower.id} />
         );
       }) : null;
