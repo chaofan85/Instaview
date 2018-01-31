@@ -1,5 +1,5 @@
 import React from 'react';
-import FollowItem from './follow_item';
+import FollowItemContainer from './follow_item_container';
 
 class Follower extends React.Component {
 
@@ -25,11 +25,10 @@ class Follower extends React.Component {
     let followerList = followers.length ?
       followers.map(follower => {
         return (
-          <FollowItem username={follower.name}
+          <FollowItemContainer username={follower.name}
             realname={follower.real_name}
             avatarUrl={follower.avatar_url}
             followed={follower.followed_by_current_user}
-            pageOwner={this.props.pageOwner}
             key={follower.id} />
         );
       }) : null;
