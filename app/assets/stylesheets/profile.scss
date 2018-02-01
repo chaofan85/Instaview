@@ -82,6 +82,10 @@
   cursor: pointer;
 }
 
+.follow-avatar {
+  margin-right: 13px;
+}
+
 .followers-open .modal-form {
   background: white;
   width: 600px;
@@ -109,6 +113,41 @@
 
 .follow-item {
   display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-bottom: solid 1px #dbdbdb;
+}
+
+.follow-item .follow-user, .follow-item .unfollow-user {
+  height: 26px;
+  box-sizing: border-box;
+  padding-left: 8px;
+  margin-top: 2px;
+}
+
+.follow-item .unfollow-user {
+  width: 81px;
+}
+
+.follow-item .follow-user {
+  width: 60px;
+}
+
+.follow-profile {
+  display: flex;
+  font-size: 14px;
+}
+
+.follow-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.follow-username {
+  font-weight: 600;
+  height: 18px;
+  margin-left: 5px;
 }
 
 .follow-item img {

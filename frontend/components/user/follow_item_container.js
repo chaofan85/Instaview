@@ -4,7 +4,6 @@ import { fetchUserInfo } from '../../actions/user_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state);
   return {
     currentUser: state.session.currentUser.username,
     username: ownProps.username,

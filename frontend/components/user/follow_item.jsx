@@ -11,11 +11,18 @@ class FollowItem extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="follow-item">
-        <div><img src={this.props.avatarUrl}/></div>
-        <div>{this.props.username}</div>
+        <div className="follow-profile">
+          <div className="follow-avatar"><img src={this.props.avatarUrl}/></div>
+          <div className="follow-name">
+            <div className="follow-username">{this.props.username}</div>
+            {
+              this.props.realname ?
+              <div>{this.props.realname}</div> : null
+            }
+          </div>
+        </div>
         {
           this.props.currentUser !== this.props.username ?
           <FollowButtonContainer pageOwner={this.props.username}
