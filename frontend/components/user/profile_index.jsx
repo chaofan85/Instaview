@@ -118,6 +118,7 @@ class ProfileIndex extends React.Component {
 
                   </li>
                   <li>
+                    
                     <span>{this.props.user.following_num}</span> following
                   </li>
                 </ul>
