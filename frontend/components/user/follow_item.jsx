@@ -14,7 +14,11 @@ class FollowItem extends React.Component {
     return (
       <div className="follow-item">
         <div className="follow-profile">
-          <div className="follow-avatar"><img src={this.props.avatarUrl}/></div>
+          <div className="follow-avatar">
+            <a href={`/#/${this.props.username}` }>
+              <img src={this.props.avatarUrl}/>
+            </a>
+          </div>
           <div className="follow-name">
             <div className="follow-username">{this.props.username}</div>
             {
