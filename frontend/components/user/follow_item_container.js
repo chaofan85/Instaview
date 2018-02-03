@@ -10,7 +10,8 @@ const mapStateToProps = (state, ownProps) => {
     realname: ownProps.realname,
     avatarUrl: ownProps.avatarUrl,
     followed: ownProps.followed,
-    pageOwner: ownProps.pageOwner
+    pageOwner: ownProps.pageOwner,
+    closeModal: ownProps.action
   };
 };
 

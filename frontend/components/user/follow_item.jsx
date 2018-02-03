@@ -5,21 +5,10 @@ import FollowButtonContainer from './follow_button_container';
 class FollowItem extends React.Component {
   constructor(props) {
     super(props);
-    this.redirect = this.redirect.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchUserInfo(this.props.username);
-  }
-
-  redirect() {
-    location.reload();
-    const username = this.props.username;
-    setTimeout(function(){
-      console.log(username);
-      window.location.replace(`/#/${username}`);
-    }, 10);
-
   }
 
   render() {
@@ -27,11 +16,17 @@ class FollowItem extends React.Component {
       <div className="follow-item">
         <div className="follow-profile">
           <div className="follow-avatar"
-            onClick={this.redirect}>
-            <img src={this.props.avatarUrl}/>
+            onClick={this.props.closeModal}>
+            <a href={`/#/${this.props.username}`}>
+              <img src={this.props.avatarUrl}/>
+            </a>
           </div>
           <div className="follow-name">
-            <div className="follow-username">{this.props.username}</div>
+            <a href={`/#/${this.props.username}`}>
+              <div className="follow-username" onClick={this.props.closeModal}>
+                {this.props.username}
+              </div>
+            </a>
             {
               this.props.realname ?
               <div>{this.props.realname}</div> : null

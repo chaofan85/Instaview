@@ -30,7 +30,8 @@ class Follower extends React.Component {
             avatarUrl={follower.avatar_url}
             followed={follower.followed_by_current_user}
             pageOwner={this.props.pageOwner}
-            key={follower.id} />
+            key={follower.id}
+            action={this.closeModal}/>
         );
       }) : null;
 
