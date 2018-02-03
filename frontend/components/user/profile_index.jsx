@@ -48,7 +48,6 @@ class ProfileIndex extends React.Component {
   }
 
   render() {
-    // window.location.reload();
     if (this.props.user) {
       return (
         <div className='profile-page'>

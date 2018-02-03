@@ -1,5 +1,4 @@
 import React from 'react';
-// import LoginFormContainer from './login_form_container';
 import ErrorItem from '../other/error_item.jsx';
 
 class SignupForm extends React.Component {
