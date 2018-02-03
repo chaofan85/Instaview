@@ -4,7 +4,7 @@ import UserPhotoIndex from './user_photo_index';
 import UserAvatarContainer from './user_avatar_container';
 import { Link, withRouter } from 'react-router-dom';
 import EditOrFollowContainer from './edit_or_follow_container';
-import FollowerContainer from './follower_container';
+import FollowContainer from './follow_container';
 
 
 class ProfileIndex extends React.Component {
@@ -114,14 +114,16 @@ class ProfileIndex extends React.Component {
                     }
                   </li>
                   <li>
-                    <FollowerContainer
+                    <FollowContainer
                       pageOwner={this.props.pageOwner}
-                      followers={this.props.user.followers}/>
+                      follows={this.props.user.followers}
+                      type="followers"/>
                   </li>
                   <li>
-                    <FollowingContainer
+                    <FollowContainer
                       pageOwner={this.props.pageOwner}
-                      followings={this.props.user.followings}/>
+                      follows={this.props.user.followings}
+                      type="following"/>
                   </li>
                 </ul>
 

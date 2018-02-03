@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
-import Follower from './follower';
+import Follow from './follow';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    followers: ownProps.followers,
-    pageOwner: ownProps.pageOwner
+    follows: ownProps.follows,
+    pageOwner: ownProps.pageOwner,
+    type: ownProps.type
   };
 };
 
@@ -12,4 +13,4 @@ const mapStateToProps = (state, ownProps) => {
 export default connect(
   mapStateToProps,
   null
-)(Follower);
+)(Follow);

@@ -1,7 +1,7 @@
 import React from 'react';
 import FollowItemContainer from './follow_item_container';
 
-class Follower extends React.Component {
+class Follow extends React.Component {
 
   constructor(props) {
     super(props);
@@ -21,16 +21,16 @@ class Follower extends React.Component {
   }
 
   render() {
-    const followers = this.props.followers;
-    let followerList = followers.length ?
-      followers.map(follower => {
+    const follows = this.props.follows;
+    let followerList = follows.length ?
+      follows.map(follow => {
         return (
-          <FollowItemContainer username={follower.name}
-            realname={follower.real_name}
-            avatarUrl={follower.avatar_url}
-            followed={follower.followed_by_current_user}
+          <FollowItemContainer username={follow.name}
+            realname={follow.real_name}
+            avatarUrl={follow.avatar_url}
+            followed={follow.followed_by_current_user}
             pageOwner={this.props.pageOwner}
-            key={follower.id}
+            key={follow.id}
             action={this.closeModal}/>
         );
       }) : null;
@@ -38,8 +38,8 @@ class Follower extends React.Component {
     return (
       <div className="followers-open">
         <div className="followers" onClick={this.openModal}><span>
-          {this.props.followers.length}
-        </span>followers</div>
+          {this.props.follows.length}
+        </span>{this.props.type}</div>
 
         { this.state.renderUpload ? (
           <div className='modal-panel'>
@@ -59,4 +59,4 @@ class Follower extends React.Component {
 
 }
 
-export default Follower;
+export default Follow;
