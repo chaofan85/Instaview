@@ -33,6 +33,7 @@ class ProfileIndex extends React.Component {
   }
 
   componentDidMount() {
+
     this.props.fetchUserInfo(this.props.pageOwner);
     this.props.fetchUserPhotos(this.props.pageOwner);
   }
@@ -47,6 +48,7 @@ class ProfileIndex extends React.Component {
   }
 
   render() {
+    // window.location.reload();
     if (this.props.user) {
       return (
         <div className='profile-page'>
@@ -118,7 +120,7 @@ class ProfileIndex extends React.Component {
 
                   </li>
                   <li>
-                    
+
                     <span>{this.props.user.following_num}</span> following
                   </li>
                 </ul>
