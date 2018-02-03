@@ -117,11 +117,11 @@ class ProfileIndex extends React.Component {
                     <FollowerContainer
                       pageOwner={this.props.pageOwner}
                       followers={this.props.user.followers}/>
-
                   </li>
                   <li>
-
-                    <span>{this.props.user.following_num}</span> following
+                    <FollowingContainer
+                      pageOwner={this.props.pageOwner}
+                      followings={this.props.user.followings}/>
                   </li>
                 </ul>
 
