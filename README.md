@@ -8,7 +8,7 @@
  Instaview, an Instagram clone, is a social media application that allows users to share their photos, like other users' photos, make comments and follow the users that they are interested in.
 
 
-[Instaview](http://instaview-app.herokuapp.com/)
+[Instaview](http://www.instaview.cam/)
 
 
 ## Technology

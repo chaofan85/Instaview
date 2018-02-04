@@ -5,11 +5,6 @@ import Root from './components/root';
 import {fetchUserInfo, followUser, fetchPhotos } from './actions/user_actions';
 import merge from 'lodash/merge';
 
-// To keep heroku app awake
-var http = require("http");
-setInterval(function() {
-    http.get("https://accesscontrolalloworiginall.herokuapp.com/https://instaview-app.herokuapp.com/");
-}, 300000);
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
