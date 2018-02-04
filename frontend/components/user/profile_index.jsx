@@ -3,7 +3,7 @@ import HeaderContainer from '../header_container';
 import UserPhotoIndex from './user_photo_index';
 import UserAvatarContainer from './user_avatar_container';
 import { Link, withRouter } from 'react-router-dom';
-import EditOrFollowContainer from './edit_or_follow_container';
+import EditOrFollow from './edit_or_follow';
 import FollowContainer from './follow_container';
 
 
@@ -70,7 +70,7 @@ class ProfileIndex extends React.Component {
                     }
                   </span>
 
-                  <EditOrFollowContainer user={this.props.user}
+                  <EditOrFollow user={this.props.user}
                     currentUser={this.props.currentUser}
                     pageOwner={this.props.pageOwner}/>
 
