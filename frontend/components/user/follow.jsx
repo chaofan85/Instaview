@@ -37,14 +37,15 @@ class Follow extends React.Component {
 
     return (
       <div className="followers-open">
-        <div className="followers" onClick={this.openModal}><span>
-          {this.props.follows.length}
-        </span>{this.props.type}</div>
+        <div className="followers" onClick={this.openModal}>
+          <span>{this.props.follows.length}</span>
+          {this.props.type}
+        </div>
 
         { this.state.renderUpload ? (
           <div className='modal-panel'>
             <div className='modal-form'>
-              <div className="follower-list-title">Followers</div>
+              <div className="follower-list-title">{this.props.type}</div>
               <ul className="follower-list">
                 { followerList }
               </ul>
