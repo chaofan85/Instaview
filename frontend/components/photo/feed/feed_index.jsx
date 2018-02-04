@@ -12,7 +12,6 @@ class FeedIndex extends React.Component {
     };
     this.ifBottom = this.ifBottom.bind(this);
     this.trackScrolling = this.trackScrolling.bind(this);
-
   }
 
   componentDidMount() {

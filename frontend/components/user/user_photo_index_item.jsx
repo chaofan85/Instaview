@@ -6,7 +6,6 @@ class UserPhotoIndexItem extends React.Component {
     super(props);
 
     this.state = { renderOptions: false };
-
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
   }
@@ -42,8 +41,6 @@ class UserPhotoIndexItem extends React.Component {
             null
           }
       </div>
-
-
     );
   }
 }

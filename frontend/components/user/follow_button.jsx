@@ -3,7 +3,6 @@ import React from 'react';
 class FollowButton extends React.Component {
   constructor(props) {
     super(props);
-
     this.follow = this.follow.bind(this);
     this.unfollow = this.unfollow.bind(this);
   }

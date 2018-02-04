@@ -11,5 +11,4 @@ const EditOrFollow = ({ user, currentUser, pageOwner }) => {
   }
 };
 
-
 export default EditOrFollow;

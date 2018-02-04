@@ -17,7 +17,6 @@ class CommentSection extends React.Component {
 
   render() {
     let frameHeight = $(".photo-frame").height();
-
     let comments;
     if (this.props.comments) {
       comments = Object.values(this.props.comments).map(comment => {

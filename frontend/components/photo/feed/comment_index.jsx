@@ -12,10 +12,8 @@ class CommentIndex extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
-
   }
 
   openModal() {
@@ -36,8 +34,8 @@ class CommentIndex extends React.Component {
       () => {
         this.setState({
         body: ""
-      });}
-    );
+      });
+    });
   }
 
   handleChange() {

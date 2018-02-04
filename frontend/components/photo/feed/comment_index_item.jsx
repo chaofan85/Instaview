@@ -4,7 +4,6 @@ class CommentIndexItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = { confirmDelete : false };
-
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
     this.removeComment = this.removeComment.bind(this);
@@ -24,7 +23,6 @@ class CommentIndexItem extends React.Component {
     this.closeModal();
     this.props.deleteComment(this.props.comment);
   }
-
 
   render() {
     return (

@@ -6,9 +6,7 @@ import FeedFooterContainer from './feed_footer_container';
 class FeedIndexItem extends React.Component  {
   constructor(props) {
     super(props);
-
   }
-
 
   render() {
     return (

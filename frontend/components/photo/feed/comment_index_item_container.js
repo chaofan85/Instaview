@@ -14,14 +14,11 @@ const mapStateToProps = (state) => {
   }
 };
 
-
 const mapDispatchToProps = (dispatch) => {
   return {
     deleteComment: (comment) => dispatch(deleteComment(comment))
   };
 };
-
-
 
 export default connect(
   mapStateToProps,
