@@ -9,7 +9,6 @@ class Index extends React.Component {
     if (this.props.currentUser) {
       return (
         <div className='main'>
-
           <HeaderContainer />
           <PhotoIndex />
         </div>
