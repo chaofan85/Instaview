@@ -23,7 +23,7 @@ class UserPhotoIndexItem extends React.Component {
   render() {
     return (
       <div className="photo-item">
-        <img src={`${this.props.photo.image_url}`} onClick={this.openModal} />
+        <div className="photo-item-image" style={{backgroundImage: `url(${this.props.photo.image_url})`}} onClick={this.openModal} />
 
           {
             this.state.renderOptions ?

@@ -66,9 +66,15 @@
 .photo-item .modal-form {
   width: 1000px;
   height: 680px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
+.photo-item-image {
+  background-size: cover;
+  background-position: center;
+  width: 276px;
+  height: 276px;
+}
 
 .modal-close {
   position: absolute;
