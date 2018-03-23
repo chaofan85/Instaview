@@ -90,6 +90,10 @@
   top: 30px;
 }
 
+.upload-panel .modal-close {
+  color: black;
+}
+
 .new-photo-button {
   width: 40px;
   height: 40px;
@@ -98,18 +102,16 @@
   color: white;
   margin-left: auto;
   border-radius: 50%;
-  box-shadow: 3px 3px 2px #2c2c2c;
-  transition: background .5s;
-
+  transition: background .3s;
 }
 
 .new-photo-button:hover {
-  transition: background .5s;
+  transition: background .3s;
+  background: #4292f4;
 }
 
 .new-photo-button:active{
-  box-shadow: 1px 1px 1px #2c2c2c;
-  transform: translateY(2px);
+
 }
 
 .upload-symbol {
@@ -144,6 +146,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 
 .choose-photo {
   width: 250px;
