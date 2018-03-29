@@ -73,7 +73,7 @@ export const fetchUserPhotos = (username) => (dispatch) => {
 
 export const deletePhoto = (photoId) => (dispatch) => {
   return PhotoAPIUtil.deletePhoto(photoId).then(
-    (payload) => dispatch(deletePhoto(payload)));
+    (payload) => dispatch(removePhoto(payload)));
 };
 
 export const addLike = (photoId) => (dispatch) => {

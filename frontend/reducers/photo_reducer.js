@@ -32,7 +32,7 @@ const PhotoReducer = (state = initialState, action) => {
 
     case REMOVE_PHOTO:
       newState = merge({}, state);
-      delete newState[action.photoId];
+      delete newState[action.photo.photoId];
       return newState;
 
     case RECEIVE_COMMENT:

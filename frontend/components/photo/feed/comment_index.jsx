@@ -14,6 +14,7 @@ class CommentIndex extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   openModal() {
@@ -36,6 +37,13 @@ class CommentIndex extends React.Component {
         body: ""
       });
     });
+  }
+
+  handleDelete() {
+    let photoId = this.props.photo.photoId;
+    this.props.deletePhoto(photoId).then(
+      this.closeModal()
+    );
   }
 
   handleChange() {
@@ -92,6 +100,9 @@ class CommentIndex extends React.Component {
                     <Link to={`/p/${this.state.photo_id}`}>
                     <button onClick={this.closeModal}>Go to post</button>
                     </Link>
+                  </li>
+                  <li>
+                    <button onClick={this.handleDelete}>Delete Photo</button>
                   </li>
                   <li>
                     <button onClick={this.closeModal}>Cancel</button>
