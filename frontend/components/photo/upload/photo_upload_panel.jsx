@@ -74,7 +74,8 @@ class PhotoUploadPanel extends React.Component {
           <button className="upload-button">Submit</button>
         </form>
 
-        <img className="photo-preview" src={ this.state.imageUrl }/>
+        <div className="photo-preview"
+          style={{backgroundImage: `url(${this.state.imageUrl})`}}/>
 
       </div>
     );
