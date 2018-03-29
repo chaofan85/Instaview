@@ -210,6 +210,8 @@
 .photo-preview {
   margin-top: 60px;
   margin-right: 5px;
+  background-size: cover;
+  background-position: center;
 }
 
 .feed-index {
@@ -312,7 +314,7 @@
   background-repeat: no-repeat;
   background-position: -125px -347px;
   background-size: 395px 371px;
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
 .feed-footer-icons .liked{
@@ -322,7 +324,7 @@
   background-repeat: no-repeat;
   background-position: -256px -322px;
   background-size: 395px 371px;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .feed-footer-icons .comment-icon{
