@@ -72,8 +72,6 @@ export const deleteLike = (photoId) => (dispatch) => {
     (payload) => dispatch(receivePhoto(payload)));
 };
 
-
-
 export const fetchComments = (photoId) => (dispatch) => {
   return PhotoAPIUtil.fetchComments(photoId).then(
     (payload) => dispatch(receiveComments(payload)));
