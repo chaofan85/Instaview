@@ -2,9 +2,11 @@ import * as PhotoAPIUtil from '../util/photo_api_util';
 
 export const RECEIVE_PHOTOS = 'RECEIVE_PHOTOS';
 export const RECEIVE_PHOTO = 'RECEIVE_PHOTO';
+export const REMOVE_PHOTO = 'REMOVE_PHOTO';
 export const RECEIVE_COMMENTS = 'RECEIVE_COMMENTS';
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
+
 
 const receivePhotos = (photos) => {
   return {
@@ -16,6 +18,13 @@ const receivePhotos = (photos) => {
 const receivePhoto = (photo) => {
   return {
     type: RECEIVE_PHOTO,
+    photo
+  };
+};
+
+const removePhoto = (photo) => {
+  return {
+    type: REMOVE_PHOTO,
     photo
   };
 };
@@ -60,6 +69,11 @@ export const fetchUserPhotos = (username) => (dispatch) => {
   return PhotoAPIUtil.fetchUserPhotos(username).then(
     payload => dispatch(receivePhotos(payload))
   );
+};
+
+export const deletePhoto = (photoId) => (dispatch) => {
+  return PhotoAPIUtil.deletePhoto(photoId).then(
+    (payload) => dispatch(deletePhoto(payload)));
 };
 
 export const addLike = (photoId) => (dispatch) => {

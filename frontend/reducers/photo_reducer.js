@@ -1,7 +1,8 @@
 import { RECEIVE_PHOTO,
          RECEIVE_COMMENT,
          REMOVE_COMMENT,
-         RECEIVE_PHOTOS } from '../actions/photo_actions';
+         RECEIVE_PHOTOS,
+         REMOVE_PHOTO} from '../actions/photo_actions';
 
 import {RECEIVE_CURRENT_USER} from '../actions/session_actions';
 
@@ -28,6 +29,11 @@ const PhotoReducer = (state = initialState, action) => {
 
     case RECEIVE_PHOTOS:
       return Object.assign({}, state, action.photos);
+
+    case REMOVE_PHOTO:
+      newState = merge({}, state);
+      delete newState[action.photoId];
+      return newState;
 
     case RECEIVE_COMMENT:
       newState = merge({}, state);

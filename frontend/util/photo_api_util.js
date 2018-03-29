@@ -82,3 +82,10 @@ export const fetchFeeds = (userId, start, end) => {
     data: {start: start, end: end}
   });
 };
+
+export const deletePhoto = (photoId) => {
+  return $.ajax({
+    method: "DELETE",
+    url: `api/photos/${photoId}`
+  });
+};
