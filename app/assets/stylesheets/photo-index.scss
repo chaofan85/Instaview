@@ -17,13 +17,6 @@
   cursor: pointer;
 }
 
-.photo-upload{
-  width: 100%;
-  height: 80px;
-  text-align: center;
-  padding-top: 30px;
-
-}
 
 .modal-bg {
   position: fixed;
@@ -95,23 +88,18 @@
 }
 
 .new-photo-button {
-  width: 40px;
-  height: 40px;
-  background: #345a99;
-  font-size: 28px;
-  color: white;
-  margin-left: auto;
-  border-radius: 50%;
-  transition: background .3s;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  background: image-url("icons.png");
+  background-repeat: no-repeat;
+  background-position: -353px -201px;
+  background-size: 395px 371px;
+  margin-right: 6px;
 }
 
 .new-photo-button:hover {
-  transition: background .3s;
-  background: #4292f4;
-}
-
-.new-photo-button:active{
-
+  cursor: pointer;
 }
 
 .upload-symbol {

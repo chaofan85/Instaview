@@ -21,9 +21,9 @@ class PhotoUpload extends React.Component {
 
   render() {
     return (
-      <div className="photo-upload">
+      <span className="photo-upload">
         <button className='new-photo-button'
-          onClick={this.openModal}>+</button>
+          onClick={this.openModal}></button>
 
         { this.state.renderUpload ? (
           <div className='upload-panel'>
@@ -35,7 +35,7 @@ class PhotoUpload extends React.Component {
             <div className="modal-bg"></div>
           </div>) : null }
 
-      </div>
+      </span>
     );
   }
 }

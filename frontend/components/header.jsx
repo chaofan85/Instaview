@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import PhotoUpload from './photo/upload/photo_upload';
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +24,7 @@ class Header extends React.Component {
           </a>
 
           <div className='header-icons'>
+             <PhotoUpload />
              <Link to={`/${username}`}>
                <span className='profile-icon'></span>
              </Link>
