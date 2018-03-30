@@ -33,13 +33,18 @@ class FeedIndex extends React.Component {
   trackScrolling () {
     const wrappedElement = document.querySelector('.photo-index');
     if (this.ifBottom(wrappedElement)) {
+      $('.feed-index').append(
+        '<div class="scroll-spinner"><img src='+window.spinner+'/></div>'
+      );
       this.setState({
         start: Math.abs(this.state.start - 5) > this.state.max ?
                -(this.state.max) : this.state.start - 5,
         end: this.state.end - 5
       });
       document.removeEventListener('scroll', this.trackScrolling);
-
+      setTimeout(() => {
+        $('.scroll-spinner').remove();
+      }, 1000);
       this.props.fetchPhotos(this.props.userId,
                              this.state.start,
                              this.state.end);
@@ -49,6 +54,7 @@ class FeedIndex extends React.Component {
   componentDidUpdate() {
     if (Math.abs(this.state.start) < this.state.max) {
       document.addEventListener('scroll', this.trackScrolling);
+
     }
   }
 
