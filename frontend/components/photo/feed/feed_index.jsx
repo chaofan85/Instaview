@@ -66,7 +66,7 @@ class FeedIndex extends React.Component {
           username={this.props.username}
           key={photo.photoId} />
       );
-    }) : null;
+    }) : <div className="spinner"><img src={`${window.spinner}`}/></div>;
 
     return (
       <section className="feed-index">
