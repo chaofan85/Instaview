@@ -35,7 +35,6 @@ class PhotoUploadPanel extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const file = this.state.imageFile;
-
     const formData = new FormData();
     if (file) {
       formData.append("photo[image]", file);
@@ -47,6 +46,10 @@ class PhotoUploadPanel extends React.Component {
   }
 
   render() {
+    let preview = this.state.imageUrl ?
+      <div className="photo-preview"
+      style={{backgroundImage: `url(${this.state.imageUrl})`}}/> : null;
+
     return (
       <div className="photo-ul">
         <form className='photo-info' onSubmit={this.handleSubmit}>
@@ -74,8 +77,7 @@ class PhotoUploadPanel extends React.Component {
           <button className="upload-button">Submit</button>
         </form>
 
-        <div className="photo-preview"
-          style={{backgroundImage: `url(${this.state.imageUrl})`}}/>
+        {preview}
 
       </div>
     );
