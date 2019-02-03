@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <nav className="footer">
-      <div>&copy; INSTAVIEW 2017</div>
+      <div>&copy; INSTAVIEW 2019</div>
     </nav>
   );
 };
