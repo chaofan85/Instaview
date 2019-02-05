@@ -7,7 +7,6 @@ import { logout } from '../../actions/session_actions';
 const mapStateToProps = (state, ownProps) => {
   const username = ownProps.match.params.username;
   const user = state.entities.user[username];
-
   return {
     currentUser: state.session.currentUser,
     pageOwner: username,

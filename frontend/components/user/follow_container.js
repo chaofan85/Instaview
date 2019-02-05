@@ -1,5 +1,5 @@
-import { connect } from 'react-redux';
-import Follow from './follow';
+import { connect } from "react-redux";
+import Follow from "./follow";
 
 const mapStateToProps = (state, ownProps) => {
   return {

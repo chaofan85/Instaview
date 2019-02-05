@@ -21,7 +21,7 @@ class Follow extends React.Component {
   }
 
   render() {
-    const follows = this.props.follows;
+    const follows = Object.values(this.props.follows);
     let followerList = follows.length ?
       follows.map(follow => {
         return (
@@ -38,7 +38,7 @@ class Follow extends React.Component {
     return (
       <div className="followers-open">
         <div className="followers" onClick={this.openModal}>
-          <span>{this.props.follows.length}</span>
+          <span>{follows.length}</span>
           {this.props.type}
         </div>
 
