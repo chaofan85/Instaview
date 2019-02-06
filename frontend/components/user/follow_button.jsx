@@ -31,6 +31,7 @@ class FollowButton extends React.Component {
   }
 
   render() {
+    console.log(this.props.user)
     if (this.props.user) {
       if (this.props.user.followed_by_current_user) {
         return (
@@ -43,7 +44,11 @@ class FollowButton extends React.Component {
               this.state.renderConfirm ? (
                 <div className='modal-panel'>
                   <div className='modal-form'>
-                    <div>Unfollow?</div>
+                    <div className="confirm-info">
+                      <div className="following-avatar">
+                        <img src={this.props.user.avatar_url} />
+                      </div>
+                    </div>
                     <span className="modal-close"
                       onClick={this.closeModal}>&times;</span>
                   </div>

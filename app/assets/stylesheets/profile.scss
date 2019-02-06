@@ -163,10 +163,18 @@
 
 .unfollow-user-container .modal-form {
   height: 290px;
+  padding-top: 32px;
 }
 
 .unfollow-user-container .modal-bg {
   background: rgba(0,0,0,0.3);
+}
+
+.following-avatar img{
+  display: block;
+  margin: auto;
+  width: 90px;
+  height: 90px;
 }
 
 .edit-profile:hover, .follow-user:hover, .unfollow-user:hover{
