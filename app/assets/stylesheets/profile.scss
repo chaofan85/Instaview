@@ -88,9 +88,11 @@
 
 .followers-open .modal-form {
   background: white;
-  width: 600px;
-  height: 600px;
+  width: 400px;
+  height: 400px;
   margin: auto;
+  border-radius: 3%;
+  border: none;
 }
 
 .followers-open .modal-close {
@@ -157,6 +159,14 @@
   border-radius: 100%;
   margin-top: 3px;
   border: 1px solid gray;
+}
+
+.unfollow-user-container .modal-form {
+  height: 290px;
+}
+
+.unfollow-user-container .modal-bg {
+  background: rgba(0,0,0,0.3);
 }
 
 .edit-profile:hover, .follow-user:hover, .unfollow-user:hover{
