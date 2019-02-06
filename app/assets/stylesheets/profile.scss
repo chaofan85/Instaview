@@ -1,6 +1,7 @@
 .profile-page {
   width: 100%;
-  font-family: -apple-system, system-ui, "Segoe UI", 'Roboto', Helvetica, Arial, sans-serif;
+  font-family: -apple-system, system-ui, "Segoe UI", "Roboto", Helvetica, Arial,
+    sans-serif;
   margin-top: 77px;
 }
 
@@ -25,13 +26,11 @@
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
-
 }
 
 .user-profile-avatar img {
   height: 100%;
   width: auto;
-
 }
 
 .user-profile-avatar:hover {
@@ -56,7 +55,9 @@
   display: block;
 }
 
-.edit-profile, .follow-user, .unfollow-user {
+.edit-profile,
+.follow-user,
+.unfollow-user {
   display: block;
   width: 130px;
   height: 26px;
@@ -121,7 +122,8 @@
   border-bottom: solid 1px #dbdbdb;
 }
 
-.follow-item .follow-user, .follow-item .unfollow-user {
+.follow-item .follow-user,
+.follow-item .unfollow-user {
   height: 26px;
   box-sizing: border-box;
   padding-left: 8px;
@@ -167,17 +169,41 @@
 }
 
 .unfollow-user-container .modal-bg {
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
 }
 
-.following-avatar img{
+.following-avatar img {
   display: block;
   margin: auto;
   width: 90px;
   height: 90px;
+  margin-bottom: 30px;
 }
 
-.edit-profile:hover, .follow-user:hover, .unfollow-user:hover{
+.unfollow-confirm {
+  text-align: center;
+}
+
+.unfollow-button,
+.unfollow-cancel {
+  min-height: 60px;
+  padding: 4px 8px;
+  text-align: center;
+  cursor: pointer;
+  border-top: 1px solid #efefef;
+  box-sizing: border-box;
+  padding-top: 20px;
+}
+
+.unfollow-button {
+  margin-top: 30px;
+  color: #ed4956;
+  font-weight: 700;
+}
+
+.edit-profile:hover,
+.follow-user:hover,
+.unfollow-user:hover {
   cursor: pointer;
 }
 
@@ -225,7 +251,7 @@
   flex-wrap: wrap;
 }
 
-.user-gallery ul .photo-item:nth-child(3n+2) {
+.user-gallery ul .photo-item:nth-child(3n + 2) {
   margin-left: 35px;
   margin-right: 35px;
 }

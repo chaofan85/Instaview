@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 class FollowButton extends React.Component {
   constructor(props) {
@@ -27,11 +27,13 @@ class FollowButton extends React.Component {
 
   unfollow() {
     const followeeId = this.props.user.id;
-    this.props.unFollowUser(followeeId);
+    this.props.unFollowUser(followeeId).then(() => {
+      this.closeModal();
+    });
   }
 
   render() {
-    console.log(this.props.user)
+    console.log(this.props.user);
     if (this.props.user) {
       if (this.props.user.followed_by_current_user) {
         return (
@@ -40,22 +42,26 @@ class FollowButton extends React.Component {
               Following
             </span>
 
-            {
-              this.state.renderConfirm ? (
-                <div className='modal-panel'>
-                  <div className='modal-form'>
-                    <div className="confirm-info">
-                      <div className="following-avatar">
-                        <img src={this.props.user.avatar_url} />
+            {this.state.renderConfirm ? (
+              <div className="modal-panel">
+                <div className="modal-form">
+                  <div className="confirm-info">
+                    <div className="following-avatar">
+                      <img src={this.props.user.avatar_url} />
+                      <div className="unfollow-confirm">
+                        Unfollow {this.props.user.username}?
                       </div>
                     </div>
-                    <span className="modal-close"
-                      onClick={this.closeModal}>&times;</span>
                   </div>
-                  <div className="modal-bg"></div>
+                  <div className="unfollow-button" onClick={this.unfollow}>Unfollow</div>
+                  <div className="unfollow-cancel">Cancel</div>
+                  <span className="modal-close" onClick={this.closeModal}>
+                    &times;
+                  </span>
                 </div>
-              ) : null
-            } 
+                <div className="modal-bg" />
+              </div>
+            ) : null}
           </div>
         );
       } else {
