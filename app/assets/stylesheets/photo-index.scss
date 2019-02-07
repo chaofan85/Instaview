@@ -44,9 +44,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: white;
+  // background: white;
   z-index: 11;
-  background: #efefef;
+  background: #f2f2f2;
   transition: 2s;
   overflow: hidden;
 }
@@ -106,30 +106,29 @@
 .upload-symbol {
   width: 50px;
   height: 50px;
-  // background: #1998C2;
   color: black;
-  border-radius: 50%;
+  border-radius: 10%;
+  overflow: hidden;
   border: 1px solid black;
   text-align: center;
   font-size: 28px;
-  padding-top: 5px;
+  line-height: 1em;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   box-sizing: border-box;
-  // box-shadow: 1px 1px 1px #5d5e60;
-  // transition: 0.5s;
-
+  font-size: 40px;
+  font-weight: 300;
 }
 
 .upload-symbol:hover {
   cursor: pointer;
-  background: #5EADF2;
-  transition: 0.5s;
+  // background: #5EADF2;
+  // transition: 0.5s;
 }
 
-.upload-symbol:active {
+// .upload-symbol:active {
 
-}
+// }
 
 .photo-ul {
   width: 520px;
@@ -162,42 +161,47 @@
 .photo-ul input {
   width: 250px;
   box-sizing: border-box;
-  padding-left: 5px;
+  padding-left: 10px;
   text-align: left;
   display: block;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .location {
   height: 30px;
-  background: white;
   font-size: 14px;
-  box-shadow: 3px 3px 2px #d8d8d8;
+  border-bottom: 1px solid black;
+  // margin-bottom: 25px;
+  // box-shadow: 3px 3px 2px #d8d8d8;
 }
 
 .caption {
   height: 120px;
-  background: white;
+  background: #fafafa;
   font-size: 14px;
-  box-shadow: 3px 3px 2px #d8d8d8;
+  border: 1px solid #a5a5a5;
+  border-radius: 3%;
+  // box-shadow: 3px 3px 2px #d8d8d8;
 }
 
 .upload-button {
   width: 200px;
   height: 40px;
-  background: white;
+  background: #fafafa;
   margin: auto;
   margin-top: 15px;
   display: block;
   text-align: center;
-  box-shadow: 3px 3px 2px #5d5e60;
+  border: 1px solid #a5a5a5;
+  border-radius: 2%;
+  // box-shadow: 3px 3px 2px #5d5e60;
 }
 
-.upload-button:active{
-  box-shadow: 1px 1px 1px #5d5e60;
-  transform: translateY(2px);
-}
+// .upload-button:active{
+//   box-shadow: 1px 1px 1px #5d5e60;
+//   transform: translateY(2px);
+// }
 
 .photo-preview {
   display: inline-block;
