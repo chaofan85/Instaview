@@ -45,6 +45,6 @@
   },
   "homepage": "https://github.com/chaofan85/Instaview#readme",
   "devDependencies": {
-    "eslint": "^4.16.0"
+    "eslint": "^4.18.2"
   }
 }
